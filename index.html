@@ -1,242 +1,303 @@
 
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Biomedical Engineering portfolio">
-  <title>Isabella Chandler | Biomedical Engineering</title>
+  <meta name="description" content="Isabella Chandler | Biomedical Engineering portfolio">
+  <title>Isabella Chandler | BME Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="page-bg"></div>
+
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="logo" href="#home">
-        <span class="bow">🎀</span>
-        <span>Isabella Chandler</span>
-        <span class="heart">♡</span>
+      <a class="logo" href="#home" aria-label="Isabella Chandler home">
+        <span class="logo-ball"><i></i></span>
+        <span>isabella<span class="logo-dot">.</span></span>
       </a>
 
-      <nav>
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#experience">experience</a>
+        <a href="#contact">contact</a>
       </nav>
+
+      <a class="nav-pill" href="mailto:ichandler@ltu.edu">let's connect ♡</a>
     </div>
   </header>
 
-  <main id="home">
+  <main>
     <!-- HERO -->
-    <section class="hero section">
-      <div class="decor decor-heart heart-one">♡</div>
-      <div class="decor decor-star star-one">☆</div>
-      <div class="decor decor-heart heart-two">♡</div>
-      <div class="decor decor-star star-two">✦</div>
-
-      <div class="hero-text">
-        <p class="eyebrow">♡ welcome to my portfolio ♡</p>
-        <h1>Biomedical<br><span>Engineering</span> Student</h1>
-        <p class="hero-description">
-          Designing technology at the intersection of engineering,
-          healthcare, and human-centered design.
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tiny-pokeball"></span> biomedical engineering portfolio</div>
+        <h1>hi, i'm<br><span>isabella!</span> <span class="sparkle">✦</span></h1>
+        <p class="hero-lead">
+          I like making things that sit somewhere between <b>engineering, healthcare, technology,</b> and a little bit of creativity.
         </p>
-
-        <div class="button-row">
-          <a class="button primary" href="#projects">🎀 View My Projects</a>
-          <a class="button secondary" href="#resume">♡ View Resume</a>
+        <div class="hero-actions">
+          <a class="button button-pink" href="#projects">see my projects <span>→</span></a>
+          <a class="button button-white" href="#about">a little about me ♡</a>
+        </div>
+        <div class="hero-meta">
+          <span>📍 Lawrence Technological University</span>
+          <span>♡ biomedical engineering</span>
         </div>
       </div>
 
-      <div class="hero-art" aria-label="Decorative portfolio illustration">
-        <div class="cloud cloud-back"></div>
-        <div class="sparkle sparkle-a">✦</div>
-        <div class="sparkle sparkle-b">☆</div>
-        <div class="big-bow">🎀</div>
-        <div class="cute-face">
-          <div class="ear left-ear"></div>
-          <div class="ear right-ear"></div>
-          <div class="eye left-eye"></div>
-          <div class="eye right-eye"></div>
-          <div class="nose"></div>
-          <div class="whisker w1"></div>
-          <div class="whisker w2"></div>
-          <div class="whisker w3"></div>
-          <div class="whisker w4"></div>
+      <div class="hero-photo-wrap">
+        <div class="pixel-star star-a">✦</div>
+        <div class="pixel-star star-b">✧</div>
+        <div class="hero-photo-card">
+          <div class="photo-topline">
+            <span>TRAINER PROFILE</span>
+            <span>♡</span>
+          </div>
+          <img src="images/profile.jpg" alt="Professional portrait of Isabella Chandler">
+          <div class="photo-caption">
+            <span>ISABELLA CHANDLER</span>
+            <span class="status-dot">● available to connect</span>
+          </div>
         </div>
-        <div class="mini-bear">ʕ•ᴥ•ʔ</div>
-        <div class="quote-bubble">small steps<br>big dreams ♡</div>
+        <div class="mini-card mini-card-pink">♡<br><small>build<br>something<br>useful</small></div>
+        <div class="mini-card mini-card-blue">✦<br><small>curious<br>by nature</small></div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="about-card">
-        <div class="about-photo">
-          <div class="photo-placeholder">
-            <span>♡</span>
-            <p>Add your<br>photo here</p>
-            <small>Replace this box with your image</small>
-          </div>
+    <section id="about" class="section about-section">
+      <div class="section-label">01 / about me</div>
+      <div class="about-grid">
+        <div>
+          <h2>engineering,<br><span>but make it human.</span></h2>
         </div>
-
-        <div class="about-content">
-          <p class="section-kicker">🎀 a little about me</p>
-          <h2>About Me</h2>
+        <div class="about-copy">
           <p>
-            I'm a Biomedical Engineering student interested in medical
-            technology, wearable devices, quality science, and creating
-            solutions that connect engineering with real-world healthcare needs.
+            I'm a Biomedical Engineering student who enjoys taking an idea from a messy brainstorm to something people can actually interact with.
           </p>
           <p>
-            I enjoy turning ideas into hands-on projects, learning new
-            technologies, and working with teams to create practical,
-            human-centered designs.
+            My projects have ranged from wearable devices and embedded systems to healthcare-focused product concepts, AI-enabled wellness technology, and human-centered design.
           </p>
-
-          <div class="about-facts">
-            <div>♡ <span>Biomedical Engineering</span></div>
-            <div>🎓 <span>Lawrence Technological University</span></div>
-            <div>✦ <span>Quality Science Education Certificate</span></div>
+          <div class="about-tags">
+            <span>wearables</span><span>medical technology</span><span>human-centered design</span><span>prototyping</span><span>quality mindset</span>
           </div>
         </div>
-
-        <div class="about-doodle">♡<br><span>good things<br>take time</span><br>🎀</div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="section-heading">
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" class="section projects-section">
+      <div class="section-label">02 / selected work</div>
+      <div class="section-title-row">
         <div>
-          <p class="section-kicker">♡ things I've made</p>
-          <h2>Featured Projects</h2>
+          <h2>projects i've <span>loved making</span></h2>
+          <p class="section-intro">A few of my favorite class, design, and engineering projects.</p>
         </div>
-        <span class="tiny-note">made with lots of curiosity ♡</span>
+        <div class="pokeball-badge"><span></span><small>GOTTA<br>BUILD 'EM<br>ALL</small></div>
       </div>
 
       <div class="project-grid">
-        <article class="project-card pink-card">
-          <div class="project-art">
-            <div class="knee-icon">◯</div>
-            <div class="mini-label">WEARABLE</div>
-            <span class="art-star">☆</span>
+        <!-- 01 -->
+        <article class="project-card featured">
+          <div class="project-image image-pink">
+            <img src="images/nuitlume.jpg" alt="NuitLume wearable shin flashlight project presentation">
+            <span class="project-number">01</span>
           </div>
-          <div class="project-body">
-            <span class="tag pink-tag">Wearable Design</span>
-            <h3>KneeLume</h3>
-            <p>
-              A light-up knee brace designed to provide hands-free lighting
-              for outdoor and low-light activities.
-            </p>
-            <a href="#" class="project-link">View project →</a>
-          </div>
-        </article>
-
-        <article class="project-card purple-card">
-          <div class="project-art">
-            <div class="feeder-icon">♡</div>
-            <div class="box-icon">▣</div>
-            <span class="art-star">✦</span>
-          </div>
-          <div class="project-body">
-            <span class="tag purple-tag">Embedded Systems</span>
-            <h3>Smart Pet Feeder</h3>
-            <p>
-              A Bluetooth-enabled wearable and automated feeder system
-              developed with Circuit Playground Bluefruit boards.
-            </p>
-            <a href="#" class="project-link">View project →</a>
+          <div class="project-content">
+            <div class="project-type">wearable technology</div>
+            <h3>NuitLume</h3>
+            <p class="project-subtitle">The Shin Flashlight</p>
+            <p>A wearable light built into a shin/knee brace concept to provide hands-free illumination while supporting activities like hiking, running, and rehabilitation.</p>
+            <div class="skill-tags"><span>product design</span><span>3D printing</span><span>electronics</span><span>wearables</span></div>
+            <div class="project-detail"><b>What I worked on</b><br>Concept development, hardware integration, prototype fabrication, sewing/assembly, and final design refinement.</div>
           </div>
         </article>
 
-        <article class="project-card blue-card">
-          <div class="project-art">
-            <div class="watch-icon">♡</div>
-            <span class="art-star">☆</span>
-            <span class="art-heart">♡</span>
+        <!-- 02 -->
+        <article class="project-card">
+          <div class="project-image image-blue">
+            <img src="images/syncare.png" alt="SyncCare wearable prototype">
+            <span class="project-number">02</span>
           </div>
-          <div class="project-body">
-            <span class="tag blue-tag">AI + Healthcare</span>
+          <div class="project-content">
+            <div class="project-type">AI + wearable technology</div>
             <h3>SyncCare</h3>
-            <p>
-              A privacy-focused wearable wellness concept using computer
-              vision and AI-generated wellness recommendations.
-            </p>
-            <a href="#" class="project-link">View project →</a>
+            <p class="project-subtitle">Your wellness, synchronized.</p>
+            <p>A privacy-focused wearable wellness concept designed to use real-time data and AI to help users recognize patterns in mood and wellness.</p>
+            <div class="skill-tags"><span>AI concepts</span><span>wearable design</span><span>privacy</span><span>UX</span></div>
+            <div class="project-detail"><b>What I worked on</b><br>Wearable concept development, product positioning, app/interface concepts, privacy considerations, and presentation storytelling.</div>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="project-card">
+          <div class="project-image image-lavender">
+            <img src="images/headup.png" alt="HeadUp posture feedback wearable prototype">
+            <span class="project-number">03</span>
+          </div>
+          <div class="project-content">
+            <div class="project-type">bioinstrumentation</div>
+            <h3>HeadUp</h3>
+            <p class="project-subtitle">Active posture feedback</p>
+            <p>A wearable posture-monitoring device that detects forward tilt and provides vibration and LED feedback when the user consistently slouches.</p>
+            <div class="skill-tags"><span>Circuit Playground</span><span>MPU-6050</span><span>haptics</span><span>testing</span></div>
+            <div class="project-detail"><b>Technical focus</b><br>Posture calibration, accelerometer-based monitoring, haptic feedback, LEDs, battery integration, SOP development, and prototype testing.</div>
+          </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="project-card">
+          <div class="project-image image-green">
+            <img src="images/presence-plant.jpg" alt="Presence Plant sensors and actuators diagram">
+            <span class="project-number">04</span>
+          </div>
+          <div class="project-content">
+            <div class="project-type">robotics + HCI</div>
+            <h3>Presence Plant</h3>
+            <p class="project-subtitle">A friendly way to say “please don't interrupt.”</p>
+            <p>A soft-robotics concept for shared living spaces that communicates a student's focus state through organic movement instead of a harsh DND sign.</p>
+            <div class="skill-tags"><span>ESP32-S3</span><span>mmWave</span><span>soft robotics</span><span>HCI</span></div>
+            <div class="project-detail"><b>System concept</b><br>Presence and sound sensing feed an on-device system, while servos, an RGB display, and plant movement communicate the user's focus state.</div>
+          </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="project-card">
+          <div class="project-image image-cream">
+            <img src="images/smart-collar.jpg" alt="Smart pet collar and food dispenser project">
+            <span class="project-number">05</span>
+          </div>
+          <div class="project-content">
+            <div class="project-type">embedded systems</div>
+            <h3>Smart Collar</h3>
+            <p class="project-subtitle">Pet steps → smart feeding</p>
+            <p>A smart pet step tracker that connects a wearable collar tag to an automated food dispenser, using activity goals to regulate feeding.</p>
+            <div class="skill-tags"><span>Bluetooth</span><span>Circuit Playground</span><span>servos</span><span>product design</span></div>
+            <div class="project-detail"><b>What it does</b><br>Tracks pet orientation and steps, communicates wirelessly, gives visual status feedback, and triggers the dispenser after the pet reaches its goal.</div>
+          </div>
+        </article>
+
+        <!-- 06 -->
+        <article class="project-card">
+          <div class="project-image image-peach">
+            <img src="images/foot-insole.jpg" alt="Pressure injury prevention insole project prototype slides">
+            <span class="project-number">06</span>
+          </div>
+          <div class="project-content">
+            <div class="project-type">medical device design</div>
+            <h3>Pressure-Point Insole</h3>
+            <p class="project-subtitle">Preventing foot pressure injuries</p>
+            <p>A lightweight shoe-insole concept designed to redistribute pressure and reduce friction and moisture in high-risk areas of the foot.</p>
+            <div class="skill-tags"><span>3D printing</span><span>materials</span><span>haptics</span><span>design matrices</span></div>
+            <div class="project-detail"><b>Design focus</b><br>Composite gel + 3D-printed structures, pressure redistribution, user feedback, form-factor selection, and engineering tradeoff analysis.</div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- SKILLS / EDUCATION / RESUME / CONTACT -->
-    <section class="section lower-grid">
-      <div id="skills" class="info-card skills-card">
-        <p class="section-kicker">🎀 what I work with</p>
-        <h2>Skills</h2>
-        <div class="skill-list">
-          <span>Python</span>
-          <span>MATLAB</span>
-          <span>CAD</span>
-          <span>COMSOL</span>
-          <span>CircuitPython</span>
-          <span>Electronics</span>
-          <span>Quality Control</span>
-          <span>Data Analysis</span>
-          <span>Problem Solving</span>
-          <span>Teamwork</span>
+    <!-- MORE PROJECTS -->
+    <section class="section more-projects">
+      <div class="section-label">03 / more work</div>
+      <div class="more-grid">
+        <article class="mini-project">
+          <div class="mini-project-image"><img src="images/buttoneers.jpg" alt="Revenge of the Buttoneers accessible dice tower project"></div>
+          <div>
+            <span class="project-type">human-centered design</span>
+            <h3>The Revenge of the Buttoneers</h3>
+            <p>Designed and iterated an accessible dice-tower solution for a recreation station, using customer feedback, prototyping, fabrication, and testing.</p>
+            <div class="skill-tags"><span>empathy</span><span>ideation</span><span>prototyping</span><span>fabrication</span></div>
+          </div>
+        </article>
+
+        <article class="mini-project">
+          <div class="mini-project-image"><img src="images/rids.jpg" alt="R.I.D.S. LTU student recreation center project"></div>
+          <div>
+            <span class="project-type">systems + project design</span>
+            <h3>R.I.D.S. Student Recreation Center</h3>
+            <p>A team-based concept for a new LTU recreation center, including amenities, space planning, cost analysis, scheduling, and recommendations.</p>
+            <div class="skill-tags"><span>systems thinking</span><span>research</span><span>cost analysis</span><span>teamwork</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills-section">
+      <div class="section-label">04 / toolbox</div>
+      <div class="skills-layout">
+        <div>
+          <h2>my little<br><span>engineering toolbox.</span></h2>
+          <p class="section-intro">A mix of technical, design, and people-focused skills I've built through coursework, projects, and hands-on work.</p>
+        </div>
+        <div class="skills-board">
+          <div class="skill-group"><span class="skill-icon">⚙</span><div><b>engineering</b><p>Biomedical design · prototyping · materials · electronics · systems thinking</p></div></div>
+          <div class="skill-group"><span class="skill-icon">⌘</span><div><b>software</b><p>Python · MATLAB · CAD · COMSOL · CircuitPython</p></div></div>
+          <div class="skill-group"><span class="skill-icon">♡</span><div><b>design</b><p>Human-centered design · ideation · concept selection · UX thinking</p></div></div>
+          <div class="skill-group"><span class="skill-icon">✦</span><div><b>professional</b><p>Quality control · documentation · teamwork · communication · project organization</p></div></div>
         </div>
       </div>
+    </section>
 
-      <div id="education" class="info-card">
-        <p class="section-kicker">♡ school stuff</p>
-        <h2>Education</h2>
-        <h3>Lawrence Technological University</h3>
-        <p>B.S. in Biomedical Engineering</p>
-        <p class="muted">Currently pursuing</p>
-        <div class="little-doodle">🎓 ☆</div>
-      </div>
-
-      <div id="resume" class="info-card">
-        <p class="section-kicker">♡ experience + projects</p>
-        <h2>Resume</h2>
-        <p>
-          View my resume for more details about my experience, coursework,
-          technical skills, and projects.
-        </p>
-        <!-- Replace resume.pdf with your actual resume filename -->
-        <a class="button small-button primary" href="resume.pdf" target="_blank">
-          ♡ View Resume
-        </a>
-        <p class="tiny-note">Add your PDF to this repository as <strong>resume.pdf</strong>.</p>
-      </div>
-
-      <div id="contact" class="info-card contact-card">
-        <p class="section-kicker">🎀 let's connect</p>
-        <h2>Contact</h2>
-        <p>I'd love to connect!</p>
-
-        <div class="socials">
-          <!-- Replace these with your actual links -->
-          <a href="mailto:ichandler@ltu.edu" aria-label="Email">✉</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">⌘</a>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience-section">
+      <div class="section-label">05 / experience</div>
+      <div class="experience-card">
+        <div class="exp-side">
+          <span class="trainer-badge">TRAINER<br>CARD</span>
+          <span class="exp-level">LV. 20+</span>
         </div>
-
-        <div class="contact-doodle">♡<br>☆</div>
+        <div class="exp-main">
+          <div class="experience-item">
+            <div><span class="project-type">Lawrence Technological University</span><h3>Help Desk Assistant</h3></div>
+            <p class="exp-description">Technical support, laptop quality-control checks, device readiness, documentation, and front-desk communication.</p>
+          </div>
+          <div class="experience-item">
+            <div><span class="project-type">Student Government</span><h3>Programming & Event Leadership</h3></div>
+            <p class="exp-description">Planning and coordinating campus programming while working with budgets, vendors, logistics, and student engagement.</p>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <div class="contact-decor">✦<br>♡<br>✧</div>
+        <div>
+          <div class="section-label">06 / contact</div>
+          <h2>let's make<br><span>something cool.</span></h2>
+          <p>I'm always happy to connect about engineering, design, projects, opportunities, or just nerdy ideas.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:ichandler@ltu.edu"><span>school email</span><b>ichandler@ltu.edu</b></a>
+          <a href="mailto:isabellachandler169@gmail.com"><span>personal email</span><b>isabellachandler169@gmail.com</b></a>
+          <a href="tel:+15863597988"><span>phone</span><b>586 · 359 · 7988</b></a>
+          <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener noreferrer"><span>linkedin</span><b>connect with me →</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="resume-strip">
+      <div>
+        <span>♡ want the short version?</span>
+        <h2>grab my resume.</h2>
+      </div>
+      <a class="button button-white" href="resume.pdf" target="_blank">view resume →</a>
     </section>
   </main>
 
   <footer>
-    <span>♡</span>
-    Thanks for visiting!
-    <span>♡</span>
-    <div class="footer-bow">🎀</div>
+    <div>♡ isabella chandler</div>
+    <div class="footer-center"><span class="tiny-pokeball"></span> built with curiosity + caffeine <span class="tiny-pokeball"></span></div>
+    <div>2026</div>
   </footer>
 </body>
 </html>
