@@ -1,0 +1,4 @@
+Add your actual resume PDF here and name it:
+resume.pdf
+
+The Resume button in index.html already points to assets/resume.pdf.
