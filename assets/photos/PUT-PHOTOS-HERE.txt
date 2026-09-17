@@ -1,0 +1,10 @@
+ADD YOUR PHOTOS HERE
+
+1. Put JPG/PNG photos in this folder.
+2. Open photos.html.
+3. Copy a gallery-item block.
+4. Change the image filename in src="assets/photos/YOUR-FILE.jpg".
+5. Change the text inside <figcaption>...</figcaption>.
+
+Example caption:
+<figcaption>BME lab day ♡</figcaption>

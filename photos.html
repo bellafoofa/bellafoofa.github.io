@@ -2,42 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photos and personal moments from Isabella Chandler's biomedical engineering and campus life.">
   <title>Photos | Isabella Chandler</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="decor decor-left" aria-hidden="true"><span>❧</span><i></i><i></i><b>✿</b></div>
-<div class="decor decor-right" aria-hidden="true"><span>❧</span><i></i><i></i><b>❀</b></div>
-<header class="site-header"><a class="brand" href="index.html"><span class="pokeball-dot" aria-hidden="true"></span> Isabella Chandler</a><nav><a href="index.html">Home</a><a href="index.html#projects">Projects</a><a href="index.html#experience">Experience</a><a class="active" href="photos.html">Photos</a><a href="assets/resume.pdf" target="_blank">Resume</a><a href="index.html#contact">Contact</a></nav></header>
-<main>
-<section class="photo-page shell">
-  <div class="section-label">PHOTO JOURNAL</div>
-  <h1>Life outside the lab <span>♡</span></h1>
-  <p class="page-intro">A little collection of lab days, campus events, student government, volunteering, and the people who make college memorable.</p>
-
-  <div class="photo-grid">
-    <figure class="photo-slot"><div class="photo-placeholder"><span>✿</span><strong>Lab life</strong><small>your photo here</small></div><figcaption>Working on a project, lab day, or engineering class.</figcaption></figure>
-    <figure class="photo-slot tall"><div class="photo-placeholder"><span>♡</span><strong>Student Government</strong><small>your photo here</small></div><figcaption>Campus leadership, events, or an executive board moment.</figcaption></figure>
-    <figure class="photo-slot"><div class="photo-placeholder"><span>❀</span><strong>Volunteering</strong><small>your photo here</small></div><figcaption>A volunteer event or community activity.</figcaption></figure>
-    <figure class="photo-slot wide"><div class="photo-placeholder"><span>⌁</span><strong>Campus memories</strong><small>your photo here</small></div><figcaption>A short caption makes this page feel personal without becoming too informal.</figcaption></figure>
-    <figure class="photo-slot"><div class="photo-placeholder"><span>🧬</span><strong>Engineering</strong><small>your photo here</small></div><figcaption>A prototype, presentation, poster, or favorite project moment.</figcaption></figure>
-    <figure class="photo-slot"><div class="photo-placeholder"><span>✦</span><strong>Events</strong><small>your photo here</small></div><figcaption>A campus event, celebration, or memory with friends.</figcaption></figure>
-  </div>
-
-  <div class="photo-help">
-    <strong>How to add a picture + caption</strong>
-    <p><b>1.</b> Put the image inside <code>assets/photos/</code>. For example: <code>assets/photos/student-government.jpg</code></p>
-    <p><b>2.</b> In <code>photos.html</code>, replace one placeholder block with:</p>
-    <pre>&lt;figure class="photo-slot"&gt;
-  &lt;img src="assets/photos/student-government.jpg" alt="Student Government event"&gt;
-  &lt;figcaption&gt;Planning an LTU campus event with Student Government.&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
-    <p><b>3.</b> Change the words inside <code>&lt;figcaption&gt;...&lt;/figcaption&gt;</code> to whatever short caption you want. The styling is already built in.</p>
-    <p><b>Tip:</b> You can keep adding <code>&lt;figure&gt;</code> blocks. The gallery will automatically arrange them into the cute collage layout.</p>
-  </div>
-</section>
-</main>
-<footer>Isabella Chandler <span>♡</span> Photo Journal</footer>
-</body></html>
+<body class="photos-page">
+  <header class="topbar"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark"><span></span></span><span>Isabella Chandler</span></a><nav class="nav-links"><a href="index.html#about">About</a><a href="index.html#projects">Projects</a><a href="index.html#experience">Experience</a><a class="active" href="photos.html">Life</a><a href="assets/resume.pdf" target="_blank" rel="noopener">Resume ↗</a><a class="nav-contact" href="index.html#contact">Let's talk</a></nav><button class="menu-button" aria-label="Open navigation">☰</button></div></header>
+  <main>
+    <section class="photo-hero section-shell"><div><div class="section-kicker">Life outside the lab <span>🌿</span></div><h1>A few of the people,<br><em>places &amp; projects</em>.</h1><p>I'm keeping this page a little more personal. Captions are intentionally short, and you can change them anytime.</p></div><div class="photo-hero-sticker">cute things<br>+<br>good memories</div></section>
+    <section class="section-shell photo-grid-page">
+      <figure class="gallery-item large"><img src="assets/photos/student-government-1082.jpeg" alt="Student Government group photo"><figcaption>Student Government — add your caption here ✿</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/photos/campus-portrait-2813.jpg" alt="Campus portrait"><figcaption>Campus life — add your caption here</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/photos/professional-portrait-0396.jpg" alt="Professional portrait"><figcaption>One of my professional portraits ♡</figcaption></figure>
+      <figure class="gallery-item note-gallery"><div class="photo-placeholder"><span>+</span><strong>Your next photo</strong><small>Drop a picture into<br><code>assets/photos/</code></small></div><figcaption>Replace this card with another memory.</figcaption></figure>
+      <figure class="gallery-item note-gallery"><div class="photo-placeholder"><span>+</span><strong>Lab / volunteering / friends</strong><small>Same idea — just add an image.</small></div><figcaption>Your caption can be as short as “BME lab day ♡”</figcaption></figure>
+    </section>
+    <section class="section-shell photo-help"><div class="photo-help-card"><div><div class="section-kicker">Easy to edit <span>✿</span></div><h2>Adding photos is simple.</h2><p>Put your image in <code>assets/photos/</code>, then copy a gallery block in <code>photos.html</code>. Change the filename in <code>src</code> and the sentence inside <code>figcaption</code>.</p></div><div class="caption-example"><span>example</span><strong>figcaption</strong><p>“BME lab day ♡”</p></div></div></section>
+  </main>
+  <footer><div><a href="index.html">← Back to Isabella's portfolio</a></div><div>Biomedical Engineering · LTU</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

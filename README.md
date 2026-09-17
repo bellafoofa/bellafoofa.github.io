@@ -1,22 +1,18 @@
-# Isabella Chandler Portfolio
+# Isabella Chandler Portfolio - redesign
 
-Light green, clean + cute Biomedical Engineering portfolio for GitHub Pages.
+This version is a full visual redesign of the portfolio with a soft greenhouse / BME aesthetic, botanical details, cute typography, a cleaner professional photo layout, concise project cards, project detail modals, and a personal photo page.
 
-## Included
-- Two professional portraits on the homepage
-- LinkedIn + Handshake links
-- Resume already placed at `assets/resume.pdf`
-- Clickable project cards with image galleries/details
-- Stronger experience descriptions
-- Separate photo journal page with caption instructions
-- Cute botanical / science-inspired decorations
-- DM Sans body font, Quicksand headings, Caveat accent font
+## GitHub upload
+Replace the files in your existing GitHub Pages repository with the contents of this folder. Keep `index.html` at the repository root.
 
-## Updating the homepage photos
-Replace `assets/profile.jpg` or `assets/professional-portrait-2.jpg` with a new image using the same filename.
+## Resume
+`assets/resume.pdf` is the current resume copy supplied for the website. Replace it with your updated PDF later using the same filename.
 
-## Adding photo-journal images
-Put images in `assets/photos/`, then edit `photos.html`. Each photo uses a `<figure>` with an `<img>` and `<figcaption>`.
+## Photos
+Put additional photos in `assets/photos/`. Then copy one of the `<figure class="gallery-item">` blocks in `photos.html`, change the image filename in `src`, and edit the `<figcaption>` text.
 
-## Changing a project preview
-In `index.html`, find the project card and change its `<img src="...">` path. Keep the image inside `assets/projects/...`.
+## Project preview images
+Project previews live under `assets/projects/<project-name>/`. The Revenge of the Buttoneers card currently uses `preview.png` from the supplied image.
+
+## Notes
+The project descriptions are intentionally short. The modal gives recruiters the most relevant problem/design/technical details without turning the portfolio into a second resume.

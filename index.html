@@ -3,211 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Isabella Chandler | Biomedical Engineering Portfolio">
+  <meta name="description" content="Isabella Chandler | Biomedical Engineering portfolio, projects, experience, and design work.">
   <title>Isabella Chandler | Biomedical Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="decor decor-left" aria-hidden="true"><span>❧</span><i></i><i></i><b>✿</b></div>
-  <div class="decor decor-right" aria-hidden="true"><span>❧</span><i></i><i></i><b>❀</b></div>
+  <div class="page-glow page-glow-a" aria-hidden="true"></div>
+  <div class="page-glow page-glow-b" aria-hidden="true"></div>
+  <div class="leaf-rail leaf-rail-left" aria-hidden="true">❧<span>·</span>❧<span>·</span>❧</div>
+  <div class="leaf-rail leaf-rail-right" aria-hidden="true">❧<span>·</span>❧<span>·</span>❧</div>
 
-  <header class="site-header">
-    <a class="brand" href="index.html"><span class="pokeball-dot" aria-hidden="true"></span> Isabella Chandler</a>
-    <nav>
-      <a class="active" href="index.html">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="photos.html">Photos</a>
-      <a href="assets/resume.pdf" target="_blank">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Isabella Chandler home">
+        <span class="brand-mark"><span></span></span>
+        <span>Isabella Chandler</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#life">Life</a>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+        <a class="nav-contact" href="#contact">Let's talk</a>
+      </nav>
+      <button class="menu-button" aria-label="Open navigation">☰</button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero shell">
+  <main id="top">
+    <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow">BIOMEDICAL ENGINEERING • DESIGN • HEALTHCARE</p>
-        <h1>Hi, I'm Isabella <span>♡</span></h1>
-        <p class="lead">I’m a Biomedical Engineering student who enjoys turning ideas into practical, human-centered technology through prototyping, testing, and thoughtful design.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">Explore my projects</a>
-          <a class="button ghost" href="assets/resume.pdf" target="_blank">View my resume</a>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> Biomedical Engineering · Design · Healthcare</div>
+        <h1>Building thoughtful things<br><em>that help people.</em></h1>
+        <p class="hero-lead">Hi, I'm Isabella. I'm a Biomedical Engineering student who likes turning real problems into practical prototypes, testing ideas, and making technology feel a little more human.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#projects">See my work <span>→</span></a>
+          <a class="button button-soft" href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="button button-soft" href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
         </div>
-        <div class="mini-stats">
-          <div><strong>2027</strong><span>Expected BME graduation</span></div>
-          <div><strong>2.5+ yrs</strong><span>Help Desk experience</span></div>
-          <div><strong>2 yrs</strong><span>Student Government</span></div>
-        </div>
-        <div class="hero-links">
-          <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
+        <div class="hero-facts">
+          <div><strong>2027</strong><span>BME graduation</span></div>
+          <div><strong>QC + QA</strong><span>quality mindset</span></div>
+          <div><strong>Hands-on</strong><span>design + prototyping</span></div>
         </div>
       </div>
 
-      <div class="hero-photo-wrap">
-        <div class="botanical botanical-one" aria-hidden="true">✿</div>
-        <div class="botanical botanical-two" aria-hidden="true">❀</div>
-        <div class="hero-photo-card photo-main">
-          <img src="assets/profile.jpg" alt="Professional portrait of Isabella Chandler">
-          <div class="photo-caption"><span>professional portrait</span><strong>Biomedical Engineering student</strong></div>
+      <div class="hero-visual">
+        <div class="hero-window">
+          <div class="window-top"><span></span><span></span><span></span><b>isabella / bme lab</b></div>
+          <div class="window-art"><img src="assets/greenhouse-doodle.svg" alt="Decorative greenhouse laboratory illustration"></div>
+          <div class="window-note"><span>currently building</span><strong>wearables · medical tech · human-centered design</strong></div>
         </div>
-        <div class="hero-photo-card photo-secondary">
-          <img src="assets/professional-portrait-2.jpg" alt="Second professional portrait of Isabella Chandler">
-          <div class="photo-caption"><span>another side of me</span><strong>curious • creative • hands-on</strong></div>
+        <div class="portrait-board">
+          <div class="portrait portrait-one"><img src="assets/profile.jpg" alt="Professional portrait of Isabella Chandler"><span>engineer ✿</span></div>
+          <div class="portrait portrait-two"><img src="assets/professional-portrait-2.jpg" alt="Professional portrait of Isabella Chandler"><span>curious ♡</span></div>
+          <div class="sticker sticker-leaf">✿</div>
+          <div class="sticker sticker-pokeball"><i></i></div>
         </div>
-        <div class="cute-badge" aria-hidden="true">♡</div>
       </div>
     </section>
 
-    <section class="about shell" id="about">
-      <div class="section-label">01 / ABOUT</div>
+    <section class="intro-strip">
+      <div class="section-shell intro-inner">
+        <span>01</span><p>Biomedical Engineering at Lawrence Technological University</p><i></i><p>Quality Science Education Certificate</p><i></i><p>Medical technology · wearables · quality · design</p>
+      </div>
+    </section>
+
+    <section class="section-shell about-section" id="about">
+      <div class="section-kicker">A little about me <span>✿</span></div>
       <div class="about-grid">
-        <div>
-          <h2>A little about me</h2>
-          <p>I’m studying Biomedical Engineering at Lawrence Technological University, with a growing interest in medical technology, quality, human-centered design, and hands-on problem solving.</p>
-          <p>I like projects where I can move from an idea to a physical prototype, test it, learn from what does not work, and improve the design.</p>
-          <div class="interest-row">
-            <span>Medical Technology</span><span>Quality &amp; Validation</span><span>Wearables</span><span>Human-Centered Design</span>
+        <div class="about-main">
+          <h2>I like the space between <em>engineering</em> and people.</h2>
+          <p>I’m drawn to projects where technical decisions have a direct effect on how someone uses, understands, or experiences a product. I especially enjoy wearable technology, medical-device concepts, quality, and hands-on prototyping.</p>
+          <p>My favorite part is the iteration: build something, test it, notice what is not working, and make the next version better.</p>
+        </div>
+        <aside class="about-card">
+          <div class="card-label">my toolkit</div>
+          <div class="chip-cloud">
+            <span>AutoCAD</span><span>MATLAB</span><span>C#</span><span>Excel</span><span>Prototyping</span><span>Testing</span><span>Quality</span><span>Documentation</span><span>BLE</span><span>Embedded Systems</span>
           </div>
-        </div>
-        <div class="about-note">
-          <div class="note-top">✿ quick facts</div>
-          <ul>
-            <li>Biomedical Engineering, LTU</li>
-            <li>Quality Science Education Certificate</li>
-            <li>AutoCAD • MATLAB • C# • Excel</li>
-            <li>Advanced Spanish</li>
-          </ul>
-          <div class="mini-doodle" aria-hidden="true">⌁ ♡ ⌁</div>
-        </div>
+          <div class="about-card-foot">Advanced Spanish · LTU · Southfield, MI</div>
+        </aside>
       </div>
     </section>
 
-    <section class="projects shell" id="projects">
+    <section class="section-shell projects-section" id="projects">
       <div class="section-heading">
-        <div>
-          <div class="section-label">02 / PROJECTS</div>
-          <h2>Things I've built</h2>
-        </div>
-        <p>Click a project for the full story.</p>
+        <div><div class="section-kicker">Selected projects <span>⌁</span></div><h2>Things I've built, tested &amp; explored.</h2></div>
+        <p>Short version first. Click any card for the useful details.</p>
       </div>
       <div class="project-grid">
-        <button class="project-card" data-project="nuitlume">
-          <img src="assets/projects/nuitlume/preview.png" alt="NuitLume project preview">
-          <div class="project-card-body"><span>Wearable Technology</span><h3>NuitLume</h3><p>Hands-free illumination built into a wearable shin device.</p><b>View project →</b></div>
+        <button class="project-card featured" data-project="nuitlume">
+          <div class="project-image"><img src="assets/projects/nuitlume/preview.png" alt="NuitLume project preview"><span class="project-number">01</span></div>
+          <div class="project-body"><div class="project-meta"><span>Wearable Technology</span><span>Human-Centered Design</span></div><h3>NuitLume</h3><p>Hands-free illumination integrated into a wearable shin device for low-light visibility.</p><div class="skill-line">wearable design · prototyping · product design</div></div>
         </button>
         <button class="project-card" data-project="headup">
-          <img src="assets/projects/headup/preview.png" alt="HeadUp project preview">
-          <div class="project-card-body"><span>Bioinstrumentation</span><h3>HeadUp</h3><p>A wearable posture-feedback system using IMU sensing.</p><b>View project →</b></div>
+          <div class="project-image"><img src="assets/projects/headup/preview.png" alt="HeadUp project preview"><span class="project-number">02</span></div>
+          <div class="project-body"><div class="project-meta"><span>Bioinstrumentation</span></div><h3>HeadUp</h3><p>Wearable posture feedback using IMU sensing, a ~15° threshold, and a 3-second delay.</p><div class="skill-line">IMU sensing · calibration · testing</div></div>
         </button>
         <button class="project-card" data-project="syncare">
-          <img src="assets/projects/syncare/preview.png" alt="SyncCare project preview">
-          <div class="project-card-body"><span>AI + Healthcare</span><h3>SyncCare</h3><p>A privacy-conscious wearable wellness concept.</p><b>View project →</b></div>
+          <div class="project-image"><img src="assets/projects/syncare/preview.png" alt="SyncCare project preview"><span class="project-number">03</span></div>
+          <div class="project-body"><div class="project-meta"><span>AI + Healthcare</span></div><h3>SyncCare</h3><p>Wearable wellness concept connecting visual cues, AI analysis, and simple user feedback.</p><div class="skill-line">wearables · AI concepts · privacy-aware design</div></div>
         </button>
         <button class="project-card" data-project="smart-collar">
-          <img src="assets/projects/smart-collar/preview.jpg" alt="Smart Collar project preview">
-          <div class="project-card-body"><span>Embedded Systems</span><h3>Smart Collar</h3><p>Bluetooth step tracking paired with automated feeding.</p><b>View project →</b></div>
+          <div class="project-image"><img src="assets/projects/smart-collar/preview.jpg" alt="Smart Collar project preview"><span class="project-number">04</span></div>
+          <div class="project-body"><div class="project-meta"><span>Embedded Systems</span><span>BLE</span></div><h3>Smart Collar</h3><p>Pet step tracking linked to an automated feeder through wireless communication.</p><div class="skill-line">CircuitPython · BLE · servo control</div></div>
         </button>
         <button class="project-card" data-project="insole">
-          <img src="assets/projects/insole/preview.png" alt="Pressure point insole project preview">
-          <div class="project-card-body"><span>Wearable / Materials</span><h3>Pressure-Point Insole</h3><p>A layered insole concept for targeted pressure feedback.</p><b>View project →</b></div>
+          <div class="project-image"><img src="assets/projects/insole/preview.png" alt="Pressure-point insole project preview"><span class="project-number">05</span></div>
+          <div class="project-body"><div class="project-meta"><span>Bioengineering</span><span>Materials</span></div><h3>Pressure-Point Insole</h3><p>Insole concept designed to reduce pressure, friction, and moisture while adding haptic feedback.</p><div class="skill-line">materials · 3D printing · wearable design</div></div>
         </button>
         <button class="project-card" data-project="presence-plant">
-          <img src="assets/projects/presence-plant/preview.png" alt="Presence Plant project preview">
-          <div class="project-card-body"><span>Human-Centered Design</span><h3>Presence Plant</h3><p>An interactive plant concept designed around presence and engagement.</p><b>View project →</b></div>
+          <div class="project-image"><img src="assets/projects/presence-plant/preview.png" alt="Presence Plant project preview"><span class="project-number">06</span></div>
+          <div class="project-body"><div class="project-meta"><span>Human-Computer Interaction</span></div><h3>Presence Plant</h3><p>Soft-robotic plant concept that communicates focus and availability in shared spaces.</p><div class="skill-line">sensors · soft robotics · HCI</div></div>
+        </button>
+        <button class="project-card" data-project="buttoneers">
+          <div class="project-image"><img src="assets/projects/buttoneers/preview.png" alt="The Revenge of the Buttoneers final prototype display"><span class="project-number">07</span></div>
+          <div class="project-body"><div class="project-meta"><span>Entrepreneurial Engineering</span><span>Design Process</span></div><h3>The Revenge of the Buttoneers</h3><p>Accessible dice-tower redesign developed through empathy, prototyping, customer feedback, and testing.</p><div class="skill-line">design thinking · prototyping · user feedback</div></div>
+        </button>
+        <button class="project-card" data-project="rids">
+          <div class="project-image"><img src="assets/projects/rids/preview.jpg" alt="R.I.D.S. recreation center project preview"><span class="project-number">08</span></div>
+          <div class="project-body"><div class="project-meta"><span>Systems + Planning</span></div><h3>R.I.D.S.</h3><p>New LTU student recreation center concept focused on community, wellness, and student engagement.</p><div class="skill-line">research · cost analysis · systems planning</div></div>
         </button>
       </div>
     </section>
 
-    <section class="experience shell" id="experience">
-      <div class="section-label">03 / EXPERIENCE</div>
-      <div class="experience-grid">
-        <article class="timeline-card">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">JAN 2025 — PRESENT</div>
-          <h3>Help Desk Assistant</h3>
-          <p class="org">Lawrence Technological University</p>
-          <ul class="experience-list">
-            <li>Provide front-line technical support to students, faculty, and staff, including in-person assistance and phone support.</li>
-            <li>Inspect, clean, test, image, and prepare Lenovo and Fujitsu laptops for reliable redistribution, following consistent quality-control checks.</li>
-            <li>Perform routine printer checks and help identify equipment issues before they affect day-to-day campus use.</li>
-          </ul>
-          <div class="tags"><span>Quality Control</span><span>Technical Support</span><span>Process Consistency</span><span>Excel</span></div>
-        </article>
-        <article class="timeline-card">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2024 — PRESENT</div>
-          <h3>Student Government</h3>
-          <p class="org">Lawrence Technological University</p>
-          <ul class="experience-list">
-            <li>Progressed from Student Body Senator to committee leadership and Executive Board programming leadership.</li>
-            <li>Coordinate campus programming, event logistics, vendors, schedules, and student-facing communication.</li>
-            <li>Help plan large-scale campus events with budgets exceeding $10,000 while balancing student experience, logistics, and execution.</li>
-          </ul>
-          <div class="tags"><span>Leadership</span><span>Event Planning</span><span>Budgeting</span><span>Communication</span></div>
-        </article>
-        <article class="timeline-card">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">APR — AUG 2024</div>
-          <h3>BME Lab Assistant</h3>
-          <p class="org">Lawrence Technological University</p>
-          <ul class="experience-list">
-            <li>Supported Biomedical Engineering summer-camp activities and hands-on lab experiences for students.</li>
-            <li>Organized lab materials, storage areas, and equipment to keep activities prepared and accessible.</li>
-            <li>Built experience working in a technical environment where organization, preparation, and reliability mattered.</li>
-          </ul>
-          <div class="tags"><span>Lab Support</span><span>Organization</span><span>Technical Environment</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="education shell">
-      <div class="section-label">04 / EDUCATION</div>
-      <div class="education-card">
-        <div><p class="eyebrow">LAWRENCE TECHNOLOGICAL UNIVERSITY</p><h2>B.S. Biomedical Engineering</h2><p>Expected May 2027 • Southfield, Michigan</p></div>
-        <div class="certificate"><strong>Quality Science Education Certificate</strong><span>Completed August 2025</span></div>
-      </div>
-    </section>
-
-    <section class="toolkit shell">
-      <div class="section-label">05 / TOOLKIT</div>
-      <div class="toolkit-grid">
-        <div><h2>What I bring to a team</h2><p>I enjoy roles that combine technical work with organization, communication, and continuous improvement.</p></div>
-        <div class="toolkit-chips"><span>Prototyping</span><span>Quality Mindset</span><span>Testing</span><span>Technical Support</span><span>CAD</span><span>MATLAB</span><span>Embedded Systems</span><span>Documentation</span><span>Team Leadership</span></div>
-      </div>
-    </section>
-
-    <section class="photos-teaser shell">
-      <div class="photos-teaser-copy"><div class="section-label">06 / LIFE OUTSIDE THE LAB</div><h2>A few more sides of me</h2><p>I also love being involved on campus, volunteering, and documenting the people and moments behind the work.</p><a class="button primary" href="photos.html">Open photo page →</a></div>
-      <div class="mini-gallery">
-        <div class="mini-placeholder"><span>✿</span><strong>Lab life</strong><small>Add your photo</small></div>
-        <div class="mini-placeholder"><span>♡</span><strong>Campus</strong><small>Add your photo</small></div>
-        <div class="mini-placeholder"><span>❀</span><strong>Volunteering</strong><small>Add your photo</small></div>
-      </div>
-    </section>
-
-    <section class="contact shell" id="contact">
-      <div class="contact-card">
-        <div><div class="section-label">07 / CONTACT</div><h2>Let's connect ♡</h2><p>Interested in biomedical engineering, medical technology, quality, or just want to say hi?</p></div>
-        <div class="contact-links">
-          <a href="mailto:isabellachandler169@gmail.com">isabellachandler169@gmail.com</a>
-          <a href="mailto:ichandler@ltu.edu">ichandler@ltu.edu</a>
-          <a href="tel:+15863597988">(586) 359-7988</a>
-          <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
+    <section class="experience-section" id="experience">
+      <div class="section-shell">
+        <div class="section-heading compact"><div><div class="section-kicker">Experience <span>♡</span></div><h2>What I've actually done.</h2></div><p>Focused on the work, not the word count.</p></div>
+        <div class="experience-list">
+          <article class="experience-card experience-featured">
+            <div class="experience-date">JAN 2025 — PRESENT</div>
+            <div class="experience-content"><div class="experience-title-row"><div><h3>Help Desk Assistant</h3><p>Lawrence Technological University</p></div><span class="experience-icon">⌘</span></div>
+              <ul><li>Provide front-line technical support to students, faculty, and staff in person and by phone.</li><li>Inspect, clean, test, image, and prepare Lenovo and Fujitsu laptops for redistribution using repeatable quality-control checks.</li><li>Check printers and campus equipment, identify issues, and communicate problems clearly so devices are ready for use.</li></ul>
+              <div class="tags"><span>Quality Control</span><span>Technical Support</span><span>Testing</span><span>Process Consistency</span></div>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-date">SEP 2024 — PRESENT</div>
+            <div class="experience-content"><div class="experience-title-row"><div><h3>Student Government</h3><p>Lawrence Technological University · Senator → Committee Leader → Executive Board</p></div><span class="experience-icon">✿</span></div>
+              <ul><li>Progressed through student leadership roles, including Safety, Health &amp; Mental Health Committee leadership and Executive Board programming.</li><li>Coordinate with Student Life, Senate, vendors, and students to plan campus events and manage logistics.</li><li>Help execute large campus programming, including events with budgets exceeding $10,000.</li></ul>
+              <div class="tags"><span>Leadership</span><span>Event Planning</span><span>Budgeting</span><span>Communication</span></div>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-date">APR — AUG 2024</div>
+            <div class="experience-content"><div class="experience-title-row"><div><h3>BME Lab Assistant</h3><p>Lawrence Technological University · BME Summer Camp</p></div><span class="experience-icon">⌬</span></div>
+              <ul><li>Supported hands-on Biomedical Engineering activities and summer-camp experiences for high school students.</li><li>Maintained Excel-based inventory and organized lab materials so activities and equipment were ready to go.</li><li>Worked in a technical environment where preparation, organization, and reliability mattered.</li></ul>
+              <div class="tags"><span>Lab Support</span><span>Excel</span><span>Inventory</span><span>Organization</span></div>
+            </div>
+          </article>
         </div>
+        <div class="other-experience"><span>Also:</span> Biomedical Engineering Society event support · customer service experience · community volunteering</div>
+      </div>
+    </section>
+
+    <section class="section-shell education-section">
+      <div class="education-grid">
+        <div><div class="section-kicker">Education <span>⌁</span></div><h2>B.S. Biomedical Engineering</h2><p class="school">Lawrence Technological University · Southfield, Michigan</p><p>Expected May 2027</p></div>
+        <div class="certificate-card"><span>Certificate</span><strong>Quality Science Education</strong><p>Completed August 2025 · Pathway for Patient Health</p><small>FDA quality regulations · GMP · risk assessment · data integrity · validation · privacy · change control</small></div>
+      </div>
+    </section>
+
+    <section class="section-shell life-section" id="life">
+      <div class="section-heading compact"><div><div class="section-kicker">Life outside the project files <span>🌿</span></div><h2>A little more Isabella.</h2></div><p>Campus, people, projects, and the occasional cute thing.</p></div>
+      <div class="life-grid">
+        <a class="life-photo tall" href="photos.html"><img src="assets/photos/student-government-1082.jpeg" alt="Student Government group photo"><span>Student Government</span></a>
+        <a class="life-photo" href="photos.html"><img src="assets/photos/campus-portrait-2813.jpg" alt="Campus portrait"><span>Campus life</span></a>
+        <div class="life-note"><div class="note-scribble">currently into...</div><h3>wearables<br>quality<br>cute stationery<br>good teamwork</h3><a href="photos.html">See the photo page →</a></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="section-shell contact-card">
+        <div class="contact-copy"><div class="section-kicker">Contact <span>♡</span></div><h2>Let's build something useful.</h2><p>I'm interested in biomedical engineering, medical technology, quality, product development, and hands-on opportunities where I can keep learning.</p></div>
+        <div class="contact-links"><a href="mailto:isabellachandler169@gmail.com"><span>Personal</span>isabellachandler169@gmail.com</a><a href="mailto:ichandler@ltu.edu"><span>LTU</span>ichandler@ltu.edu</a><a href="tel:+15863597988"><span>Phone</span>(586) 359-7988</a><div class="contact-socials"><a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a></div></div>
       </div>
     </section>
   </main>
 
-  <footer>Isabella Chandler <span>♡</span> Biomedical Engineering Portfolio</footer>
+  <footer><div>Isabella Chandler <span>♡</span> · Biomedical Engineering</div><div>Made with curiosity + too many browser tabs.</div></footer>
 
   <div class="modal" id="projectModal" aria-hidden="true">
     <div class="modal-backdrop" data-close></div>
-    <article class="modal-window" role="dialog" aria-modal="true">
+    <article class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" data-close aria-label="Close project">×</button>
       <div id="modalContent"></div>
     </article>

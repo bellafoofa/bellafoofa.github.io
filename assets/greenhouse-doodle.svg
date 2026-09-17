@@ -1,0 +1,28 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7FBF2"/><stop offset="1" stop-color="#DCEEDB"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8DBA8A"/><stop offset="1" stop-color="#4D8560"/></linearGradient>
+  </defs>
+  <rect x="150" y="72" width="610" height="430" rx="34" fill="url(#glass)" opacity=".86" stroke="#B5CFAF" stroke-width="7"/>
+  <path d="M455 75V501M154 286H757" stroke="#C2D8BD" stroke-width="5" opacity=".8"/>
+  <path d="M207 82L270 497M702 82L640 497" stroke="#C2D8BD" stroke-width="4" opacity=".65"/>
+  <path d="M145 508C260 457 324 467 408 511C499 559 600 542 770 484" stroke="#91B78E" stroke-width="10" stroke-linecap="round" opacity=".45"/>
+  <path d="M260 520C246 438 260 360 322 307" stroke="#5D8D68" stroke-width="10" stroke-linecap="round"/>
+  <path d="M274 405C229 393 207 362 219 330C259 329 288 355 274 405Z" fill="url(#leaf)"/>
+  <path d="M285 360C315 314 349 303 377 318C367 356 334 378 285 360Z" fill="#76A978"/>
+  <path d="M260 460C216 450 196 423 205 393C243 392 273 414 260 460Z" fill="#65976E"/>
+  <path d="M641 523C666 443 646 360 590 310" stroke="#5D8D68" stroke-width="10" stroke-linecap="round"/>
+  <path d="M626 408C674 394 697 361 684 330C644 329 616 355 626 408Z" fill="url(#leaf)"/>
+  <path d="M615 361C585 315 552 303 523 318C533 356 566 378 615 361Z" fill="#76A978"/>
+  <path d="M641 464C686 451 706 423 696 392C659 392 629 416 641 464Z" fill="#65976E"/>
+  <circle cx="458" cy="210" r="34" fill="#F3D97A" opacity=".95"/>
+  <path d="M445 209H471M458 196V222" stroke="#5D8D68" stroke-width="5" stroke-linecap="round"/>
+  <path d="M410 238C420 256 437 266 458 266C479 266 497 256 507 238" stroke="#5D8D68" stroke-width="5" stroke-linecap="round"/>
+  <path d="M401 209H383C366 209 354 221 354 238V254" stroke="#6E9D7A" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="354" cy="263" r="9" fill="#F0A8A8"/>
+  <path d="M520 209H538C555 209 567 221 567 238V254" stroke="#6E9D7A" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="567" cy="263" r="9" fill="#A6C9E9"/>
+  <path d="M435 160C421 139 424 117 445 105C463 119 468 140 455 160" fill="#9CC49B"/>
+  <path d="M478 160C469 139 477 119 500 112C511 133 502 151 478 160" fill="#6D9E76"/>
+  <text x="345" y="590" font-family="Nunito Sans, sans-serif" font-size="22" font-weight="700" fill="#53735B">LAB • DESIGN • GROW</text>
+</svg>
