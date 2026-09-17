@@ -1,34 +1,22 @@
 # Isabella Chandler Portfolio
 
-## Upload structure
-Upload the contents of this folder to the **root** of your GitHub Pages repository:
+Light green, clean + cute Biomedical Engineering portfolio for GitHub Pages.
 
-- `index.html`
-- `photos.html`
-- `style.css`
-- `script.js`
-- `assets/`
+## Included
+- Two professional portraits on the homepage
+- LinkedIn + Handshake links
+- Resume already placed at `assets/resume.pdf`
+- Clickable project cards with image galleries/details
+- Stronger experience descriptions
+- Separate photo journal page with caption instructions
+- Cute botanical / science-inspired decorations
+- DM Sans body font, Quicksand headings, Caveat accent font
 
-The `assets` folder already contains the project preview/detail images, your profile photo, and `resume.pdf`.
+## Updating the homepage photos
+Replace `assets/profile.jpg` or `assets/professional-portrait-2.jpg` with a new image using the same filename.
 
-## Changing a project preview image
-Open `index.html` and find the project card. Change the `src` value, for example:
+## Adding photo-journal images
+Put images in `assets/photos/`, then edit `photos.html`. Each photo uses a `<figure>` with an `<img>` and `<figcaption>`.
 
-`<img src="assets/projects/nuitlume/preview.png" ...>`
-
-to the filename of another image in that project's folder.
-
-For example, if you add `my-new-preview.jpg` to `assets/projects/nuitlume/`, use:
-
-`<img src="assets/projects/nuitlume/my-new-preview.jpg" ...>`
-
-## Adding photos
-Create `assets/photos/`, put your JPG/PNG photos there, and replace the placeholder blocks in `photos.html` with image tags such as:
-
-`<img src="assets/photos/lab-day.jpg" alt="Isabella in the lab">`
-
-## Resume
-The current resume is already included as `assets/resume.pdf`.
-
-## GitHub Pages
-Repository → Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save.
+## Changing a project preview
+In `index.html`, find the project card and change its `<img src="...">` path. Keep the image inside `assets/projects/...`.

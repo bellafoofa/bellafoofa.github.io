@@ -7,12 +7,15 @@
   <title>Isabella Chandler | Biomedical Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="decor decor-left" aria-hidden="true"><span>❧</span><i></i><i></i><b>✿</b></div>
+  <div class="decor decor-right" aria-hidden="true"><span>❧</span><i></i><i></i><b>❀</b></div>
+
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="pokeball-dot">◒</span> Isabella Chandler</a>
+    <a class="brand" href="index.html"><span class="pokeball-dot" aria-hidden="true"></span> Isabella Chandler</a>
     <nav>
       <a class="active" href="index.html">Home</a>
       <a href="#projects">Projects</a>
@@ -28,7 +31,7 @@
       <div class="hero-copy">
         <p class="eyebrow">BIOMEDICAL ENGINEERING • DESIGN • HEALTHCARE</p>
         <h1>Hi, I'm Isabella <span>♡</span></h1>
-        <p class="lead">I’m a Biomedical Engineering student who enjoys building thoughtful, hands-on solutions at the intersection of healthcare, technology, and human-centered design.</p>
+        <p class="lead">I’m a Biomedical Engineering student who enjoys turning ideas into practical, human-centered technology through prototyping, testing, and thoughtful design.</p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">Explore my projects</a>
           <a class="button ghost" href="assets/resume.pdf" target="_blank">View my resume</a>
@@ -38,13 +41,22 @@
           <div><strong>2.5+ yrs</strong><span>Help Desk experience</span></div>
           <div><strong>2 yrs</strong><span>Student Government</span></div>
         </div>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
+        </div>
       </div>
+
       <div class="hero-photo-wrap">
-        <div class="leaf leaf-a">✦</div>
-        <div class="leaf leaf-b">♡</div>
-        <div class="hero-photo-card">
+        <div class="botanical botanical-one" aria-hidden="true">✿</div>
+        <div class="botanical botanical-two" aria-hidden="true">❀</div>
+        <div class="hero-photo-card photo-main">
           <img src="assets/profile.jpg" alt="Professional portrait of Isabella Chandler">
-          <div class="photo-caption"><span>currently building</span><strong>people-centered technology</strong></div>
+          <div class="photo-caption"><span>professional portrait</span><strong>Biomedical Engineering student</strong></div>
+        </div>
+        <div class="hero-photo-card photo-secondary">
+          <img src="assets/professional-portrait-2.jpg" alt="Second professional portrait of Isabella Chandler">
+          <div class="photo-caption"><span>another side of me</span><strong>curious • creative • hands-on</strong></div>
         </div>
         <div class="cute-badge" aria-hidden="true">♡</div>
       </div>
@@ -55,8 +67,11 @@
       <div class="about-grid">
         <div>
           <h2>A little about me</h2>
-          <p>I’m studying Biomedical Engineering at Lawrence Technological University, with a focus on practical design, medical technology, quality, and problem solving.</p>
-          <p>I like projects where I can move from an idea to a physical prototype, test it, and figure out how to make it work better.</p>
+          <p>I’m studying Biomedical Engineering at Lawrence Technological University, with a growing interest in medical technology, quality, human-centered design, and hands-on problem solving.</p>
+          <p>I like projects where I can move from an idea to a physical prototype, test it, learn from what does not work, and improve the design.</p>
+          <div class="interest-row">
+            <span>Medical Technology</span><span>Quality &amp; Validation</span><span>Wearables</span><span>Human-Centered Design</span>
+          </div>
         </div>
         <div class="about-note">
           <div class="note-top">✿ quick facts</div>
@@ -66,6 +81,7 @@
             <li>AutoCAD • MATLAB • C# • Excel</li>
             <li>Advanced Spanish</li>
           </ul>
+          <div class="mini-doodle" aria-hidden="true">⌁ ♡ ⌁</div>
         </div>
       </div>
     </section>
@@ -114,24 +130,36 @@
           <div class="timeline-date">JAN 2025 — PRESENT</div>
           <h3>Help Desk Assistant</h3>
           <p class="org">Lawrence Technological University</p>
-          <p>Provide front-line technical support to students, faculty, and staff; answer calls and assist with technical questions; inspect, clean, test, and prepare laptops; and perform routine printer checks.</p>
-          <div class="tags"><span>Quality Control</span><span>Technical Support</span><span>Excel</span><span>Documentation</span></div>
+          <ul class="experience-list">
+            <li>Provide front-line technical support to students, faculty, and staff, including in-person assistance and phone support.</li>
+            <li>Inspect, clean, test, image, and prepare Lenovo and Fujitsu laptops for reliable redistribution, following consistent quality-control checks.</li>
+            <li>Perform routine printer checks and help identify equipment issues before they affect day-to-day campus use.</li>
+          </ul>
+          <div class="tags"><span>Quality Control</span><span>Technical Support</span><span>Process Consistency</span><span>Excel</span></div>
         </article>
         <article class="timeline-card">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2024 — PRESENT</div>
           <h3>Student Government</h3>
           <p class="org">Lawrence Technological University</p>
-          <p>Served as a Student Body Senator, led the Safety, Health & Mental Health Committee for a semester, and moved into Executive Board leadership as Vice President / Director of Programming.</p>
-          <div class="tags"><span>Event Planning</span><span>Leadership</span><span>Budgeting</span><span>Collaboration</span></div>
+          <ul class="experience-list">
+            <li>Progressed from Student Body Senator to committee leadership and Executive Board programming leadership.</li>
+            <li>Coordinate campus programming, event logistics, vendors, schedules, and student-facing communication.</li>
+            <li>Help plan large-scale campus events with budgets exceeding $10,000 while balancing student experience, logistics, and execution.</li>
+          </ul>
+          <div class="tags"><span>Leadership</span><span>Event Planning</span><span>Budgeting</span><span>Communication</span></div>
         </article>
         <article class="timeline-card">
           <div class="timeline-dot"></div>
           <div class="timeline-date">APR — AUG 2024</div>
           <h3>BME Lab Assistant</h3>
           <p class="org">Lawrence Technological University</p>
-          <p>Supported the BME summer camp and recruitment activities while maintaining Excel-based inventory and organization for the laboratory.</p>
-          <div class="tags"><span>Lab Support</span><span>Inventory</span><span>Excel</span></div>
+          <ul class="experience-list">
+            <li>Supported Biomedical Engineering summer-camp activities and hands-on lab experiences for students.</li>
+            <li>Organized lab materials, storage areas, and equipment to keep activities prepared and accessible.</li>
+            <li>Built experience working in a technical environment where organization, preparation, and reliability mattered.</li>
+          </ul>
+          <div class="tags"><span>Lab Support</span><span>Organization</span><span>Technical Environment</span></div>
         </article>
       </div>
     </section>
@@ -144,19 +172,32 @@
       </div>
     </section>
 
+    <section class="toolkit shell">
+      <div class="section-label">05 / TOOLKIT</div>
+      <div class="toolkit-grid">
+        <div><h2>What I bring to a team</h2><p>I enjoy roles that combine technical work with organization, communication, and continuous improvement.</p></div>
+        <div class="toolkit-chips"><span>Prototyping</span><span>Quality Mindset</span><span>Testing</span><span>Technical Support</span><span>CAD</span><span>MATLAB</span><span>Embedded Systems</span><span>Documentation</span><span>Team Leadership</span></div>
+      </div>
+    </section>
+
     <section class="photos-teaser shell">
-      <div class="photos-teaser-copy"><div class="section-label">05 / LIFE OUTSIDE THE LAB</div><h2>A few more sides of me</h2><p>I also love being involved on campus, volunteering, and documenting the people and moments behind the work.</p><a class="button primary" href="photos.html">Open photo page →</a></div>
-      <div class="mini-gallery"><div class="mini-placeholder">Add campus photo</div><div class="mini-placeholder">Add lab photo</div><div class="mini-placeholder">Add volunteering photo</div></div>
+      <div class="photos-teaser-copy"><div class="section-label">06 / LIFE OUTSIDE THE LAB</div><h2>A few more sides of me</h2><p>I also love being involved on campus, volunteering, and documenting the people and moments behind the work.</p><a class="button primary" href="photos.html">Open photo page →</a></div>
+      <div class="mini-gallery">
+        <div class="mini-placeholder"><span>✿</span><strong>Lab life</strong><small>Add your photo</small></div>
+        <div class="mini-placeholder"><span>♡</span><strong>Campus</strong><small>Add your photo</small></div>
+        <div class="mini-placeholder"><span>❀</span><strong>Volunteering</strong><small>Add your photo</small></div>
+      </div>
     </section>
 
     <section class="contact shell" id="contact">
       <div class="contact-card">
-        <div><div class="section-label">06 / CONTACT</div><h2>Let's connect ♡</h2><p>Interested in biomedical engineering, medical technology, or just want to say hi?</p></div>
+        <div><div class="section-label">07 / CONTACT</div><h2>Let's connect ♡</h2><p>Interested in biomedical engineering, medical technology, quality, or just want to say hi?</p></div>
         <div class="contact-links">
           <a href="mailto:isabellachandler169@gmail.com">isabellachandler169@gmail.com</a>
           <a href="mailto:ichandler@ltu.edu">ichandler@ltu.edu</a>
           <a href="tel:+15863597988">(586) 359-7988</a>
           <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
         </div>
       </div>
     </section>
