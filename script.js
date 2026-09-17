@@ -1,24 +1,27 @@
 const projects = {
   mopec: {
     title: 'Mopec Medical AI Senior Project',
-    category: 'Senior Capstone · Medical AI',
-    subtitle: 'Company-sponsored BME project focused on developing, training, and fine-tuning an AI model for a healthcare-facing application.',
-    hero: 'assets/projects/syncare/privacy.png',
-    gallery: ['assets/projects/syncare/app.png', 'assets/projects/syncare/preview.png'],
-    overview: 'This is my BME company-sponsored senior project with Mopec. Our team is developing, training, and fine-tuning an AI model intended for future use in hospitals, medical facilities, and related healthcare environments. Because the project has just started, the emphasis right now is on creating a sound development process rather than presenting final performance results.',
+    category: 'Senior Capstone · Company Sponsored',
+    subtitle: 'Early-stage BME senior project focused on developing, training, and fine-tuning an AI model for a healthcare-facing company application.',
+    hero: 'assets/projects/mopec/preview-generated.png',
+    gallery: [
+      'assets/projects/mopec/model-split.png',
+      'assets/projects/mopec/vlm-workflow.png'
+    ],
+    overview: 'This is my BME company-sponsored senior project with Mopec. Our team is developing, training, and fine-tuning an AI model intended for future use in hospitals, medical facilities, and related healthcare environments. Because the project has just started, the emphasis right now is on building a strong development workflow rather than presenting final performance results.',
     challenge: [
-      'Define a realistic AI-development workflow for a healthcare-related use case while the project scope and available data are still being refined.',
-      'Work with limited or unevenly available public datasets and make careful decisions about what can be used for training, validation, and testing.',
-      'Build toward a model that can be evaluated clearly and improved through controlled iteration rather than one-off experimentation.'
+      'Define a realistic healthcare AI workflow while the exact use case, scope, and available data are still being refined.',
+      'Work with limited or unevenly available datasets, especially when public histopathology datasets are more common than gross-tissue datasets.',
+      'Set up a process that separates training, validation, and testing clearly so future results can be interpreted more responsibly.'
     ],
     approach: [
-      'Review relevant datasets and determine how dataset availability may shape the final project scope.',
-      'Use a structured training / validation / test split so model development, tuning, and final evaluation remain distinct.',
-      'Train and fine-tune the model iteratively while documenting decisions, limitations, and future evaluation needs.',
-      'Continue adding results, visuals, and performance metrics as the project progresses.'
+      'Review datasets and literature to understand what data are available and where dataset gaps may influence project direction.',
+      'Use a structured training / validation / test split so teaching, tuning, and final evaluation remain distinct.',
+      'Develop and fine-tune the model iteratively while documenting assumptions, limitations, and future evaluation needs.',
+      'Continue adding results, visuals, and technical insights as the project becomes more tangible over time.'
     ],
     skills: ['Medical AI', 'Machine-learning workflow', 'Model training', 'Fine-tuning', 'Dataset review', 'Validation planning', 'Technical documentation', 'Team collaboration'],
-    employerTakeaways: ['Early-stage experience working on a company-sponsored healthcare AI problem', 'Exposure to structured model-development practices and dataset constraints', 'Strong fit for medical-technology, product-development, data, and validation-oriented environments']
+    employerTakeaways: ['Early exposure to a real company-sponsored healthcare AI problem', 'Experience thinking about data limitations, evaluation structure, and scope definition', 'Relevant foundation for medical technology, product development, AI, and quality-oriented roles']
   },
   nuitlume: {
     title: 'NuitLume',
@@ -42,7 +45,7 @@ const projects = {
     title: 'HeadUp',
     category: 'Bioinstrumentation',
     subtitle: 'Posture-feedback system using inertial sensing and threshold-based feedback logic.',
-    hero: 'assets/projects/headup/preview.png',
+    hero: 'assets/projects/headup/preview-generated.png',
     gallery: ['assets/projects/headup/design.png', 'assets/projects/headup/testing.png'],
     overview: 'HeadUp was built around a straightforward question: how can a wearable detect sustained poor posture and alert the user without becoming overly sensitive? The project combines sensing, threshold tuning, and testing around a real behavior-based problem.',
     challenge: [
@@ -60,7 +63,7 @@ const projects = {
     title: 'SyncCare',
     category: 'Healthcare Technology + AI',
     subtitle: 'Wearable wellness concept linking image-based input, AI analysis, and supportive user feedback.',
-    hero: 'assets/projects/syncare/preview.png',
+    hero: 'assets/projects/syncare/preview-generated.png',
     gallery: ['assets/projects/syncare/app.png', 'assets/projects/syncare/privacy.png'],
     overview: 'SyncCare is a wellness-oriented concept exploring how a wearable could use visual cues and AI analysis to offer simple suggestions such as hydrating, resting, walking, or taking a break. The project sits at the intersection of healthcare technology, user experience, and privacy-aware design.',
     challenge: [
@@ -78,7 +81,7 @@ const projects = {
     title: 'Smart Collar',
     category: 'Embedded Systems + BLE',
     subtitle: 'Pet activity-tracking collar connected to an automated feeder.',
-    hero: 'assets/projects/smart-collar/preview.jpg',
+    hero: 'assets/projects/smart-collar/preview-generated.png',
     gallery: ['assets/projects/smart-collar/tag.jpg', 'assets/projects/smart-collar/app.png'],
     overview: 'This project connected a wearable tracker to an automated feeder so a pet’s step count could trigger a reward workflow. It combines embedded devices, wireless communication, movement tracking, and physical actuation.',
     challenge: [
@@ -96,7 +99,7 @@ const projects = {
     title: 'Pressure-Point Insole',
     category: 'Biomechanics + Product Development',
     subtitle: 'Insole concept focused on pressure redistribution, friction reduction, and early feedback.',
-    hero: 'assets/projects/insole/preview.png',
+    hero: 'assets/projects/insole/preview-generated.png',
     gallery: ['assets/projects/insole/layers.jpg', 'assets/projects/insole/system.png'],
     overview: 'This concept narrowed a broad medical problem into a more specific design target: helping address factors related to pressure injuries at the foot. The design combines materials thinking, physical structure, and the idea of supportive feedback.',
     challenge: [
@@ -114,8 +117,8 @@ const projects = {
     title: 'Presence Plant',
     category: 'Human-Computer Interaction',
     subtitle: 'Soft-robotic ambient object that communicates focus and availability in shared spaces.',
-    hero: 'assets/projects/presence-plant/hero.png',
-    gallery: ['assets/projects/presence-plant/system.png', 'assets/projects/presence-plant/preview.png'],
+    hero: 'assets/projects/presence-plant/preview-generated.png',
+    gallery: ['assets/projects/presence-plant/system.png', 'assets/projects/presence-plant/hero.png'],
     overview: 'Presence Plant rethinks a “do not disturb” signal as something softer and more expressive. Instead of a harsh notification, the design explores an ambient object that changes behavior based on sensing and communicates a person’s availability in a more social way.',
     challenge: [
       'Create a signal for focus and availability that feels friendly rather than awkward or abrupt.',
@@ -129,12 +132,12 @@ const projects = {
     employerTakeaways: ['Demonstrates interdisciplinary thinking', 'Shows sensitivity to user experience and environment', 'Strong example of concepting beyond purely functional engineering']
   },
   buttoneers: {
-    title: 'The Revenge of the Buttoneers',
-    category: 'Entrepreneurial Engineering Design',
+    title: 'ConnectUs Accessibility Design Project',
+    category: 'Entrepreneurial Engineering Design Studio',
     subtitle: 'Accessible dice-tower redesign informed by empathy, prototyping, and customer feedback.',
-    hero: 'assets/projects/buttoneers/preview.jpg',
+    hero: 'assets/projects/buttoneers/revenge-8107.jpeg',
     gallery: ['assets/projects/buttoneers/prototype.jpg', 'assets/projects/buttoneers/cards.png'],
-    overview: 'The project focused on improving an existing station experience by redesigning the dice interaction into something more accessible, engaging, and easier to use. It reflects a full design-process approach, not just a final artifact.',
+    overview: 'This project focused on improving an existing station experience by redesigning the dice interaction into something more accessible, engaging, and easier to use. It reflects a full design-process approach, not just a final artifact.',
     challenge: [
       'The original dice station had usability and accessibility issues, took up table space, and reduced engagement for some participants.',
       'The team needed a solution that responded to customer needs, physical constraints, and iterative feedback.'
@@ -147,12 +150,12 @@ const projects = {
     employerTakeaways: ['Strong example of the engineering design process', 'Shows ability to incorporate feedback into design revisions', 'Relevant to product-development and human-factors conversations']
   },
   rids: {
-    title: 'R.I.D.S.',
-    category: 'Systems Planning + Research',
-    subtitle: 'Student recreation center concept connecting wellness, campus life, and planning decisions.',
-    hero: 'assets/projects/rids/preview.jpg',
+    title: 'Recreation Planning Team Project',
+    category: 'Technical & Professional Communication',
+    subtitle: 'Student recreation-center concept connecting wellness, campus life, planning, and technical communication.',
+    hero: 'assets/projects/rids/preview-generated.png',
     gallery: ['assets/projects/rids/plan.jpg'],
-    overview: 'R.I.D.S. explored what a student recreation center could provide for campus culture, wellness, and engagement. While less device-focused than some of my other work, it still involved research, planning, tradeoffs, and systems-level thinking.',
+    overview: 'This project explored what a student recreation center could provide for campus culture, wellness, and engagement. While less device-focused than some of my other work, it still involved research, planning, tradeoffs, and systems-level thinking.',
     challenge: [
       'Define what features and infrastructure would make a campus recreation center useful, realistic, and impactful.',
       'Think beyond the building itself to the effect on student engagement, wellbeing, and community.'
@@ -161,7 +164,7 @@ const projects = {
       'Considered amenities, infrastructure, utilities, maintenance, and overall cost in building the proposal.',
       'Connected planning decisions to student outcomes such as physical activity, sense of community, and campus involvement.'
     ],
-    skills: ['Research', 'Systems thinking', 'Planning', 'Presentation', 'Team collaboration'],
+    skills: ['Research', 'Systems thinking', 'Planning', 'Presentation', 'Technical communication'],
     employerTakeaways: ['Shows broader problem framing', 'Demonstrates planning and analytical thinking', 'Useful complement to more hardware-centered project work']
   }
 };
@@ -254,7 +257,6 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeProject();
 });
 
-// Simple generated ambient soundscape: filtered noise + soft occasional chirps.
 let ambience = {
   ctx: null,
   sources: [],
