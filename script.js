@@ -1,19 +1,380 @@
 const projects = {
-  nuitlume:{title:'NuitLume',category:'Wearable Technology',subtitle:'Hands-free illumination integrated into a wearable shin device.',images:['assets/projects/nuitlume/final.png','assets/projects/nuitlume/components.png','assets/projects/nuitlume/preview.png'],details:[['Problem','Traditional flashlights occupy a hand and can be inconvenient during movement. The project explored how lighting could be integrated directly into a wearable form.'],['Design','A wearable shin concept with integrated LEDs, power, and controls, developed around visibility, comfort, and hands-free use.'],['What I practiced','Wearable product design, prototyping, human-centered design, and translating a user need into a physical concept.'],['Skills','Wearable design · prototyping · product design · user-centered design']]},
-  headup:{title:'HeadUp',category:'Bioinstrumentation',subtitle:'A wearable posture-feedback system using inertial sensing.',images:['assets/projects/headup/design.png','assets/projects/headup/testing.png','assets/projects/headup/preview.png'],details:[['Goal','Detect prolonged head-down posture and provide feedback when the user maintains poor posture.'],['Technical approach','The system uses IMU-based sensing with an approximately 15° posture threshold and a 3-second delay before feedback is triggered.'],['Testing','Testing focused on distinguishing acceptable and poor posture while tuning threshold and timing to reduce unnecessary alerts.'],['Skills','IMU sensing · calibration · embedded systems · testing · data interpretation']]},
-  syncare:{title:'SyncCare',category:'AI + Healthcare',subtitle:'A wearable wellness concept connecting sensing, AI, and simple feedback.',images:['assets/projects/syncare/preview.png','assets/projects/syncare/app.png','assets/projects/syncare/privacy.png'],details:[['Concept','SyncCare explores a wearable wellness assistant that uses visual cues and AI to offer simple suggestions such as taking a break, stretching, hydrating, or resting.'],['System','The concept combines a wearable sensing device, an AI analysis workflow, and a simple user-facing recommendation interface.'],['Design focus','Privacy-conscious interaction, low-friction feedback, and a wellness experience that feels supportive rather than overwhelming.'],['Skills','Wearable technology · AI concepts · human-centered design · privacy-aware product design']]},
-  'smart-collar':{title:'Smart Collar',category:'Embedded Systems',subtitle:'A smart pet step tracker connected to an automated feeder.',images:['assets/projects/smart-collar/preview.jpg','assets/projects/smart-collar/tag.jpg','assets/projects/smart-collar/app.png'],details:[['Need','Support pet activity tracking, customizable step goals, and healthier eating habits for pets and their owners.'],['System','A Circuit Playground Bluefruit wearable tracks movement and communicates wirelessly with a second board controlling a servo-based feeder.'],['Interaction','The prototype connects activity tracking to an automated response: when the step goal is reached and the pet is near the feeder, food or treats can be dispensed.'],['Skills','CircuitPython · BLE / wireless communication · orientation tracking · servo control · wearable electronics']]},
-  insole:{title:'Pressure-Point Insole',category:'Bioengineering + Materials',subtitle:'A wearable insole concept for reducing foot pressure, friction, and moisture.',images:['assets/projects/insole/layers.jpg','assets/projects/insole/system.png','assets/projects/insole/preview.png'],details:[['Need','Pressure ulcers can be linked to sustained pressure, friction, shear, and moisture. The project narrowed a broad problem to foot pressure injuries.'],['Design','The concept combines composite gel and 3D-printed material to redistribute pressure, with a modular design intended to fit within standard footwear.'],['Feedback','A proposed haptic system could alert users when static pressure has been applied for too long, with a mobile-app component for notifications.'],['Skills','Materials selection · 3D printing · wearable design · pressure redistribution · product development']]},
-  'presence-plant':{title:'Presence Plant',category:'Human-Computer Interaction',subtitle:'A soft-robotic plant that communicates focus and availability in shared spaces.',images:['assets/projects/presence-plant/hero.png','assets/projects/presence-plant/system.png','assets/projects/presence-plant/preview.png'],details:[['User need','College students in shared rooms may need a way to signal focus without making the interaction feel rude or awkward.'],['How it works','A mmWave presence sensor and MEMS microphone array are paired with an ESP32-S3, servos, and an RGB LED matrix to create an expressive plant-like interface.'],['Design idea','Drooping and blooming behaviors communicate availability in a softer, more social way than a simple “Do Not Disturb” signal.'],['Skills','Sensors · soft robotics · ESP32-S3 · HCI · physical interaction design']]},
-  buttoneers:{title:'The Revenge of the Buttoneers',category:'Entrepreneurial Engineering Design',subtitle:'An accessible dice-tower redesign developed through empathy, prototyping, customer feedback, and testing.',images:['assets/projects/buttoneers/preview.png','assets/projects/buttoneers/prototype.jpg','assets/projects/buttoneers/cards.png'],details:[['Problem','Station 4 used a partially functional dice shaker that took time, occupied table space, and reduced engagement for participants with a range of needs.'],['Design process','The team used customer needs, patented-device research, a concept-selection process, and multiple prototype levels to move from early ideas to a refined dice tower.'],['Iteration','Customer feedback influenced features such as a dice magazine, simplified trays, a button-activated drop mechanism, and accessible dimensions.'],['Skills','Empathy · design thinking · concept selection · prototyping · user feedback · testing']]},
-  rids:{title:'R.I.D.S.',category:'Systems + Planning',subtitle:'A new LTU student recreation center concept focused on community, wellness, and engagement.',images:['assets/projects/rids/plan.jpg','assets/projects/rids/preview.jpg'],details:[['Goal','Create a modern space for students to exercise, socialize, study, and participate in recreational activities.'],['Planning','The project considered facility goals, amenities, infrastructure, utilities, construction cost, and annual maintenance.'],['Impact considered','The team connected recreation-center design to student engagement, campus community, physical activity, and academic success.'],['Skills','Research · systems planning · cost analysis · teamwork · presentation']]}
+  mopec: {
+    title: 'Mopec Medical AI Senior Project',
+    category: 'Senior Capstone · Medical AI',
+    subtitle: 'Company-sponsored BME project focused on developing, training, and fine-tuning an AI model for a healthcare-facing application.',
+    hero: 'assets/projects/syncare/privacy.png',
+    gallery: ['assets/projects/syncare/app.png', 'assets/projects/syncare/preview.png'],
+    overview: 'This is my BME company-sponsored senior project with Mopec. Our team is developing, training, and fine-tuning an AI model intended for future use in hospitals, medical facilities, and related healthcare environments. Because the project has just started, the emphasis right now is on creating a sound development process rather than presenting final performance results.',
+    challenge: [
+      'Define a realistic AI-development workflow for a healthcare-related use case while the project scope and available data are still being refined.',
+      'Work with limited or unevenly available public datasets and make careful decisions about what can be used for training, validation, and testing.',
+      'Build toward a model that can be evaluated clearly and improved through controlled iteration rather than one-off experimentation.'
+    ],
+    approach: [
+      'Review relevant datasets and determine how dataset availability may shape the final project scope.',
+      'Use a structured training / validation / test split so model development, tuning, and final evaluation remain distinct.',
+      'Train and fine-tune the model iteratively while documenting decisions, limitations, and future evaluation needs.',
+      'Continue adding results, visuals, and performance metrics as the project progresses.'
+    ],
+    skills: ['Medical AI', 'Machine-learning workflow', 'Model training', 'Fine-tuning', 'Dataset review', 'Validation planning', 'Technical documentation', 'Team collaboration'],
+    employerTakeaways: ['Early-stage experience working on a company-sponsored healthcare AI problem', 'Exposure to structured model-development practices and dataset constraints', 'Strong fit for medical-technology, product-development, data, and validation-oriented environments']
+  },
+  nuitlume: {
+    title: 'NuitLume',
+    category: 'Wearable Technology',
+    subtitle: 'Hands-free lighting concept for low-light visibility and more independent movement.',
+    hero: 'assets/projects/nuitlume/final.png',
+    gallery: ['assets/projects/nuitlume/components.png', 'assets/projects/nuitlume/preview.png'],
+    overview: 'NuitLume explores how a wearable product could replace the inconvenience of carrying a flashlight. The concept focuses on visibility, comfort, and making light available exactly where the user needs it during movement.',
+    challenge: [
+      'Translate a simple need, portable lighting, into a wearable product rather than a hand-held device.',
+      'Think through comfort, placement, and how illumination should support the user instead of getting in the way.'
+    ],
+    approach: [
+      'Developed a wearable lighting concept with integrated LEDs, power, and controls in a lower-body form factor.',
+      'Considered breathability, washability, visibility, and practical use cases such as jogging, hiking, and low-light activity.'
+    ],
+    skills: ['Wearable product design', 'Concept development', 'Prototyping', 'User-centered design', 'Physical product thinking'],
+    employerTakeaways: ['Translating user pain points into a product concept', 'Balancing function and wearability', 'Clear connection between need, design choice, and use context']
+  },
+  headup: {
+    title: 'HeadUp',
+    category: 'Bioinstrumentation',
+    subtitle: 'Posture-feedback system using inertial sensing and threshold-based feedback logic.',
+    hero: 'assets/projects/headup/preview.png',
+    gallery: ['assets/projects/headup/design.png', 'assets/projects/headup/testing.png'],
+    overview: 'HeadUp was built around a straightforward question: how can a wearable detect sustained poor posture and alert the user without becoming overly sensitive? The project combines sensing, threshold tuning, and testing around a real behavior-based problem.',
+    challenge: [
+      'Detect poor posture in a way that is noticeable and useful, not noisy or annoying.',
+      'Tune decision thresholds so the device responds to sustained posture changes rather than momentary movement.'
+    ],
+    approach: [
+      'Used IMU-based sensing with an approximately 15° threshold and a 3-second delay before feedback.',
+      'Tested timing and angle settings to distinguish acceptable head position from sustained head-down posture.'
+    ],
+    skills: ['IMU sensing', 'Calibration', 'Embedded-system logic', 'Testing and threshold tuning', 'Data interpretation'],
+    employerTakeaways: ['Good example of closed-loop sensing and feedback', 'Shows calibration and basic signal-to-decision logic', 'Highlights iterative testing rather than just concept sketching']
+  },
+  syncare: {
+    title: 'SyncCare',
+    category: 'Healthcare Technology + AI',
+    subtitle: 'Wearable wellness concept linking image-based input, AI analysis, and supportive user feedback.',
+    hero: 'assets/projects/syncare/preview.png',
+    gallery: ['assets/projects/syncare/app.png', 'assets/projects/syncare/privacy.png'],
+    overview: 'SyncCare is a wellness-oriented concept exploring how a wearable could use visual cues and AI analysis to offer simple suggestions such as hydrating, resting, walking, or taking a break. The project sits at the intersection of healthcare technology, user experience, and privacy-aware design.',
+    challenge: [
+      'Design a wellness product that feels supportive rather than invasive or overwhelming.',
+      'Think through how AI might add value while still respecting privacy and keeping the user experience simple.'
+    ],
+    approach: [
+      'Built the concept around a SenseCAP-style wearable and an app workflow that interprets image-based cues.',
+      'Focused on user-facing simplicity, calm interactions, and privacy-first design choices when thinking through the system.'
+    ],
+    skills: ['AI product concepts', 'Healthcare UX', 'Wearable systems thinking', 'Privacy-aware design', 'System-level communication'],
+    employerTakeaways: ['Shows ability to frame an AI idea around real user needs', 'Highlights product thinking, not just technical novelty', 'Strong fit for healthcare-technology and early product-development conversations']
+  },
+  'smart-collar': {
+    title: 'Smart Collar',
+    category: 'Embedded Systems + BLE',
+    subtitle: 'Pet activity-tracking collar connected to an automated feeder.',
+    hero: 'assets/projects/smart-collar/preview.jpg',
+    gallery: ['assets/projects/smart-collar/tag.jpg', 'assets/projects/smart-collar/app.png'],
+    overview: 'This project connected a wearable tracker to an automated feeder so a pet’s step count could trigger a reward workflow. It combines embedded devices, wireless communication, movement tracking, and physical actuation.',
+    challenge: [
+      'Create a simple system where wearable activity data can trigger a physical action at a second device.',
+      'Keep the build approachable while still integrating sensing, communication, and actuation.'
+    ],
+    approach: [
+      'Used Circuit Playground Bluefruit boards and BLE communication to send activity information from the wearable tracker to the feeder.',
+      'Linked step tracking with servo actuation so the feeder could dispense and then re-close after the goal condition was met.'
+    ],
+    skills: ['CircuitPython', 'BLE / wireless communication', 'Wearable electronics', 'Servo control', 'Prototype integration'],
+    employerTakeaways: ['Shows hardware-software integration', 'Demonstrates logic across multiple devices', 'Useful example of prototyping within cost and hardware constraints']
+  },
+  insole: {
+    title: 'Pressure-Point Insole',
+    category: 'Biomechanics + Product Development',
+    subtitle: 'Insole concept focused on pressure redistribution, friction reduction, and early feedback.',
+    hero: 'assets/projects/insole/preview.png',
+    gallery: ['assets/projects/insole/layers.jpg', 'assets/projects/insole/system.png'],
+    overview: 'This concept narrowed a broad medical problem into a more specific design target: helping address factors related to pressure injuries at the foot. The design combines materials thinking, physical structure, and the idea of supportive feedback.',
+    challenge: [
+      'Move from a large healthcare issue to a more actionable product direction.',
+      'Think about pressure, friction, shear, moisture, comfort, and practical wearability in a single concept.'
+    ],
+    approach: [
+      'Proposed a layered insole using composite gel and 3D-printed components to help redistribute pressure and improve comfort.',
+      'Included a concept for haptic or app-based feedback to alert the user when prolonged static pressure might be occurring.'
+    ],
+    skills: ['Materials selection', '3D printing', 'Biomechanics thinking', 'Wearable / product design', 'Medical-device style problem framing'],
+    employerTakeaways: ['Good example of narrowing a clinical problem into a tangible design concept', 'Shows systems thinking across materials and feedback', 'Relevant to orthotics, assistive products, and medical-device ideation']
+  },
+  'presence-plant': {
+    title: 'Presence Plant',
+    category: 'Human-Computer Interaction',
+    subtitle: 'Soft-robotic ambient object that communicates focus and availability in shared spaces.',
+    hero: 'assets/projects/presence-plant/hero.png',
+    gallery: ['assets/projects/presence-plant/system.png', 'assets/projects/presence-plant/preview.png'],
+    overview: 'Presence Plant rethinks a “do not disturb” signal as something softer and more expressive. Instead of a harsh notification, the design explores an ambient object that changes behavior based on sensing and communicates a person’s availability in a more social way.',
+    challenge: [
+      'Create a signal for focus and availability that feels friendly rather than awkward or abrupt.',
+      'Use sensing and movement to communicate state in a way people can read intuitively.'
+    ],
+    approach: [
+      'Combined a mmWave presence sensor, MEMS microphone array, ESP32-S3, servos, and LED output into a plant-like form.',
+      'Used blooming and drooping behaviors to make status communication more ambient and human.'
+    ],
+    skills: ['ESP32-S3', 'Sensors', 'Soft robotics', 'HCI', 'Physical interaction design'],
+    employerTakeaways: ['Demonstrates interdisciplinary thinking', 'Shows sensitivity to user experience and environment', 'Strong example of concepting beyond purely functional engineering']
+  },
+  buttoneers: {
+    title: 'The Revenge of the Buttoneers',
+    category: 'Entrepreneurial Engineering Design',
+    subtitle: 'Accessible dice-tower redesign informed by empathy, prototyping, and customer feedback.',
+    hero: 'assets/projects/buttoneers/preview.jpg',
+    gallery: ['assets/projects/buttoneers/prototype.jpg', 'assets/projects/buttoneers/cards.png'],
+    overview: 'The project focused on improving an existing station experience by redesigning the dice interaction into something more accessible, engaging, and easier to use. It reflects a full design-process approach, not just a final artifact.',
+    challenge: [
+      'The original dice station had usability and accessibility issues, took up table space, and reduced engagement for some participants.',
+      'The team needed a solution that responded to customer needs, physical constraints, and iterative feedback.'
+    ],
+    approach: [
+      'Used empathy work, customer-needs gathering, patent and concept review, concept selection, and multiple prototype stages.',
+      'Refined the design through feedback into a dice tower with a more streamlined interaction and clearer accessibility-minded features.'
+    ],
+    skills: ['Design thinking', 'Concept selection', 'Prototyping', 'User feedback', 'Accessibility considerations', 'Team-based design'],
+    employerTakeaways: ['Strong example of the engineering design process', 'Shows ability to incorporate feedback into design revisions', 'Relevant to product-development and human-factors conversations']
+  },
+  rids: {
+    title: 'R.I.D.S.',
+    category: 'Systems Planning + Research',
+    subtitle: 'Student recreation center concept connecting wellness, campus life, and planning decisions.',
+    hero: 'assets/projects/rids/preview.jpg',
+    gallery: ['assets/projects/rids/plan.jpg'],
+    overview: 'R.I.D.S. explored what a student recreation center could provide for campus culture, wellness, and engagement. While less device-focused than some of my other work, it still involved research, planning, tradeoffs, and systems-level thinking.',
+    challenge: [
+      'Define what features and infrastructure would make a campus recreation center useful, realistic, and impactful.',
+      'Think beyond the building itself to the effect on student engagement, wellbeing, and community.'
+    ],
+    approach: [
+      'Considered amenities, infrastructure, utilities, maintenance, and overall cost in building the proposal.',
+      'Connected planning decisions to student outcomes such as physical activity, sense of community, and campus involvement.'
+    ],
+    skills: ['Research', 'Systems thinking', 'Planning', 'Presentation', 'Team collaboration'],
+    employerTakeaways: ['Shows broader problem framing', 'Demonstrates planning and analytical thinking', 'Useful complement to more hardware-centered project work']
+  }
 };
 
-const modal=document.getElementById('projectModal');
-const modalContent=document.getElementById('modalContent');
-document.querySelectorAll('.project-card').forEach(card=>card.addEventListener('click',()=>openProject(card.dataset.project)));
-document.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',closeProject));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProject()});
-function openProject(key){const p=projects[key];if(!p)return;modalContent.innerHTML=`<div class="modal-head"><span class="modal-category">${p.category}</span><h2 id="modalTitle">${p.title}</h2><p>${p.subtitle}</p></div><div class="modal-gallery">${p.images.map(src=>`<img src="${src}" alt="${p.title} project image">`).join('')}</div><div class="detail-grid">${p.details.map(([h,t])=>`<section><h3>${h}</h3><p>${t}</p></section>`).join('')}</div>`;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}
-function closeProject(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
-const menu=document.querySelector('.menu-button');if(menu){menu.addEventListener('click',()=>{document.querySelector('.nav-links').classList.toggle('mobile-open')})}
+const modal = document.getElementById('projectModal');
+const modalContent = document.getElementById('modalContent');
+const menuButton = document.querySelector('.menu-button');
+const navLinks = document.querySelector('.nav-links');
+const printPortfolio = document.getElementById('printPortfolio');
+const soundToggle = document.getElementById('soundToggle');
+
+if (menuButton && navLinks) {
+  menuButton.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
+}
+
+if (printPortfolio) {
+  printPortfolio.addEventListener('click', () => window.print());
+}
+
+function openProject(key) {
+  const project = projects[key];
+  if (!project) return;
+
+  const extraThumbs = project.gallery
+    .map(src => `<div class="thumb"><img src="${src}" alt="${project.title} project image"></div>`)
+    .join('');
+
+  modalContent.innerHTML = `
+    <div class="modal-intro">
+      <div class="modal-hero"><img src="${project.hero}" alt="${project.title} main project image"></div>
+      <div>
+        <div class="modal-head">
+          <span class="modal-category">${project.category}</span>
+          <h2 id="modalTitle">${project.title}</h2>
+          <p>${project.subtitle}</p>
+        </div>
+        <div class="modal-side-gallery">${extraThumbs}</div>
+      </div>
+    </div>
+
+    <div class="modal-grid">
+      <div class="modal-panel">
+        <h3>Overview</h3>
+        <p>${project.overview}</p>
+      </div>
+      <div class="modal-callout">
+        <h3>Project skills</h3>
+        <div class="chip-cloud">
+          ${project.skills.map(skill => `<span>${skill}</span>`).join('')}
+        </div>
+      </div>
+
+      <div class="modal-panel">
+        <h3>Design challenge</h3>
+        <ul>${project.challenge.map(item => `<li>${item}</li>`).join('')}</ul>
+      </div>
+      <div class="modal-panel">
+        <h3>Approach</h3>
+        <ul>${project.approach.map(item => `<li>${item}</li>`).join('')}</ul>
+      </div>
+
+      <div class="modal-callout" style="grid-column: 1 / -1;">
+        <h3>What an employer could notice here</h3>
+        <ul>${project.employerTakeaways.map(item => `<li>${item}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeProject() {
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+document.querySelectorAll('.project-card, .senior-project-button').forEach(card => {
+  card.addEventListener('click', () => openProject(card.dataset.project));
+});
+
+document.querySelectorAll('[data-close]').forEach(node => {
+  node.addEventListener('click', closeProject);
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeProject();
+});
+
+// Simple generated ambient soundscape: filtered noise + soft occasional chirps.
+let ambience = {
+  ctx: null,
+  sources: [],
+  gains: [],
+  timers: [],
+  running: false
+};
+
+function createNoiseBuffer(ctx, seconds = 2) {
+  const buffer = ctx.createBuffer(1, ctx.sampleRate * seconds, ctx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < data.length; i += 1) {
+    data[i] = (Math.random() * 2 - 1) * 0.35;
+  }
+  return buffer;
+}
+
+function startAmbience() {
+  if (ambience.running) return;
+
+  const AudioContextRef = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextRef) return;
+
+  const ctx = new AudioContextRef();
+  const master = ctx.createGain();
+  master.gain.value = 0.05;
+  master.connect(ctx.destination);
+
+  const noiseBuffer = createNoiseBuffer(ctx, 2.5);
+
+  const stream1 = ctx.createBufferSource();
+  stream1.buffer = noiseBuffer;
+  stream1.loop = true;
+  const lowpass = ctx.createBiquadFilter();
+  lowpass.type = 'lowpass';
+  lowpass.frequency.value = 900;
+  const gain1 = ctx.createGain();
+  gain1.gain.value = 0.18;
+  stream1.connect(lowpass).connect(gain1).connect(master);
+  stream1.start();
+
+  const stream2 = ctx.createBufferSource();
+  stream2.buffer = noiseBuffer;
+  stream2.loop = true;
+  const bandpass = ctx.createBiquadFilter();
+  bandpass.type = 'bandpass';
+  bandpass.frequency.value = 450;
+  bandpass.Q.value = 0.6;
+  const gain2 = ctx.createGain();
+  gain2.gain.value = 0.10;
+  stream2.connect(bandpass).connect(gain2).connect(master);
+  stream2.start();
+
+  const lfo = ctx.createOscillator();
+  const lfoGain = ctx.createGain();
+  lfo.frequency.value = 0.08;
+  lfoGain.gain.value = 120;
+  lfo.connect(lfoGain);
+  lfoGain.connect(lowpass.frequency);
+  lfo.start();
+
+  const chirpInterval = setInterval(() => {
+    if (!ambience.running) return;
+    const osc = ctx.createOscillator();
+    const chirpGain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.value = 1800 + Math.random() * 900;
+    osc.type = 'sine';
+    const startTime = ctx.currentTime;
+    const duration = 0.18 + Math.random() * 0.22;
+    const startFreq = 1200 + Math.random() * 600;
+    const endFreq = startFreq + 400 + Math.random() * 700;
+    osc.frequency.setValueAtTime(startFreq, startTime);
+    osc.frequency.exponentialRampToValueAtTime(endFreq, startTime + duration);
+    chirpGain.gain.setValueAtTime(0.0001, startTime);
+    chirpGain.gain.linearRampToValueAtTime(0.03, startTime + duration * 0.3);
+    chirpGain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+    osc.connect(filter).connect(chirpGain).connect(master);
+    osc.start(startTime);
+    osc.stop(startTime + duration);
+  }, 4800);
+
+  ambience = {
+    ctx,
+    sources: [stream1, stream2, lfo],
+    gains: [master, gain1, gain2, lfoGain],
+    timers: [chirpInterval],
+    running: true
+  };
+}
+
+function stopAmbience() {
+  if (!ambience.running) return;
+  ambience.timers.forEach(timer => clearInterval(timer));
+  ambience.sources.forEach(source => {
+    try { source.stop(); } catch (error) {}
+    try { source.disconnect(); } catch (error) {}
+  });
+  ambience.gains.forEach(node => {
+    try { node.disconnect(); } catch (error) {}
+  });
+  if (ambience.ctx) {
+    ambience.ctx.close().catch(() => {});
+  }
+  ambience = { ctx: null, sources: [], gains: [], timers: [], running: false };
+}
+
+if (soundToggle) {
+  soundToggle.addEventListener('click', async () => {
+    if (!ambience.running) {
+      startAmbience();
+      soundToggle.classList.add('active');
+      soundToggle.setAttribute('aria-pressed', 'true');
+      soundToggle.textContent = 'forest ambience on ♫';
+    } else {
+      stopAmbience();
+      soundToggle.classList.remove('active');
+      soundToggle.setAttribute('aria-pressed', 'false');
+      soundToggle.textContent = 'forest ambience ♫';
+    }
+  });
+}
