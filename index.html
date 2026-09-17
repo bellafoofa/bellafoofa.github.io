@@ -1,85 +1,242 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Biomedical Engineering</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biomedical Engineering portfolio">
+  <title>Your Name | Biomedical Engineering</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="#home">
+        <span class="bow">🎀</span>
+        <span>Your Name</span>
+        <span class="heart">♡</span>
+      </a>
 
-    <nav>
-        <h2>Your Name</h2>
-        <div>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+      <nav>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="decor decor-heart heart-one">♡</div>
+      <div class="decor decor-star star-one">☆</div>
+      <div class="decor decor-heart heart-two">♡</div>
+      <div class="decor decor-star star-two">✦</div>
+
+      <div class="hero-text">
+        <p class="eyebrow">♡ welcome to my portfolio ♡</p>
+        <h1>Biomedical<br><span>Engineering</span> Student</h1>
+        <p class="hero-description">
+          Designing technology at the intersection of engineering,
+          healthcare, and human-centered design.
+        </p>
+
+        <div class="button-row">
+          <a class="button primary" href="#projects">🎀 View My Projects</a>
+          <a class="button secondary" href="#resume">♡ View Resume</a>
         </div>
-    </nav>
+      </div>
 
-    <section class="hero">
-        <h1>Biomedical Engineering Student</h1>
-        <p>
-            Designing technology at the intersection of engineering,
-            healthcare, and human-centered design.
-        </p>
-
-        <a class="button" href="#projects">View My Projects</a>
+      <div class="hero-art" aria-label="Decorative portfolio illustration">
+        <div class="cloud cloud-back"></div>
+        <div class="sparkle sparkle-a">✦</div>
+        <div class="sparkle sparkle-b">☆</div>
+        <div class="big-bow">🎀</div>
+        <div class="cute-face">
+          <div class="ear left-ear"></div>
+          <div class="ear right-ear"></div>
+          <div class="eye left-eye"></div>
+          <div class="eye right-eye"></div>
+          <div class="nose"></div>
+          <div class="whisker w1"></div>
+          <div class="whisker w2"></div>
+          <div class="whisker w3"></div>
+          <div class="whisker w4"></div>
+        </div>
+        <div class="mini-bear">ʕ•ᴥ•ʔ</div>
+        <div class="quote-bubble">small steps<br>big dreams ♡</div>
+      </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Biomedical Engineering student interested in medical
-            technology, wearable devices, quality science, and healthcare
-            innovation.
-        </p>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="about-card">
+        <div class="about-photo">
+          <div class="photo-placeholder">
+            <span>♡</span>
+            <p>Add your<br>photo here</p>
+            <small>Replace this box with your image</small>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="section-kicker">🎀 a little about me</p>
+          <h2>About Me</h2>
+          <p>
+            I'm a Biomedical Engineering student interested in medical
+            technology, wearable devices, quality science, and creating
+            solutions that connect engineering with real-world healthcare needs.
+          </p>
+          <p>
+            I enjoy turning ideas into hands-on projects, learning new
+            technologies, and working with teams to create practical,
+            human-centered designs.
+          </p>
+
+          <div class="about-facts">
+            <div>♡ <span>Biomedical Engineering</span></div>
+            <div>🎓 <span>Lawrence Technological University</span></div>
+            <div>✦ <span>Quality Science Education Certificate</span></div>
+          </div>
+        </div>
+
+        <div class="about-doodle">♡<br><span>good things<br>take time</span><br>🎀</div>
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">♡ things I've made</p>
+          <h2>Featured Projects</h2>
+        </div>
+        <span class="tiny-note">made with lots of curiosity ♡</span>
+      </div>
 
-        <div class="project">
+      <div class="project-grid">
+        <article class="project-card pink-card">
+          <div class="project-art">
+            <div class="knee-icon">◯</div>
+            <div class="mini-label">WEARABLE</div>
+            <span class="art-star">☆</span>
+          </div>
+          <div class="project-body">
+            <span class="tag pink-tag">Wearable Design</span>
             <h3>KneeLume</h3>
             <p>
-                A wearable illuminated knee brace designed to provide
-                hands-free lighting for outdoor and low-light activities.
+              A light-up knee brace designed to provide hands-free lighting
+              for outdoor and low-light activities.
             </p>
-        </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+        </article>
 
-        <div class="project">
+        <article class="project-card purple-card">
+          <div class="project-art">
+            <div class="feeder-icon">♡</div>
+            <div class="box-icon">▣</div>
+            <span class="art-star">✦</span>
+          </div>
+          <div class="project-body">
+            <span class="tag purple-tag">Embedded Systems</span>
             <h3>Smart Pet Feeder</h3>
             <p>
-                A Bluetooth-enabled wearable and automated feeder system
-                developed using Circuit Playground Bluefruit boards.
+              A Bluetooth-enabled wearable and automated feeder system
+              developed with Circuit Playground Bluefruit boards.
             </p>
-        </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+        </article>
 
-        <div class="project">
+        <article class="project-card blue-card">
+          <div class="project-art">
+            <div class="watch-icon">♡</div>
+            <span class="art-star">☆</span>
+            <span class="art-heart">♡</span>
+          </div>
+          <div class="project-body">
+            <span class="tag blue-tag">AI + Healthcare</span>
             <h3>SyncCare</h3>
             <p>
-                A privacy-focused wearable wellness concept using
-                computer vision and AI-generated recommendations.
+              A privacy-focused wearable wellness concept using computer
+              vision and AI-generated wellness recommendations.
             </p>
-        </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="skills">
+    <!-- SKILLS / EDUCATION / RESUME / CONTACT -->
+    <section class="section lower-grid">
+      <div id="skills" class="info-card skills-card">
+        <p class="section-kicker">🎀 what I work with</p>
         <h2>Skills</h2>
-        <p>
-            MATLAB · Python · CAD · COMSOL · CircuitPython ·
-            Biomedical Design · Quality Control
-        </p>
-    </section>
+        <div class="skill-list">
+          <span>Python</span>
+          <span>MATLAB</span>
+          <span>CAD</span>
+          <span>COMSOL</span>
+          <span>CircuitPython</span>
+          <span>Electronics</span>
+          <span>Quality Control</span>
+          <span>Data Analysis</span>
+          <span>Problem Solving</span>
+          <span>Teamwork</span>
+        </div>
+      </div>
 
-    <section id="contact">
+      <div id="education" class="info-card">
+        <p class="section-kicker">♡ school stuff</p>
+        <h2>Education</h2>
+        <h3>Lawrence Technological University</h3>
+        <p>B.S. in Biomedical Engineering</p>
+        <p class="muted">Currently pursuing</p>
+        <div class="little-doodle">🎓 ☆</div>
+      </div>
+
+      <div id="resume" class="info-card">
+        <p class="section-kicker">♡ experience + projects</p>
+        <h2>Resume</h2>
+        <p>
+          View my resume for more details about my experience, coursework,
+          technical skills, and projects.
+        </p>
+        <!-- Replace resume.pdf with your actual resume filename -->
+        <a class="button small-button primary" href="resume.pdf" target="_blank">
+          ♡ View Resume
+        </a>
+        <p class="tiny-note">Add your PDF to this repository as <strong>resume.pdf</strong>.</p>
+      </div>
+
+      <div id="contact" class="info-card contact-card">
+        <p class="section-kicker">🎀 let's connect</p>
         <h2>Contact</h2>
-        <p>
-            Email: your@email.com
-        </p>
-    </section>
+        <p>I'd love to connect!</p>
 
+        <div class="socials">
+          <!-- Replace these with your actual links -->
+          <a href="mailto:your.email@example.com" aria-label="Email">✉</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">⌘</a>
+        </div>
+
+        <div class="contact-doodle">♡<br>☆</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>♡</span>
+    Thanks for visiting!
+    <span>♡</span>
+    <div class="footer-bow">🎀</div>
+  </footer>
 </body>
 </html>
