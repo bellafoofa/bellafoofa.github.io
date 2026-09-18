@@ -2552,3 +2552,70 @@ p, .hero-lead, .lead,
   object-fit: cover;
   object-position: center center;
 }
+
+
+/* =========================================================
+   v29 — iPad navigation + gallery crop polish
+   ========================================================= */
+
+/* iPad/tablet landscape: preserve desktop navigation while improving spacing. */
+@media (min-width: 901px) and (max-width: 1250px) {
+  .site-header .nav-shell {
+    width: calc(100% - 2.25rem) !important;
+    min-height: 58px !important;
+    padding: .48rem .9rem !important;
+    gap: .8rem !important;
+  }
+  .site-header .brand {
+    font-size: .98rem !important;
+    gap: .42rem !important;
+  }
+  .site-header .brand-logo {
+    width: 19px !important;
+    height: 19px !important;
+    min-width: 19px !important;
+    min-height: 19px !important;
+    flex-basis: 19px !important;
+  }
+  .site-header .site-nav {
+    gap: clamp(.48rem, 1.05vw, .82rem) !important;
+  }
+  .site-header .site-nav a {
+    font-size: clamp(.72rem, 1.03vw, .84rem) !important;
+    padding: .32rem 0 !important;
+  }
+}
+
+/* Fill gallery frames so portrait photos do not show white side bars. */
+.photo-card {
+  padding: 0 !important;
+}
+.photo-card img {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(215px, 20vw, 300px) !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 13px 13px 0 0 !important;
+  background: transparent !important;
+}
+@media (min-width: 901px) and (max-width: 1250px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: .8rem !important;
+  }
+  .photo-card img {
+    height: clamp(225px, 25vw, 310px) !important;
+  }
+}
+@media (max-width: 900px) {
+  .photo-card img {
+    height: clamp(210px, 38vw, 285px) !important;
+  }
+}
+@media (max-width: 560px) {
+  .photo-card img {
+    height: clamp(230px, 72vw, 360px) !important;
+  }
+}
