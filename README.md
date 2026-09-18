@@ -1,37 +1,12 @@
-# Isabella Chandler Portfolio — v10
+# Isabella Portfolio Forest v11
 
-This version fixes the broken project preview images and makes the design consistent across:
+This version includes:
+- one-photo homepage intro using the black outfit portrait
+- shorter, cleaner project text across the site
+- more compact, longer layout with a narrower overall content width
+- updated project preview cards using the generated images
+- cleaner case study image cropping and centered preview images
+- photo gallery page redesigned to match the main site
+- consistent navigation and styling across Home, Case Studies, and Photos
 
-- `index.html`
-- `projects.html`
-- `photos.html`
-
-## Important when uploading to GitHub Pages
-
-Upload **all contents of this folder together**, especially:
-
-- `index.html`
-- `projects.html`
-- `photos.html`
-- `style.css`
-- `script.js`
-- the entire `assets/` folder
-
-If you only replace the HTML files but keep an older `style.css` or older `assets/` folder, pages can look unstyled and preview images can appear broken.
-
-## Site structure
-
-```text
-index.html
-projects.html
-photos.html
-style.css
-script.js
-assets/
-  profile.jpg
-  resume.pdf
-  projects/
-  photos/
-```
-
-The homepage now uses only the black-outfit professional portrait.
+Open `index.html` locally to preview the site.
