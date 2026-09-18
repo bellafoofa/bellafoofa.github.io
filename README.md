@@ -77,3 +77,10 @@ The case-study information and web images remain in the site.
 
 Important: extract the ZIP first and upload the CONTENTS of this folder to your repository.
 Do not upload this ZIP file itself into the repository.
+
+## v24 updates
+- ConnectUs Presentation & Files now shows one expo poster, not a duplicate.
+- Mopec preview is centered with contain-fit so the left edge is not clipped.
+- Photo captions 01–15 were filled in as requested.
+- Photo 16 was added as "CircuitLab in Bioinstrumentation".
+- Captions remain easy to edit in `photo-captions.js`.

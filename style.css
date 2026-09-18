@@ -2511,3 +2511,27 @@ p, .hero-lead, .lead,
   .case-tab { padding:.68rem .82rem; }
   .file-download { width:100%; justify-content:center; }
 }
+
+/* =========================================================
+   v24 — Mopec image centering + gallery polish
+   ========================================================= */
+
+/* Mopec workflow: avoid the left edge feeling clipped in preview containers. */
+.senior-image {
+  background: #eef4ee;
+}
+.senior-image img[src*="mopec.png"] {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: clamp(.25rem, .7vw, .6rem) !important;
+}
+.case-mopec .case-image img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: clamp(.25rem, .7vw, .6rem) !important;
+}
+
+/* Keep the gallery balanced after adding photo 16. */
+.photo-grid-compact {
+  align-items: start;
+}
