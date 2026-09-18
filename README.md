@@ -1,12 +1,10 @@
-# Isabella Chandler Portfolio — Forest v14
+# Isabella Chandler Portfolio — Forest v15
 
-New in this version:
-- automatic dark mode support using the device/system setting
-- manual Light/Dark toggle in the navigation
-- theme choice saved in the browser
-- consistent dark-mode styling across Home, Case Studies, and Photos
-- responsive improvements for laptops, desktops, iPad, iPhone, and Android phones
-- larger touch targets and mobile-friendly navigation
-- image/card layouts adjusted for smaller screens
+Updates in this version:
+- removed the dark mode toggle from the navigation
+- kept the responsive layout improvements for desktop, tablet, and mobile
+- added a cute custom profile-picture asset for the site
+- used the new profile picture as the site icon / brand avatar
+- kept the rest of the layout and project content intact
 
-Upload the contents of this folder to the root of your GitHub Pages repository.
+Upload the contents of this folder to the root of the GitHub Pages repository.

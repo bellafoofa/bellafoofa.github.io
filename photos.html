@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f4f7f1" id="themeColorMeta">
   <meta name="description" content="Photo gallery for Isabella Chandler's biomedical engineering portfolio">
   <title>Photos | Isabella Chandler</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./assets/pfp.png">
 </head>
 <body>
   <div class="forest-bg" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container nav-shell">
-      <a class="brand" href="./index.html">Isabella Chandler</a>
+      <a class="brand" href="./index.html"><img class="brand-logo" src="./assets/pfp.png" alt=""><span>Isabella Chandler</span></a>
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
       <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
         <a href="./index.html#about">About</a>
@@ -28,10 +27,6 @@
         <a class="active" href="./photos.html" aria-current="page">Photos</a>
         <a href="./index.html#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-        <span class="theme-icon" aria-hidden="true">☾</span>
-        <span class="theme-label">Dark</span>
-      </button>
     </div>
   </header>
 

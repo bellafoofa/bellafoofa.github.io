@@ -134,18 +134,18 @@ button { font: inherit; }
 }
 
 .brand::before {
-  content: '+';
-  width: 28px;
-  height: 28px;
-  border-radius: 10px;
-  display: inline-grid;
-  place-items: center;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--accent-deep);
-  background: linear-gradient(145deg, #eef5ed, #e9edf4);
-  border: 1px solid rgba(75, 108, 82, 0.12);
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: inline-block;
+  background-image: url('./assets/pfp.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(75, 108, 82, 0.16);
+  box-shadow: 0 4px 10px rgba(33, 45, 36, 0.08);
+  flex: 0 0 30px;
 }
 
 .site-nav {
@@ -794,125 +794,29 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.theme-toggle {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.42rem;
-  min-height: 42px;
-  padding: 0.62rem 0.86rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  background: rgba(255,255,255,0.74);
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 0.88rem;
-  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
-}
 
-.theme-toggle:hover {
-  transform: translateY(-1px);
-  color: var(--accent-deep);
-}
 
-.theme-icon {
-  font-size: 1rem;
-  line-height: 1;
-}
 
-:root[data-theme="dark"] {
-  --bg: #111814;
-  --surface: rgba(24, 35, 28, 0.88);
-  --surface-strong: rgba(29, 41, 33, 0.97);
-  --ink: #edf4ee;
-  --muted: #b4c3b8;
-  --line: rgba(211, 231, 216, 0.12);
-  --accent: #9fbea5;
-  --accent-deep: #c7dfcb;
-  --accent-soft: #243329;
-  --lavender-soft: #2d2c3a;
-  --blush-soft: #3a2e2b;
-  --blue-soft: #26353b;
-  --shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
-}
 
-:root[data-theme="dark"] body {
-  background:
-    radial-gradient(circle at 8% 8%, rgba(87, 128, 95, 0.18), transparent 30%),
-    radial-gradient(circle at 92% 12%, rgba(80, 111, 102, 0.17), transparent 27%),
-    linear-gradient(180deg, #111814 0%, #121b16 46%, #101712 100%);
-}
 
-:root[data-theme="dark"] body::before {
-  background:
-    linear-gradient(rgba(182, 211, 188, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(182, 211, 188, 0.025) 1px, transparent 1px);
-}
 
-:root[data-theme="dark"] .site-header {
-  background: rgba(17, 24, 20, 0.80);
-}
 
-:root[data-theme="dark"] .nav-shell,
-:root[data-theme="dark"] .panel,
-:root[data-theme="dark"] .senior-card,
-:root[data-theme="dark"] .project-card,
-:root[data-theme="dark"] .gallery-cta,
-:root[data-theme="dark"] .contact-links,
-:root[data-theme="dark"] .case-card,
-:root[data-theme="dark"] .photo-card,
-:root[data-theme="dark"] .case-gallery-card {
-  background:
-    radial-gradient(circle at top right, rgba(91, 129, 98, 0.12), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(78, 103, 83, 0.10), transparent 22%),
-    var(--surface);
-  border-color: rgba(207, 229, 211, 0.08);
-}
 
-:root[data-theme="dark"] .nav-shell,
-:root[data-theme="dark"] .theme-toggle,
-:root[data-theme="dark"] .button.secondary,
-:root[data-theme="dark"] .hero-photo-label,
-:root[data-theme="dark"] .contact-links a,
-:root[data-theme="dark"] .case-facts > div {
-  background: rgba(28, 40, 32, 0.94);
-}
 
-:root[data-theme="dark"] .tag-list span,
-:root[data-theme="dark"] .skill-row span,
-:root[data-theme="dark"] .mini-tags span,
-:root[data-theme="dark"] .pill {
-  border-color: rgba(201, 225, 205, 0.08);
-}
 
-:root[data-theme="dark"] .hero-photo-card {
-  border-color: rgba(232, 241, 233, 0.10);
-  background: #18221b;
-}
 
-:root[data-theme="dark"] .senior-image,
-:root[data-theme="dark"] .project-card > img,
-:root[data-theme="dark"] .case-image,
-:root[data-theme="dark"] .photo-card img,
-:root[data-theme="dark"] .case-gallery-card img {
-  background: #18221b;
-}
 
-:root[data-theme="dark"] .theme-toggle:hover,
-:root[data-theme="dark"] .site-nav a:hover,
-:root[data-theme="dark"] .site-nav a.active,
-:root[data-theme="dark"] .text-link:hover,
-:root[data-theme="dark"] .link-row a:hover {
-  color: #e1efe3;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-  }
-}
+
+
+
+
+
+
+
+
+
+
 
 /* Laptop / desktop */
 @media (min-width: 1180px) {
@@ -993,11 +897,6 @@ a {
     order: 3;
   }
 
-  .theme-toggle {
-    order: 2;
-    margin-left: auto;
-  }
-
   .site-nav {
     position: absolute;
     top: calc(100% + 0.55rem);
@@ -1064,16 +963,6 @@ a {
 
   .brand {
     font-size: 1.02rem;
-  }
-
-  .theme-label {
-    display: none;
-  }
-
-  .theme-toggle {
-    width: 42px;
-    height: 42px;
-    padding: 0;
   }
 
   .hero {
@@ -1155,9 +1044,10 @@ a {
 /* Narrow Android / small iPhone */
 @media (max-width: 420px) {
   .brand::before {
-    width: 24px;
-    height: 24px;
-    border-radius: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    flex-basis: 26px;
   }
 
   .brand {
@@ -1169,9 +1059,7 @@ a {
     padding-left: 0.75rem;
     padding-right: 0.55rem;
   }
-
-  .nav-toggle,
-  .theme-toggle {
+  .nav-toggle {
     width: 38px;
     height: 38px;
   }
@@ -1210,8 +1098,20 @@ a {
   .button,
   .text-link,
   .contact-links a,
-  .theme-toggle,
   .nav-toggle {
     min-height: 44px;
   }
+}
+
+
+/* v15 updates: cute profile icon in nav + no dark mode toggle */
+
+/* v16 green Poké Ball navigation logo */
+.brand::before { display: none !important; content: none !important; }
+.brand-logo {
+  width: 30px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
+  flex: 0 0 30px;
 }
