@@ -2667,3 +2667,16 @@ p, .hero-lead, .lead,
     line-height: 1.25 !important;
   }
 }
+
+
+/* v31 — force gallery framing on desktop too; cache-busted assets */
+@media (min-width: 1251px) {
+  .photo-card img {
+    width:100% !important; height:auto !important; max-height:none !important;
+    aspect-ratio:auto !important; object-fit:contain !important; object-position:center center !important;
+    background:transparent !important;
+  }
+  .photo-card[data-photo-id="photo-07"] img {
+    height:clamp(215px,20vw,300px) !important; object-fit:cover !important; object-position:center center !important;
+  }
+}
