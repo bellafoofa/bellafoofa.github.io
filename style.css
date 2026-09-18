@@ -1115,3 +1115,320 @@ a {
   object-fit: contain;
   flex: 0 0 30px;
 }
+
+
+/* =========================================================
+   v17 HEADER FIX
+   Compact, consistent navigation + correctly sized logo
+   ========================================================= */
+
+.site-header {
+  padding: 0.65rem 0 !important;
+}
+
+.site-header .nav-shell {
+  width: min(calc(100% - 2rem), 1480px) !important;
+  min-height: 62px !important;
+  padding: 0.55rem 1.15rem !important;
+  margin: 0 auto !important;
+  border-radius: 999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1.25rem !important;
+  position: relative !important;
+}
+
+.site-header .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  flex: 0 0 auto !important;
+  font-size: 1.08rem !important;
+  line-height: 1 !important;
+}
+
+.site-header .brand-logo {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  max-width: 22px !important;
+  min-height: 22px !important;
+  max-height: 22px !important;
+  object-fit: contain !important;
+  display: block !important;
+  flex: 0 0 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.site-header .brand span {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+.site-header .site-nav {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(0.6rem, 1.25vw, 1.15rem) !important;
+  position: static !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.site-header .site-nav a {
+  width: auto !important;
+  padding: 0.35rem 0 !important;
+  white-space: nowrap !important;
+  font-size: clamp(0.79rem, 0.92vw, 0.93rem) !important;
+}
+
+.site-header .nav-toggle {
+  display: none !important;
+}
+
+/* Tablet/phone navigation */
+@media (max-width: 900px) {
+  .site-header .nav-shell {
+    width: min(calc(100% - 1rem), 1480px) !important;
+    min-height: 58px !important;
+    padding: 0.5rem 0.65rem 0.5rem 0.8rem !important;
+    border-radius: 22px !important;
+    gap: 0.7rem !important;
+  }
+
+  .site-header .brand {
+    font-size: 1rem !important;
+    gap: 0.48rem !important;
+  }
+
+  .site-header .brand-logo {
+    width: 21px !important;
+    height: 21px !important;
+    min-width: 21px !important;
+    max-width: 21px !important;
+    min-height: 21px !important;
+    max-height: 21px !important;
+    flex-basis: 21px !important;
+  }
+
+  .site-header .nav-toggle {
+    display: inline-grid !important;
+    place-items: center !important;
+    margin-left: auto !important;
+    width: 40px !important;
+    height: 40px !important;
+    flex: 0 0 40px !important;
+    border-radius: 12px !important;
+  }
+
+  .site-header .site-nav {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 0.5rem) !important;
+    left: 0 !important;
+    right: 0 !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.2rem !important;
+    padding: 0.65rem !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,0.98) !important;
+    border: 1px solid var(--line) !important;
+    box-shadow: var(--shadow) !important;
+  }
+
+  .site-header .site-nav.open {
+    display: flex !important;
+  }
+
+  .site-header .site-nav a {
+    width: 100% !important;
+    padding: 0.68rem 0.75rem !important;
+    font-size: 0.92rem !important;
+    border-radius: 11px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header .brand {
+    font-size: 0.94rem !important;
+  }
+
+  .site-header .brand-logo {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    flex-basis: 20px !important;
+  }
+}
+
+
+/* =========================================================
+   v18 FINAL HEADER + SYSTEM DARK MODE CONTRAST FIX
+   ========================================================= */
+
+/* Header stays compact even if older rules are cached/combined */
+header.site-header .container.nav-shell {
+  max-width: 1120px !important;
+  width: min(calc(100% - 2rem), 1120px) !important;
+  min-height: 58px !important;
+  height: auto !important;
+  padding: 0.48rem 0.85rem !important;
+  overflow: visible !important;
+}
+
+header.site-header a.brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  min-width: 0 !important;
+  font-size: 1.02rem !important;
+}
+
+header.site-header a.brand > img.brand-logo {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  min-width: 1.25rem !important;
+  max-width: 1.25rem !important;
+  min-height: 1.25rem !important;
+  max-height: 1.25rem !important;
+  flex: 0 0 1.25rem !important;
+  object-fit: contain !important;
+}
+
+header.site-header .site-nav {
+  min-width: 0 !important;
+}
+
+@media (max-width: 900px) {
+  header.site-header .container.nav-shell {
+    width: min(calc(100% - 1rem), 1120px) !important;
+  }
+}
+
+/* Respect the device/browser dark preference without adding a visible toggle. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111a15;
+    --surface: rgba(27, 39, 31, 0.90);
+    --surface-strong: #1c2921;
+    --ink: #f2f6ef;
+    --muted: #c0cbc1;
+    --line: rgba(211, 226, 214, 0.15);
+    --accent: #b7d0b5;
+    --accent-deep: #d8ead5;
+    --accent-soft: #26382b;
+    --lavender-soft: #302e3b;
+    --blush-soft: #3b302d;
+    --blue-soft: #29373e;
+    --shadow: 0 18px 44px rgba(0,0,0,0.25);
+  }
+
+  body {
+    color: var(--ink) !important;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(104, 145, 111, 0.14), transparent 30%),
+      radial-gradient(circle at 92% 12%, rgba(89, 124, 104, 0.13), transparent 27%),
+      linear-gradient(180deg, #111a15 0%, #142019 48%, #101813 100%) !important;
+  }
+
+  .site-header {
+    background: rgba(17, 26, 21, 0.88) !important;
+  }
+
+  .nav-shell,
+  .card,
+  .about-card,
+  .interest-card,
+  .senior-card,
+  .project-card,
+  .case-card,
+  .gallery-cta,
+  .contact-links a,
+  .photo-card {
+    background: rgba(27, 39, 31, 0.92) !important;
+    border-color: var(--line) !important;
+    color: var(--ink) !important;
+  }
+
+  h1, h2, h3, h4,
+  .brand,
+  .brand span,
+  .project-body h3,
+  .senior-copy h2,
+  .case-copy h2,
+  .section-heading h2 {
+    color: var(--ink) !important;
+  }
+
+  p,
+  .lead,
+  .project-body p,
+  .senior-copy p,
+  .case-copy p,
+  .gallery-cta p,
+  .footer p,
+  .contact-links a,
+  .site-nav a {
+    color: var(--muted) !important;
+  }
+
+  .eyebrow,
+  .site-nav a:hover,
+  .site-nav a.active,
+  .text-link,
+  .link-row a,
+  .footer-simple a {
+    color: var(--accent-deep) !important;
+  }
+
+  .tag-list span,
+  .skill-row span,
+  .mini-tags span,
+  .pill,
+  .coursework-tags span {
+    background: #26372b !important;
+    color: #e4eee2 !important;
+    border-color: rgba(210, 227, 212, 0.14) !important;
+  }
+
+  .tag-list span:nth-child(3n + 2),
+  .skill-row span:nth-child(3n + 2),
+  .mini-tags span:nth-child(2n),
+  .pill:nth-child(2) {
+    background: #29383f !important;
+    color: #e2edf1 !important;
+  }
+
+  .tag-list span:nth-child(3n),
+  .skill-row span:nth-child(3n),
+  .pill:nth-child(3) {
+    background: #34313f !important;
+    color: #eee9f4 !important;
+  }
+
+  .button.primary {
+    background: #c9ddc5 !important;
+    color: #1d2c22 !important;
+  }
+
+  .button:not(.primary) {
+    color: var(--ink) !important;
+    border-color: var(--line) !important;
+    background: rgba(27,39,31,.72) !important;
+  }
+
+  .site-header .site-nav.open {
+    background: #1b2720 !important;
+  }
+}
