@@ -1726,3 +1726,51 @@ html[data-theme="dark"] .theme-toggle {
     font-size: .94rem;
   }
 }
+
+
+/* =========================================================
+   v20 — portrait badge contrast + editable photo captions
+   ========================================================= */
+
+/* Stronger contrast for the degree badge below the professional photo. */
+html[data-theme="dark"] .hero-photo-label {
+  background: #f4f7f1 !important;
+  color: #203a29 !important;
+  border: 1px solid rgba(32, 58, 41, 0.16) !important;
+  font-weight: 800 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* Photo captions */
+.photo-card {
+  overflow: hidden;
+}
+
+.photo-card figcaption {
+  padding: .72rem .85rem .82rem;
+  font-size: .88rem;
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--surface-strong);
+  border-top: 1px solid var(--line);
+}
+
+html[data-theme="dark"] .photo-card figcaption {
+  color: #e5eee5 !important;
+  background: #1c2921 !important;
+  border-top-color: rgba(211, 226, 214, 0.16) !important;
+}
+
+html[data-theme="light"] .photo-card figcaption {
+  color: #53645a !important;
+  background: rgba(255,255,255,.96) !important;
+}
+
+@media (max-width: 560px) {
+  .photo-card figcaption {
+    padding: .62rem .72rem .72rem;
+    font-size: .82rem;
+  }
+}

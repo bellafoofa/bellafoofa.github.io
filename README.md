@@ -9,3 +9,20 @@ Changes:
 - Header remains responsive for desktop, laptop, tablet, iPhone, and Android.
 
 Upload the CONTENTS of this folder to the root of your GitHub Pages repository, replacing the old files.
+
+## Editing photo captions
+
+Open `photos.html`. Each photo now looks like:
+
+    <figure class="photo-card">
+      <img src="./assets/photos/photo-01.jpg" alt="Portfolio photo">
+      <figcaption>Add your caption here</figcaption>
+    </figure>
+
+Only change the words between `<figcaption>` and `</figcaption>`.
+
+Example:
+
+    <figcaption>Biomedical Engineering Design Expo · Spring 2026</figcaption>
+
+To hide a caption completely, delete its `<figcaption>...</figcaption>` line.
