@@ -1432,3 +1432,297 @@ header.site-header .site-nav {
     background: #1b2720 !important;
   }
 }
+
+
+/* =========================================================
+   v19 — stable Poké Ball header + explicit theme toggle
+   ========================================================= */
+
+/* Do NOT follow OS/browser dark mode. The button controls the theme. */
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Poké Ball is always visible and never rendered as a button/plus box. */
+header.site-header .brand {
+  gap: .58rem !important;
+}
+
+header.site-header .brand::before,
+header.site-header .brand::after {
+  display: none !important;
+  content: none !important;
+}
+
+header.site-header .brand-logo {
+  display: block !important;
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+  flex: 0 0 26px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+header.site-header .nav-shell {
+  max-width: 1180px !important;
+  width: min(calc(100% - 2rem), 1180px) !important;
+  gap: 1rem !important;
+}
+
+header.site-header .site-nav {
+  justify-content: center !important;
+}
+
+/* Real theme control, separate from the logo. */
+.theme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: .42rem;
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: .55rem .78rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-deep);
+  border-color: rgba(65,96,74,.22);
+}
+
+.theme-icon {
+  width: 1rem;
+  text-align: center;
+}
+
+/* Explicit dark theme. */
+html[data-theme="dark"] {
+  --bg: #111a15;
+  --surface: rgba(27, 39, 31, 0.92);
+  --surface-strong: #1c2921;
+  --ink: #f3f6f1;
+  --muted: #c4cec5;
+  --line: rgba(211, 226, 214, 0.16);
+  --accent: #b7d0b5;
+  --accent-deep: #d8ead5;
+  --accent-soft: #26382b;
+  --lavender-soft: #302e3b;
+  --blush-soft: #3b302d;
+  --blue-soft: #29373e;
+  --shadow: 0 18px 44px rgba(0,0,0,.25);
+}
+
+html[data-theme="dark"] body {
+  color: var(--ink) !important;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(104,145,111,.14), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(89,124,104,.13), transparent 27%),
+    linear-gradient(180deg, #111a15 0%, #142019 48%, #101813 100%) !important;
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(17,26,21,.88) !important;
+}
+
+html[data-theme="dark"] .nav-shell,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .about-card,
+html[data-theme="dark"] .interest-card,
+html[data-theme="dark"] .senior-card,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .case-card,
+html[data-theme="dark"] .gallery-cta,
+html[data-theme="dark"] .photo-card {
+  background: rgba(27,39,31,.92) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] .brand,
+html[data-theme="dark"] .brand span {
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] .hero-lead,
+html[data-theme="dark"] .lead,
+html[data-theme="dark"] .site-nav a,
+html[data-theme="dark"] .contact-links a {
+  color: var(--muted) !important;
+}
+
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .site-nav a:hover,
+html[data-theme="dark"] .site-nav a.active,
+html[data-theme="dark"] .text-link,
+html[data-theme="dark"] .link-row a {
+  color: var(--accent-deep) !important;
+}
+
+html[data-theme="dark"] .tag-list span,
+html[data-theme="dark"] .skill-row span,
+html[data-theme="dark"] .mini-tags span,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .coursework-tags span {
+  background: #26372b !important;
+  color: #e8f0e6 !important;
+  border-color: rgba(210,227,212,.14) !important;
+}
+
+/* Specifically fix the degree badge below the portrait. */
+html[data-theme="dark"] .hero-photo-label {
+  background: #edf3e9 !important;
+  color: #294331 !important;
+  border-color: rgba(255,255,255,.18) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+html[data-theme="dark"] .hero-photo-card {
+  border-color: rgba(237,243,233,.92) !important;
+}
+
+html[data-theme="dark"] .button.primary {
+  background: #c9ddc5 !important;
+  color: #1d2c22 !important;
+}
+
+html[data-theme="dark"] .button.secondary,
+html[data-theme="dark"] .theme-toggle {
+  background: rgba(27,39,31,.88) !important;
+  color: #f0f5ed !important;
+  border-color: var(--line) !important;
+}
+
+/* Neutralize the old automatic system-dark rules by restoring light variables
+   whenever the explicit theme is light. */
+@media (prefers-color-scheme: dark) {
+  html[data-theme="light"] {
+    --bg: #f4f7f1 !important;
+    --surface: rgba(255,255,255,.88) !important;
+    --surface-strong: rgba(255,255,255,.96) !important;
+    --ink: #203027 !important;
+    --muted: #5f6f67 !important;
+    --line: rgba(55,88,65,.11) !important;
+    --accent: #627f68 !important;
+    --accent-deep: #41604a !important;
+    --accent-soft: #e4ebe0 !important;
+    --lavender-soft: #eceaf3 !important;
+    --blush-soft: #f4ece8 !important;
+    --blue-soft: #e7eff3 !important;
+    --shadow: 0 18px 44px rgba(48,71,54,.09) !important;
+  }
+
+  html[data-theme="light"] body {
+    color: #203027 !important;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(147,188,155,.20), transparent 30%),
+      radial-gradient(circle at 92% 12%, rgba(180,204,193,.23), transparent 27%),
+      linear-gradient(180deg, #f7faf5 0%, #f0f5ef 44%, #edf3ed 100%) !important;
+  }
+
+  html[data-theme="light"] .site-header {
+    background: rgba(244,247,241,.78) !important;
+  }
+
+  html[data-theme="light"] .nav-shell,
+  html[data-theme="light"] .panel,
+  html[data-theme="light"] .card,
+  html[data-theme="light"] .about-card,
+  html[data-theme="light"] .interest-card,
+  html[data-theme="light"] .senior-card,
+  html[data-theme="light"] .project-card,
+  html[data-theme="light"] .case-card,
+  html[data-theme="light"] .gallery-cta,
+  html[data-theme="light"] .photo-card {
+    background: rgba(255,255,255,.88) !important;
+    color: #203027 !important;
+  }
+
+  html[data-theme="light"] h1,
+  html[data-theme="light"] h2,
+  html[data-theme="light"] h3,
+  html[data-theme="light"] h4,
+  html[data-theme="light"] .brand,
+  html[data-theme="light"] .brand span {
+    color: #203027 !important;
+  }
+
+  html[data-theme="light"] p,
+  html[data-theme="light"] .hero-lead,
+  html[data-theme="light"] .lead,
+  html[data-theme="light"] .site-nav a {
+    color: #5f6f67 !important;
+  }
+
+  html[data-theme="light"] .hero-photo-label {
+    background: rgba(255,255,255,.95) !important;
+    color: #41604a !important;
+  }
+}
+
+/* Responsive header: logo remains visible; hamburger is only for navigation. */
+@media (max-width: 900px) {
+  header.site-header .nav-shell {
+    width: min(calc(100% - 1rem), 1180px) !important;
+  }
+
+  header.site-header .brand-logo {
+    width: 25px !important;
+    height: 25px !important;
+    min-width: 25px !important;
+    max-width: 25px !important;
+    min-height: 25px !important;
+    max-height: 25px !important;
+    flex-basis: 25px !important;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
+    padding-inline: .65rem;
+  }
+
+  header.site-header .site-nav {
+    background: var(--surface-strong) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme-toggle .theme-label {
+    display: none;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    padding: 0;
+  }
+
+  header.site-header .brand span {
+    font-size: .94rem;
+  }
+}

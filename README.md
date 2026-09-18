@@ -1,10 +1,11 @@
-# Isabella Chandler Portfolio — Forest v15
+# Isabella Chandler Portfolio — v19
 
-Updates in this version:
-- removed the dark mode toggle from the navigation
-- kept the responsive layout improvements for desktop, tablet, and mobile
-- added a cute custom profile-picture asset for the site
-- used the new profile picture as the site icon / brand avatar
-- kept the rest of the layout and project content intact
+Changes:
+- Poké Ball logo is permanently visible beside the site name.
+- Removed the confusing logo/plus-box behavior.
+- Light mode is the default on first visit.
+- Dark mode is controlled only by the visible Light/Dark toggle and remembers the user's choice.
+- Fixed dark-mode contrast for the B.S. Biomedical Engineering badge under the portrait.
+- Header remains responsive for desktop, laptop, tablet, iPhone, and Android.
 
-Upload the contents of this folder to the root of the GitHub Pages repository.
+Upload the CONTENTS of this folder to the root of your GitHub Pages repository, replacing the old files.
