@@ -26,3 +26,12 @@ Example:
     <figcaption>Biomedical Engineering Design Expo · Spring 2026</figcaption>
 
 To hide a caption completely, delete its `<figcaption>...</figcaption>` line.
+
+## v21 automatic light/dark mode
+
+There is no visible theme button anymore. The site automatically follows the visitor's
+browser/device light or dark preference using `prefers-color-scheme`.
+
+Light mode uses the pale sage/cream palette. Dark mode uses the forest green palette.
+Text, buttons, contact cards, photo captions, and the degree badge have dedicated
+high-contrast colors in both modes.

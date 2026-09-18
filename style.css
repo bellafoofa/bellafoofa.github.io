@@ -1774,3 +1774,339 @@ html[data-theme="light"] .photo-card figcaption {
     font-size: .82rem;
   }
 }
+
+
+/* =========================================================
+   v21 — automatic system theme + cross-device contrast pass
+   ========================================================= */
+
+/* Manual theme control is removed from the layout. */
+.theme-toggle {
+  display: none !important;
+}
+
+/* LIGHT MODE — default */
+:root {
+  color-scheme: light;
+  --bg: #f2f7f0 !important;
+  --surface: rgba(255,255,255,.90) !important;
+  --surface-strong: #ffffff !important;
+  --ink: #1d3024 !important;
+  --muted: #5c6e63 !important;
+  --line: rgba(45,76,55,.13) !important;
+  --accent: #6c896f !important;
+  --accent-deep: #405f49 !important;
+  --accent-soft: #dfeadb !important;
+  --shadow: 0 18px 44px rgba(48,71,54,.09) !important;
+}
+
+body {
+  color: var(--ink) !important;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(147,188,155,.18), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(180,204,193,.20), transparent 27%),
+    linear-gradient(180deg, #f7faf5 0%, #eef5ed 46%, #eaf2ea 100%) !important;
+}
+
+.site-header {
+  background: rgba(244,248,242,.84) !important;
+}
+
+.nav-shell,
+.panel,
+.card,
+.about-card,
+.interest-card,
+.senior-card,
+.project-card,
+.case-card,
+.gallery-cta,
+.photo-card,
+.contact-links {
+  color: var(--ink) !important;
+}
+
+.nav-shell,
+.panel,
+.card,
+.about-card,
+.interest-card,
+.senior-card,
+.project-card,
+.case-card,
+.gallery-cta,
+.photo-card {
+  background: rgba(255,255,255,.90) !important;
+  border-color: var(--line) !important;
+}
+
+h1, h2, h3, h4,
+.brand, .brand span,
+.project-body h3,
+.senior-copy h2,
+.case-copy h2,
+.section-heading h2 {
+  color: var(--ink) !important;
+}
+
+p, .hero-lead, .lead,
+.project-body p, .senior-copy p, .case-copy p,
+.gallery-cta p, .footer p,
+.site-nav a {
+  color: var(--muted) !important;
+}
+
+.eyebrow, .text-link, .link-row a,
+.footer-simple a,
+.site-nav a:hover, .site-nav a.active {
+  color: var(--accent-deep) !important;
+}
+
+.button.primary {
+  background: #cfe1c9 !important;
+  color: #1c2d21 !important;
+}
+
+.button.secondary,
+.button:not(.primary) {
+  background: rgba(255,255,255,.86) !important;
+  color: #203027 !important;
+  border-color: rgba(45,76,55,.13) !important;
+}
+
+.contact-links {
+  background: rgba(255,255,255,.82) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.contact-links a {
+  background: #f7faf6 !important;
+  color: #30483a !important;
+  border-color: var(--line) !important;
+}
+
+.contact-links span {
+  color: #58765f !important;
+}
+
+.hero-photo-label {
+  background: #ffffff !important;
+  color: #365640 !important;
+  border-color: rgba(45,76,55,.12) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
+}
+
+.photo-card figcaption {
+  background: #ffffff !important;
+  color: #53645a !important;
+}
+
+/* DARK MODE — follows the browser/device automatically */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #101914 !important;
+    --surface: rgba(25,38,30,.94) !important;
+    --surface-strong: #1a2920 !important;
+    --ink: #f2f6f0 !important;
+    --muted: #c5d0c7 !important;
+    --line: rgba(214,229,216,.17) !important;
+    --accent: #b7d0b5 !important;
+    --accent-deep: #d8ead5 !important;
+    --accent-soft: #26382b !important;
+    --shadow: 0 18px 44px rgba(0,0,0,.26) !important;
+  }
+
+  body {
+    color: var(--ink) !important;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(104,145,111,.14), transparent 30%),
+      radial-gradient(circle at 92% 12%, rgba(89,124,104,.13), transparent 27%),
+      linear-gradient(180deg, #101914 0%, #142119 48%, #0f1813 100%) !important;
+  }
+
+  .site-header {
+    background: rgba(15,24,19,.90) !important;
+  }
+
+  .nav-shell,
+  .panel,
+  .card,
+  .about-card,
+  .interest-card,
+  .senior-card,
+  .project-card,
+  .case-card,
+  .gallery-cta,
+  .photo-card {
+    background: rgba(25,38,30,.94) !important;
+    border-color: var(--line) !important;
+    color: var(--ink) !important;
+  }
+
+  h1, h2, h3, h4,
+  .brand, .brand span,
+  .project-body h3,
+  .senior-copy h2,
+  .case-copy h2,
+  .section-heading h2 {
+    color: #f2f6f0 !important;
+  }
+
+  p, .hero-lead, .lead,
+  .project-body p, .senior-copy p, .case-copy p,
+  .gallery-cta p, .footer p,
+  .site-nav a {
+    color: #c5d0c7 !important;
+  }
+
+  .eyebrow, .text-link, .link-row a,
+  .footer-simple a,
+  .site-nav a:hover, .site-nav a.active {
+    color: #d8ead5 !important;
+  }
+
+  .button.primary {
+    background: #c9ddc5 !important;
+    color: #1c2d21 !important;
+  }
+
+  .button.secondary,
+  .button:not(.primary) {
+    background: #1a2920 !important;
+    color: #f2f6f0 !important;
+    border-color: rgba(214,229,216,.18) !important;
+  }
+
+  .contact-links {
+    background: rgba(24,36,29,.82) !important;
+    border: 1px solid var(--line) !important;
+  }
+
+  .contact-links a {
+    background: #203229 !important;
+    color: #edf4ed !important;
+    border-color: rgba(214,229,216,.15) !important;
+  }
+
+  .contact-links span {
+    color: #bcd5bd !important;
+  }
+
+  .hero-photo-card {
+    border-color: rgba(241,247,239,.92) !important;
+  }
+
+  /* High-contrast degree badge in dark mode. */
+  .hero-photo-label {
+    background: #edf3e9 !important;
+    color: #203d2a !important;
+    border-color: rgba(255,255,255,.20) !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+
+  .tag-list span,
+  .skill-row span,
+  .mini-tags span,
+  .pill,
+  .coursework-tags span {
+    background: #26382b !important;
+    color: #edf4eb !important;
+    border-color: rgba(214,229,216,.15) !important;
+  }
+
+  .photo-card figcaption {
+    background: #1a2920 !important;
+    color: #e7eee7 !important;
+    border-top-color: rgba(214,229,216,.15) !important;
+  }
+
+  .site-header .site-nav.open {
+    background: #1a2920 !important;
+  }
+}
+
+/* Tablet + phone header: brand and hamburger only. */
+@media (max-width: 900px) {
+  header.site-header .nav-shell {
+    grid-template-columns: minmax(0,1fr) auto !important;
+    display: grid !important;
+    align-items: center !important;
+    gap: .65rem !important;
+  }
+
+  header.site-header .brand {
+    min-width: 0 !important;
+  }
+
+  header.site-header .nav-toggle {
+    justify-self: end !important;
+    margin-left: 0 !important;
+  }
+
+  header.site-header .site-nav {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  header.site-header .nav-shell {
+    min-height: 64px !important;
+    padding: .58rem .7rem !important;
+  }
+
+  header.site-header .brand-logo {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    min-height: 24px !important;
+    max-height: 24px !important;
+    flex-basis: 24px !important;
+  }
+
+  header.site-header .brand span {
+    font-size: 1rem !important;
+    white-space: nowrap !important;
+  }
+
+  header.site-header .nav-toggle {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  .hero {
+    padding-top: 2.7rem !important;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.35rem, 17vw, 5rem) !important;
+    line-height: .98 !important;
+  }
+
+  .hero-lead {
+    font-size: 1rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .button-row.hero-buttons {
+    width: 100% !important;
+  }
+
+  .hero-buttons .button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .link-row {
+    gap: .45rem .75rem !important;
+  }
+
+  .contact-links a {
+    overflow-wrap: anywhere !important;
+  }
+}
