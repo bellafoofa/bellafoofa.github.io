@@ -84,3 +84,15 @@ Do not upload this ZIP file itself into the repository.
 - Photo captions 01–15 were filled in as requested.
 - Photo 16 was added as "CircuitLab in Bioinstrumentation".
 - Captions remain easy to edit in `photo-captions.js`.
+
+## v25 updates
+- Replaced the website resume with the September 2026 employer-ready BME resume.
+- Added gallery photos 17–22 and their requested captions.
+- NuitLume is now a normal case-study card in the main Case Studies list on desktop and mobile.
+- Removed the separate "Additional Project Archive" section.
+
+## v26 GitHub-ready update
+- Added the new generated NuitLume preview image.
+- Converted large project PNG previews and gallery photos to WebP to reduce upload size.
+- This package is intentionally smaller and better suited to GitHub's browser uploader.
+- Upload the CONTENTS of this folder to the repository, not the ZIP itself.

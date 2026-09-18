@@ -18,6 +18,12 @@ window.PHOTO_CAPTIONS = {
   "photo-14": 'ConnectUs Company Team Project Poster',
   "photo-15": 'E-Board 2025 Professional Photo',
   "photo-16": 'CircuitLab in Bioinstrumentation',
+  "photo-17": 'First LTU Project: Egg Drop',
+  "photo-18": 'Wearable Technology Coding Practice',
+  "photo-19": 'HeadUp Brace: Accelerometer Troubleshooting',
+  "photo-20": 'Bioinstrumentation Team Photo',
+  "photo-21": 'ConnectUs Prototype #1',
+  "photo-22": 'Quality Science Education coursework',
 };
 
 document.querySelectorAll("[data-photo-id]").forEach((card) => {

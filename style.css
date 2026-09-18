@@ -2535,3 +2535,20 @@ p, .hero-lead, .lead,
 .photo-grid-compact {
   align-items: start;
 }
+
+/* v25: NuitLume is a standard case-study card on every screen size. */
+.case-nuitlume .case-image img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* v26: centered, portfolio-ready NuitLume preview */
+.case-nuitlume .case-image {
+  overflow: hidden;
+}
+.case-nuitlume .case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
