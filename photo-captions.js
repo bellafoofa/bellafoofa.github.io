@@ -3,7 +3,7 @@
 // Leave a caption as "" if you do not want text under that image.
 window.PHOTO_CAPTIONS = {
   "photo-01": 'Experimenting with Virtual Reality',
-  "photo-02": 'Team Bonding Activity',
+  "photo-02": 'E-Board Bonding Activity',
   "photo-03": 'E-Board Professional Photoshoot',
   "photo-04": 'Surgery combined with VR',
   "photo-05": 'BMES VR Activity',

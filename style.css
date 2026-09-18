@@ -2619,3 +2619,51 @@ p, .hero-lead, .lead,
     height: clamp(230px, 72vw, 360px) !important;
   }
 }
+
+
+/* =========================================================
+   v30 — full-person gallery framing + iPad nav centering
+   ========================================================= */
+
+/* Most gallery images use their natural aspect ratio. This keeps people,
+   heads, and full-body shots visible without introducing white side bars. */
+.photo-card img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+
+/* Keep Coding with ChatGPT as the intentionally cropped exception. */
+.photo-card[data-photo-id="photo-07"] img {
+  height: clamp(215px, 20vw, 300px) !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* iPad/tablet: center the navigation vertically and give it balanced air. */
+@media (min-width: 901px) and (max-width: 1250px) {
+  .site-header {
+    padding: .9rem 0 !important;
+  }
+  .site-header .nav-shell {
+    min-height: 68px !important;
+    padding: .62rem 1rem !important;
+    align-items: center !important;
+  }
+  .site-header .site-nav {
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.35 !important;
+  }
+  .site-header .site-nav a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 38px !important;
+    padding: .42rem 0 !important;
+    line-height: 1.25 !important;
+  }
+}
