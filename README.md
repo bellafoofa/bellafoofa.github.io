@@ -35,3 +35,13 @@ browser/device light or dark preference using `prefers-color-scheme`.
 Light mode uses the pale sage/cream palette. Dark mode uses the forest green palette.
 Text, buttons, contact cards, photo captions, and the degree badge have dedicated
 high-contrast colors in both modes.
+
+
+## v22 case-study structure
+- No manual light/dark toggle. Theme follows the visitor's device/browser preference.
+- Hero buttons use one soft sage style in both themes.
+- Case Studies and View Projects capitalization corrected.
+- Mopec preview uses contain/center cropping so the left-side workflow stays visible.
+- Dark-mode Current Focus / Technical Themes cards have dedicated high-contrast colors.
+- `case-studies/` contains a dedicated internal page for every case study.
+- ConnectUs expo setup and expo poster were moved from the overview into `case-studies/connectus.html`.

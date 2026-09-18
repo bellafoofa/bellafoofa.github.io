@@ -2110,3 +2110,141 @@ p, .hero-lead, .lead,
     overflow-wrap: anywhere !important;
   }
 }
+
+
+/* =========================================================
+   v22 — polished buttons, automatic theme, case-study archive
+   ========================================================= */
+
+/* No visible manual theme control anywhere. */
+.theme-toggle, #themeToggle { display:none !important; }
+
+/* All hero/action pills use the same soft sage treatment. */
+.button.primary,
+.button.secondary,
+.button:not(.primary) {
+  background: #d8e6d3 !important;
+  color: #203027 !important;
+  border: 1px solid rgba(54,83,62,.12) !important;
+  box-shadow: 0 10px 26px rgba(51,76,57,.08) !important;
+}
+.button:hover {
+  background: #cbdcc5 !important;
+  color: #17261c !important;
+  transform: translateY(-1px);
+}
+.case-detail-link { margin-top: 1.05rem; width: fit-content; }
+
+/* Mopec: show the full workflow more comfortably rather than cropping the left edge. */
+.case-mopec .case-image {
+  background: #eef4ee !important;
+}
+.case-mopec .case-image img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: .35rem !important;
+}
+
+/* More legible fact cards in light mode. */
+.case-facts > div {
+  background: #edf3eb !important;
+  color: #203027 !important;
+  border: 1px solid rgba(54,83,62,.10) !important;
+}
+.case-facts strong { color: #294734 !important; }
+.case-facts span { color: #53675a !important; }
+
+/* Internal case-study pages. */
+.detail-hero {
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+  gap:clamp(2rem,5vw,5rem);
+  align-items:center;
+}
+.detail-copy h1 { margin:.25rem 0 1rem; }
+.detail-copy > p:not(.eyebrow) { max-width:760px; }
+.detail-preview {
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:.7rem;
+  box-shadow:var(--shadow);
+}
+.detail-preview img {
+  display:block;
+  width:100%;
+  max-height:560px;
+  object-fit:contain;
+  border-radius:20px;
+}
+.detail-overview {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
+}
+.detail-gallery {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.3rem;
+}
+.detail-gallery .case-gallery-card img {
+  width:100%;
+  height:auto;
+  max-height:760px;
+  object-fit:contain;
+}
+.archive-placeholder {
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:clamp(1.5rem,4vw,3rem);
+  box-shadow:var(--shadow);
+}
+.archive-placeholder h2 { max-width:800px; }
+.archive-hint {
+  margin-top:1rem;
+  padding:1rem 1.1rem;
+  border-radius:18px;
+  background:var(--accent-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  .button.primary,
+  .button.secondary,
+  .button:not(.primary) {
+    background:#c8dcc3 !important;
+    color:#17271c !important;
+    border-color:rgba(230,242,228,.16) !important;
+  }
+  .button:hover {
+    background:#d7e7d3 !important;
+    color:#142219 !important;
+  }
+
+  /* Fix illegible Current Focus / Technical Themes boxes. */
+  .case-facts > div {
+    background:#26392c !important;
+    color:#f0f5ef !important;
+    border-color:rgba(221,235,220,.16) !important;
+  }
+  .case-facts strong {
+    color:#f4f8f2 !important;
+  }
+  .case-facts span {
+    color:#cbd8cc !important;
+  }
+  .case-mopec .case-image { background:#223329 !important; }
+  .archive-hint {
+    background:#26392c !important;
+    color:#dce7dc !important;
+  }
+}
+
+@media (max-width:900px) {
+  .detail-hero, .detail-overview { grid-template-columns:1fr; }
+  .detail-preview { order:-1; }
+}
+@media (max-width:650px) {
+  .detail-gallery { grid-template-columns:1fr; }
+  .detail-actions .button { width:100%; justify-content:center; }
+}
