@@ -3,344 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Isabella Chandler | Biomedical Engineering portfolio featuring medical-device, wearable, and human-centered design projects.">
+  <meta name="description" content="Isabella Chandler | Biomedical Engineering portfolio featuring medical-device, wearable, AI, and human-centered design projects.">
   <title>Isabella Chandler | Biomedical Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-bg" aria-hidden="true">
-    <div class="mist mist-a"></div>
-    <div class="mist mist-b"></div>
-    <div class="canopy canopy-a"></div>
-    <div class="canopy canopy-b"></div>
-    <div class="grid-glow"></div>
-  </div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#top" aria-label="Isabella Chandler home">
-        <span class="brand-icon">✿</span>
-        <span>Isabella Chandler</span>
-      </a>
-
-      <nav class="nav-links" aria-label="Primary">
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html">Isabella Chandler</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="site-nav" id="siteNav">
         <a href="#about">About</a>
         <a href="#senior-project">Senior Project</a>
         <a href="#projects">Projects</a>
         <a href="#coursework">Coursework</a>
+        <a href="projects.html">Case Studies</a>
         <a href="photos.html">Photos</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="topbar-actions">
-        <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">forest ambience ♫</button>
-        <button class="menu-button" type="button" aria-label="Open navigation">☰</button>
-      </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero section-shell">
-      <div class="hero-copy card">
-        <p class="kicker">Biomedical Engineering · Wearables · Quality · Human-Centered Design</p>
-        <h1>Professional, thoughtful, and still a little bit <em>me.</em></h1>
-        <p class="hero-lead">I’m Isabella Chandler, a Biomedical Engineering student at Lawrence Technological University interested in medical devices, healthcare technology, product development, and quality-minded design. I like projects that turn open-ended ideas into something clearer, more useful, and more human-centered.</p>
-
-        <div class="hero-quick-links">
-          <a class="button button-primary" href="#projects">View projects</a>
-          <a class="button button-soft" href="assets/resume.pdf" target="_blank" rel="noopener">Resume PDF ↗</a>
-          <button class="button button-soft" id="printPortfolio" type="button">Download portfolio PDF</button>
-          <a class="button button-soft" href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="button button-soft" href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy centered-copy">
+          <p class="eyebrow">Biomedical Engineering · AI · Wearables · Quality-Minded Design</p>
+          <h1>Biomedical engineering projects, thoughtfully designed and clearly presented.</h1>
+          <p class="lead">I’m Isabella Chandler, a Biomedical Engineering student at Lawrence Technological University interested in medical devices, healthcare technology, AI-enabled tools, and product development. I’m drawn to work that is practical, organized, and genuinely useful to people.</p>
+          <div class="button-row center-row">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="projects.html">Open Case Studies</a>
+            <a class="button secondary" href="assets/resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+          </div>
+          <div class="mini-links center-row small-links">
+            <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener">Handshake ↗</a>
+            <a href="mailto:ichandler@ltu.edu">ichandler@ltu.edu</a>
+          </div>
         </div>
 
-        <div class="hero-stats">
-          <div>
-            <strong>Expected 2027</strong>
-            <span>B.S. Biomedical Engineering</span>
-          </div>
-          <div>
-            <strong>Quality Science</strong>
-            <span>certificate + validation mindset</span>
-          </div>
-          <div>
-            <strong>Focus areas</strong>
-            <span>medical devices, AI, wearables, healthcare tech</span>
+        <div class="hero-visual">
+          <div class="portrait-combo">
+            <div class="portrait back"><img src="assets/professional-portrait-2.jpg" alt="Professional portrait of Isabella Chandler with blue backdrop"></div>
+            <div class="portrait front"><img src="assets/profile.jpg" alt="Professional portrait of Isabella Chandler in black top"></div>
+            <div class="floating-note note-one">B.S. Biomedical Engineering</div>
+            <div class="floating-note note-two">Quality Science Education Certificate</div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-visual">
-        <div class="portrait-stack">
-          <div class="portrait portrait-back">
-            <img src="assets/professional-portrait-2.jpg" alt="Professional portrait of Isabella Chandler with blue backdrop">
+    <section class="section" id="about">
+      <div class="container intro-grid">
+        <article class="card soft centered-text">
+          <p class="eyebrow">About</p>
+          <h2>A quick introduction.</h2>
+          <p>I enjoy projects that combine technical problem-solving, practical testing, and human-centered design. My work so far includes wearable technology, healthcare AI concepts, embedded systems, and team-based product development.</p>
+        </article>
+        <article class="card soft">
+          <p class="eyebrow">Quick snapshot</p>
+          <ul class="clean-list">
+            <li><strong>School:</strong> Lawrence Technological University</li>
+            <li><strong>Major:</strong> Biomedical Engineering</li>
+            <li><strong>Certificate:</strong> Quality Science Education</li>
+            <li><strong>Interests:</strong> Medical devices, healthcare AI, product development, quality, and wearables</li>
+            <li><strong>Location:</strong> Southeast Michigan</li>
+          </ul>
+        </article>
+        <article class="card soft">
+          <p class="eyebrow">Skills & tools</p>
+          <div class="tag-list">
+            <span>MATLAB</span><span>Excel</span><span>CircuitPython</span><span>BLE</span><span>Embedded Systems</span>
+            <span>Prototyping</span><span>Testing</span><span>Documentation</span><span>Human-Centered Design</span>
+            <span>Validation Mindset</span><span>AI Workflow Planning</span><span>Technical Communication</span>
           </div>
-          <div class="portrait portrait-front">
-            <img src="assets/profile.jpg" alt="Professional portrait of Isabella Chandler in black top">
-          </div>
-          <div class="portrait-note note-a">biomedical engineering</div>
-          <div class="portrait-note note-b">forest-lab mood ✿</div>
-        </div>
-        <div class="hero-aside card glass-card">
-          <p class="handwritten">currently interested in</p>
-          <div class="interest-chips compact">
-            <span>Medical Devices</span>
-            <span>Quality Engineering</span>
-            <span>Healthcare Technology</span>
-            <span>Biomedical Design</span>
-            <span>Product Development</span>
-            <span>Wearable Technology</span>
+        </article>
+        <article class="card soft interest-card">
+          <p class="eyebrow">Currently interested in</p>
+          <div class="tag-list">
+            <span>Medical Devices</span><span>Quality Engineering</span><span>Healthcare Technology</span>
+            <span>Biomedical Design</span><span>Product Development</span><span>Healthcare AI</span>
             <span>Human-Centered Design</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-shell overview-grid" id="about">
-      <article class="card soft-card intro-card">
-        <p class="kicker">About</p>
-        <h2>A professional portfolio with a calmer feel.</h2>
-        <p>My strongest interests sit where engineering, healthcare, and real user needs meet. I’m especially drawn to projects involving prototyping, system thinking, usability, and clear technical communication.</p>
-        <p>This portfolio is meant to show both sides of how I like to work: thoughtful design on the front end, and practical technical decision-making underneath.</p>
-      </article>
-
-      <article class="card soft-card snapshot-card">
-        <p class="kicker">Quick snapshot</p>
-        <ul class="snapshot-list">
-          <li><strong>School:</strong> Lawrence Technological University</li>
-          <li><strong>Degree:</strong> B.S. in Biomedical Engineering</li>
-          <li><strong>Certificate:</strong> Quality Science Education</li>
-          <li><strong>Strengths:</strong> prototyping, documentation, testing, technical communication, and quality-minded thinking</li>
-          <li><strong>Location:</strong> Southeast Michigan</li>
-        </ul>
-      </article>
-
-      <article class="card soft-card toolkit-card">
-        <p class="kicker">Skills & tools</p>
-        <div class="chip-cloud">
-          <span>MATLAB</span>
-          <span>AutoCAD</span>
-          <span>Excel</span>
-          <span>C#</span>
-          <span>CircuitPython</span>
-          <span>BLE</span>
-          <span>Embedded Systems</span>
-          <span>Prototyping</span>
-          <span>Testing</span>
-          <span>Technical Documentation</span>
-          <span>Quality Control</span>
-          <span>Human-Centered Design</span>
-        </div>
-      </article>
-    </section>
-
-    <section class="section-shell section-block senior-project-section" id="senior-project">
-      <div class="senior-project-card card">
-        <div class="senior-project-copy">
-          <div class="senior-project-topline">
-            <p class="kicker">Senior Project · Company Sponsored</p>
-            <span class="status-pill">In progress · 2026–2027</span>
-          </div>
-          <h2>Mopec Medical AI Senior Project</h2>
-          <p class="senior-lead">I’m part of LTU’s BME company-sponsored senior project with Mopec, where our team is developing, training, and fine-tuning an AI model intended for future use in hospitals, medical facilities, and related healthcare settings.</p>
-          <p>Because the project is still early, the current focus is on workflow development: reviewing available datasets, planning the training / validation / test structure, and building a strong foundation for future model evaluation and iteration.</p>
-          <div class="project-skill-pills senior-skills">
-            <span>Medical AI</span><span>Model training</span><span>Fine-tuning</span><span>Dataset review</span><span>Validation planning</span><span>Technical documentation</span><span>Team collaboration</span>
-          </div>
-          <div class="senior-actions">
-            <button class="button button-primary senior-project-button" data-project="mopec" type="button">View project details</button>
-            <span class="senior-note">This section will grow as our team adds results, visuals, and performance insights.</span>
-          </div>
-        </div>
-        <div class="senior-project-visual image-visual">
-          <img src="assets/projects/mopec/preview-generated.png" alt="Preview of Mopec medical AI senior project">
-        </div>
-      </div>
-    </section>
-
-    <section class="section-shell section-block projects-section" id="projects">
-      <div class="section-heading">
-        <div>
-          <p class="kicker">Projects</p>
-          <h2>Short previews first. Better case studies when you click in.</h2>
-        </div>
-        <p>Each card gives the quick version: what the project is, what it shows, and the most visible skills an employer would likely notice.</p>
-      </div>
-
-      <div class="project-grid">
-        <button class="project-card" data-project="syncare" type="button">
-          <div class="project-image"><img src="assets/projects/syncare/preview-generated.png" alt="SyncCare project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Healthcare AI</span><span>Wearables</span></div>
-            <h3>SyncCare</h3>
-            <p>Wearable wellness concept connecting image-based input, AI interpretation, and simple user feedback.</p>
-            <div class="project-skill-pills"><span>Healthcare UX</span><span>AI concepts</span><span>Privacy-aware design</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="smart-collar" type="button">
-          <div class="project-image"><img src="assets/projects/smart-collar/preview-generated.png" alt="Smart Collar project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Embedded Systems</span><span>BLE</span></div>
-            <h3>Smart Collar</h3>
-            <p>Pet activity tracker and automated feeder system linking wearable data to physical device action.</p>
-            <div class="project-skill-pills"><span>CircuitPython</span><span>BLE</span><span>Servo control</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="headup" type="button">
-          <div class="project-image"><img src="assets/projects/headup/preview-generated.png" alt="HeadUp project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Bioinstrumentation</span><span>Sensing</span></div>
-            <h3>HeadUp</h3>
-            <p>Posture-feedback device using inertial sensing and threshold-based logic to detect sustained head-down posture.</p>
-            <div class="project-skill-pills"><span>IMU sensing</span><span>Calibration</span><span>Testing</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="insole" type="button">
-          <div class="project-image"><img src="assets/projects/insole/preview-generated.png" alt="Pressure-Point Insole project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Biomechanics</span><span>Product Development</span></div>
-            <h3>Pressure-Point Insole</h3>
-            <p>Insole concept focused on pressure redistribution, comfort, and early-support feedback ideas.</p>
-            <div class="project-skill-pills"><span>3D printing</span><span>Materials selection</span><span>Product design</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="presence-plant" type="button">
-          <div class="project-image"><img src="assets/projects/presence-plant/preview-generated.png" alt="Presence Plant project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>HCI</span><span>Sensing</span></div>
-            <h3>Presence Plant</h3>
-            <p>Soft-robotic ambient display concept for communicating focus and availability in shared spaces.</p>
-            <div class="project-skill-pills"><span>ESP32-S3</span><span>Sensors</span><span>Interaction design</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="nuitlume" type="button">
-          <div class="project-image"><img src="assets/projects/nuitlume/preview.png" alt="NuitLume project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Wearable Tech</span><span>Product Design</span></div>
-            <h3>NuitLume</h3>
-            <p>Hands-free wearable lighting concept for visibility and safer movement in low-light environments.</p>
-            <div class="project-skill-pills"><span>Wearable design</span><span>Prototyping</span><span>User-centered design</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="buttoneers" type="button">
-          <div class="project-image"><img src="assets/projects/buttoneers/revenge-8107.jpeg" alt="ConnectUs design studio project display"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Design Process</span><span>Accessibility</span></div>
-            <h3>ConnectUs Accessibility Design Project</h3>
-            <p>Customer-informed redesign of a dice-tower station shaped by empathy, prototyping, and testing.</p>
-            <div class="project-skill-pills"><span>Design thinking</span><span>Prototyping</span><span>User feedback</span></div>
-          </div>
-        </button>
-
-        <button class="project-card" data-project="rids" type="button">
-          <div class="project-image"><img src="assets/projects/rids/preview-generated.png" alt="Technical communication team project preview"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Planning</span><span>Research</span></div>
-            <h3>Recreation Planning Team Project</h3>
-            <p>Campus recreation concept developed through systems planning, research, and technical communication.</p>
-            <div class="project-skill-pills"><span>Research</span><span>Planning</span><span>Presentation</span></div>
-          </div>
-        </button>
-      </div>
-    </section>
-
-    <section class="section-shell section-block coursework-section" id="coursework">
-      <div class="section-heading">
-        <div>
-          <p class="kicker">Coursework</p>
-          <h2>Classes and technical areas shaping my foundation.</h2>
-        </div>
-        <p>I’ll keep refining this as I update my materials, but these are the areas most connected to the BME roles I’m pursuing.</p>
-      </div>
-
-      <div class="coursework-grid">
-        <article class="card soft-card">
-          <h3>Biomedical engineering</h3>
-          <ul>
-            <li>Bioinstrumentation</li>
-            <li>Wearable Technology Design Studio</li>
-            <li>Biomechanics</li>
-            <li>Biotransport</li>
-            <li>Biomedical design projects</li>
-            <li>Machine-learning project development</li>
-          </ul>
-        </article>
-        <article class="card soft-card">
-          <h3>Engineering & technical</h3>
-          <ul>
-            <li>Circuits & Electronics</li>
-            <li>Materials / biomaterials-related work</li>
-            <li>Microfluidics concepts & COMSOL exposure</li>
-            <li>CAD / technical drawing</li>
-            <li>Embedded systems & prototyping</li>
-            <li>Programming fundamentals</li>
-          </ul>
-        </article>
-        <article class="card soft-card">
-          <h3>Math, science & quality</h3>
-          <ul>
-            <li>Calculus I, II, III</li>
-            <li>Differential Equations</li>
-            <li>Probability & Statistics</li>
-            <li>Biology I with lab</li>
-            <li>Quality Science Education Certificate</li>
-            <li>GMP, validation, risk, data integrity, and privacy concepts</li>
-          </ul>
         </article>
       </div>
     </section>
 
-    <section class="section-shell section-block photo-cta-section">
-      <div class="photo-cta-card card">
-        <div>
-          <p class="kicker">Photo gallery</p>
-          <h2>Project, campus, and leadership photos are all in one separate place.</h2>
-          <p>You asked to keep the homepage shorter, so the photos are still included, just moved to their own page.</p>
+    <section class="section" id="senior-project">
+      <div class="container">
+        <div class="section-head center-head">
+          <p class="eyebrow">Senior Project</p>
+          <h2>Senior project, featured up front.</h2>
         </div>
-        <a class="button button-primary" href="photos.html">Open photo gallery</a>
+        <article class="feature-card">
+          <div class="feature-copy">
+            <div class="pill-row"><span class="pill">Mopec</span><span class="pill">In Progress</span><span class="pill">2026–2027</span></div>
+            <h3>Mopec Medical AI Senior Project</h3>
+            <p>I’m part of LTU’s BME company-sponsored senior project with Mopec. Our team is developing, training, and fine-tuning an AI model intended for future use in healthcare environments such as hospitals, medical facilities, and related pathology workflows.</p>
+            <p>Because the project is still early, the current work is centered on building a strong foundation: reviewing available datasets, shaping the training / validation / test approach, and organizing a workflow that can support future model evaluation and iteration.</p>
+            <div class="tag-list compact-tags">
+              <span>Medical AI</span><span>Dataset review</span><span>Model training</span><span>Fine-tuning</span><span>Workflow design</span><span>Team collaboration</span>
+            </div>
+            <div class="button-row">
+              <a class="button primary" href="projects.html#mopec">Read case study</a>
+            </div>
+          </div>
+          <div class="feature-image">
+            <img src="assets/projects/mopec.png" alt="Preview image for Mopec medical AI senior project">
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section-shell section-block contact-section" id="contact">
-      <div class="contact-card card">
-        <div class="contact-copy">
-          <p class="kicker">Contact</p>
-          <h2>Thanks for stopping by.</h2>
-          <p>I’m especially interested in internships and opportunities related to medical devices, healthcare technology, product development, quality engineering, and biomedical design.</p>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head center-head">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>Selected projects, kept short and easy to scan.</h2>
+          <p class="section-note">Each preview includes a quick overview, a few visible skills, and a link to more detail.</p>
         </div>
-        <div class="contact-links">
-          <a href="mailto:ichandler@ltu.edu"><span>LTU email</span>ichandler@ltu.edu</a>
-          <a href="mailto:isabellachandler169@gmail.com"><span>Personal email</span>isabellachandler169@gmail.com</a>
-          <a href="tel:+15863597988"><span>Phone</span>(586) 359-7988</a>
-          <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener"><span>LinkedIn</span>View profile ↗</a>
-          <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener"><span>Handshake</span>View profile ↗</a>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="assets/projects/syncare.png" alt="SyncCare preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>Healthcare AI</span><span>Wearables</span></div>
+              <h3>SyncCare</h3>
+              <p>AI-supported wellness wearable concept that connects user input, emotion-aware feedback, and a calm companion interface.</p>
+              <a class="text-link" href="projects.html#syncare">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/projects/smart-collar.png" alt="Smart Collar preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>Embedded Systems</span><span>BLE</span><span>Product Design</span></div>
+              <h3>Smart Collar</h3>
+              <p>Pet activity tracking and automated feeding concept that links wearable sensing to a simple physical response.</p>
+              <a class="text-link" href="projects.html#smart-collar">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/projects/headup.png" alt="HeadUp preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>Bioinstrumentation</span><span>Posture</span><span>Wearables</span></div>
+              <h3>HeadUp</h3>
+              <p>Posture-support wearable concept designed to help users recognize and improve sustained head-down posture.</p>
+              <a class="text-link" href="projects.html#headup">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/projects/pressure-point-insole.png" alt="Pressure-Point Insole preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>Biomechanics</span><span>Sensing</span><span>Concept Design</span></div>
+              <h3>Pressure-Point Insole</h3>
+              <p>Smart insole concept focused on pressure distribution, comfort, and pressure-mapping feedback.</p>
+              <a class="text-link" href="projects.html#pressure-point-insole">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/projects/presence-plant.png" alt="Presence Plant preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>HCI</span><span>Ambient Tech</span><span>UX</span></div>
+              <h3>Presence Plant</h3>
+              <p>Desk companion concept that communicates focus and availability in a softer, more playful way.</p>
+              <a class="text-link" href="projects.html#presence-plant">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/projects/connectus.png" alt="ConnectUs studio project preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>Design Studio</span><span>Prototyping</span><span>Team Project</span></div>
+              <h3>ConnectUs Company-Based Project</h3>
+              <p>Entrepreneurial engineering design studio team project shaped by concept development, prototyping, and iterative testing.</p>
+              <a class="text-link" href="projects.html#connectus">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/projects/campus-recreation.png" alt="Campus recreation planning preview image">
+            <div class="project-content">
+              <div class="project-meta"><span>Planning</span><span>Communication</span><span>Team Proposal</span></div>
+              <h3>Technical Communication Final Team Project</h3>
+              <p>Team planning proposal for a campus recreation concept, combining research, systems thinking, and clear communication.</p>
+              <a class="text-link" href="projects.html#campus-recreation">View case study →</a>
+            </div>
+          </article>
         </div>
+        <div class="centered-cta">
+          <a class="button secondary" href="projects.html">Open all case studies</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coursework">
+      <div class="container">
+        <div class="section-head center-head">
+          <p class="eyebrow">Coursework</p>
+          <h2>Coursework that supports my project work.</h2>
+        </div>
+        <div class="tag-list coursework-tags centered-tags">
+          <span>Calculus I, II, III</span><span>Differential Equations</span><span>Probability & Statistics</span>
+          <span>Biology I + Lab</span><span>Biotransport</span><span>Microfluidics</span><span>Bioinstrumentation</span>
+          <span>Wearable Technology Design Studio</span><span>Technical & Professional Communication</span>
+          <span>Quality / Regulatory Mindset</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container photo-teaser">
+        <div>
+          <p class="eyebrow">Photo Gallery</p>
+          <h2>Additional photos, kept on a separate page.</h2>
+          <p>The home page stays clean and concise, while extra campus, project, and portrait photos live in their own gallery.</p>
+        </div>
+        <a class="button primary" href="photos.html">Open photo gallery</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div>Isabella Chandler · Biomedical Engineering Portfolio</div>
-    <div>Made to feel professional, calm, and a little personal ✿</div>
+  <footer class="section footer-section" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let's connect.</h2>
+        <p>If you’d like to connect about internships, biomedical engineering work, or project experience, feel free to reach out.</p>
+      </div>
+      <div class="contact-card">
+        <a href="mailto:ichandler@ltu.edu"><span>LTU email</span>ichandler@ltu.edu</a>
+        <a href="mailto:isabellachandler169@gmail.com"><span>Personal email</span>isabellachandler169@gmail.com</a>
+        <a href="tel:+15863597988"><span>Phone</span>(586) 359-7988</a>
+        <a href="https://www.linkedin.com/in/isabella-chandler-254bab287/" target="_blank" rel="noopener"><span>LinkedIn</span>View profile ↗</a>
+        <a href="https://app.joinhandshake.com/profiles/bzjzv9" target="_blank" rel="noopener"><span>Handshake</span>View profile ↗</a>
+      </div>
+    </div>
   </footer>
-
-  <div class="modal" id="projectModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close></div>
-    <article class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" type="button" data-close aria-label="Close project">×</button>
-      <div id="modalContent"></div>
-    </article>
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>

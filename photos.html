@@ -4,113 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Photo gallery for Isabella Chandler's portfolio.">
-  <title>Isabella Chandler | Photo Gallery</title>
+  <title>Photo Gallery | Isabella Chandler</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="photos-body">
-  <div class="site-bg" aria-hidden="true">
-    <div class="mist mist-a"></div>
-    <div class="mist mist-b"></div>
-    <div class="canopy canopy-a"></div>
-    <div class="canopy canopy-b"></div>
-    <div class="grid-glow"></div>
-  </div>
-
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="index.html" aria-label="Back to home">
-        <span class="brand-icon">✿</span>
-        <span>Isabella Chandler</span>
-      </a>
-      <nav class="nav-links" aria-label="Gallery navigation">
-        <a href="index.html#about">About</a>
-        <a href="index.html#senior-project">Senior Project</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#coursework">Coursework</a>
-        <a href="photos.html">Photos</a>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html">Isabella Chandler</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Case Studies</a>
         <a href="index.html#contact">Contact</a>
       </nav>
-      <div class="topbar-actions">
-        <a class="button button-soft small" href="index.html">← Back home</a>
-        <button class="menu-button" type="button" aria-label="Open navigation">☰</button>
-      </div>
     </div>
   </header>
 
-  <main class="section-shell photo-page-main">
-    <section class="photo-page-hero card">
-      <p class="kicker">Photo gallery</p>
-      <h1>Campus, projects, people, and little moments.</h1>
-      <p>I moved the photo collection off the homepage so the main portfolio stays cleaner and shorter. You can still edit any caption later by changing the text inside each <code>&lt;figcaption&gt;</code> in this file.</p>
+  <main>
+    <section class="section page-hero simple-page-hero">
+      <div class="container centered-copy narrow">
+        <p class="eyebrow">Photo Gallery</p>
+        <h1>Extra photos, all in one place.</h1>
+        <p class="lead">A separate page for portraits, project snapshots, and campus moments so the home page stays clean and concise.</p>
+      </div>
     </section>
 
-    <section class="gallery-grid-full">
-      <figure class="gallery-item tall">
-        <img src="assets/photos/vr-solo.jpg" alt="Isabella using a VR headset">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/zap-zone-30-years.jpg" alt="Zap Zone event collage">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/photos/exec-board-black-group.jpg" alt="Group photo with student leadership team">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/photos/vr-closeup.jpg" alt="Close-up photo of Isabella using a VR headset">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/vr-group.jpg" alt="Group photo using virtual reality headsets">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/humanetics-group.jpg" alt="Group photo at Humanetics">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/photos/coding-laptop.jpg" alt="Isabella coding on a laptop">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/economic-club-group-1.jpg" alt="Group photo at Detroit Economic Club event">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/photos/friends-selfie.jpg" alt="Selfie with friends">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/white-hoodies-group.jpg" alt="Large group photo in matching hoodies">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/photos/trio-selfie.jpg" alt="Selfie with two friends">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item tall">
-        <img src="assets/photos/hoodie-friend-portrait.jpg" alt="Portrait photo with friend in matching hoodies">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/economic-club-group-2.jpg" alt="Another Detroit Economic Club group photo">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
-      <figure class="gallery-item wide">
-        <img src="assets/photos/buttoneers-display.jpg" alt="Revenge of the Buttoneers project display">
-        <figcaption>Caption coming soon.</figcaption>
-      </figure>
+    <section class="section">
+      <div class="container gallery-grid">
+        <figure class="gallery-card"><img src="assets/photos/photo-01.jpg" alt="Portfolio photo 1"><figcaption>Campus moment</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-02.jpg" alt="Portfolio photo 2"><figcaption>Project snapshot</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-03.jpg" alt="Portfolio photo 3"><figcaption>Student leadership</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-04.jpg" alt="Portfolio photo 4"><figcaption>Event photo</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-05.jpg" alt="Portfolio photo 5"><figcaption>Campus activity</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-06.jpg" alt="Portfolio photo 6"><figcaption>Team moment</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-07.jpg" alt="Portfolio photo 7"><figcaption>Project display</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-08.jpg" alt="Portfolio photo 8"><figcaption>Student life</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-09.jpg" alt="Portfolio photo 9"><figcaption>Campus memory</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-10.jpg" alt="Portfolio photo 10"><figcaption>Portfolio snapshot</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-11.jpg" alt="Portfolio photo 11"><figcaption>Professional moment</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-12.jpg" alt="Portfolio photo 12"><figcaption>Student organization</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-13.jpg" alt="Portfolio photo 13"><figcaption>Project and campus</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-14.jpg" alt="Portfolio photo 14"><figcaption>Extra snapshot</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-15.jpg" alt="Portfolio photo 15"><figcaption>Portrait</figcaption></figure>
+        <figure class="gallery-card"><img src="assets/photos/photo-16.jpg" alt="Portfolio photo 16"><figcaption>Professional portrait</figcaption></figure>
+      </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div>Want to change a caption? Open <strong>photos.html</strong> and edit the figcaption text.</div>
-    <div><a href="index.html">Return to portfolio home →</a></div>
-  </footer>
   <script src="script.js"></script>
 </body>
 </html>
