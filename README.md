@@ -1,17 +1,37 @@
-Isabella Chandler Portfolio — Forest v9
+# Isabella Chandler Portfolio — v10
 
-Updated portfolio site with:
-- newer project preview images
-- cleaner, more centered hero layout
-- shortened home-page copy
-- renamed project titles for ConnectUs and the technical communication project
-- featured senior project near the top
-- photo gallery kept on a separate page
+This version fixes the broken project preview images and makes the design consistent across:
 
-Main files:
-- index.html
-- projects.html
-- photos.html
-- style.css
-- script.js
-- assets/
+- `index.html`
+- `projects.html`
+- `photos.html`
+
+## Important when uploading to GitHub Pages
+
+Upload **all contents of this folder together**, especially:
+
+- `index.html`
+- `projects.html`
+- `photos.html`
+- `style.css`
+- `script.js`
+- the entire `assets/` folder
+
+If you only replace the HTML files but keep an older `style.css` or older `assets/` folder, pages can look unstyled and preview images can appear broken.
+
+## Site structure
+
+```text
+index.html
+projects.html
+photos.html
+style.css
+script.js
+assets/
+  profile.jpg
+  resume.pdf
+  projects/
+  photos/
+```
+
+The homepage now uses only the black-outfit professional portrait.
