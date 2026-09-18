@@ -45,3 +45,35 @@ high-contrast colors in both modes.
 - Dark-mode Current Focus / Technical Themes cards have dedicated high-contrast colors.
 - `case-studies/` contains a dedicated internal page for every case study.
 - ConnectUs expo setup and expo poster were moved from the overview into `case-studies/connectus.html`.
+
+
+## v23 internal case-study tabs
+
+Each project now has its own internal page in `case-studies/`.
+The page has three tabs:
+- Overview
+- Design & Technical
+- Presentation & Files
+
+Supporting presentation slides, expo photos, posters, and downloadable project files now live inside the project's internal page instead of on the Case Studies overview.
+
+### Editing photo captions
+Open `photo-captions.js`.
+Change only the text in quotation marks, for example:
+
+    "photo-01": "Biomedical Engineering lab work",
+
+Leave the text empty (`""`) to hide that caption.
+
+### Adding more case-study material later
+Put images in `assets/case-studies/<project-name>/`.
+Put downloadable PDFs/PPTX files in `assets/case-study-files/`.
+Then add the image/file link inside that project's HTML page in `case-studies/`.
+
+## GitHub Pages Lite Build
+This version intentionally omits the large downloadable PowerPoint and slide-archive files
+from `assets/case-study-files/` so it can be uploaded through GitHub's website more reliably.
+The case-study information and web images remain in the site.
+
+Important: extract the ZIP first and upload the CONTENTS of this folder to your repository.
+Do not upload this ZIP file itself into the repository.

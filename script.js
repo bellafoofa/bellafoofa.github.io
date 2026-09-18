@@ -36,3 +36,29 @@ if (navToggle && siteNav) {
     }
   });
 }
+
+// Internal case-study tabs
+document.querySelectorAll(".case-tabs").forEach((tabList) => {
+  const section = tabList.closest(".study-tabs-section");
+  if (!section) return;
+
+  const buttons = [...tabList.querySelectorAll(".case-tab")];
+  const panels = [...section.querySelectorAll(".case-tab-panel")];
+
+  const activate = (name) => {
+    buttons.forEach((button) => {
+      const active = button.dataset.tab === name;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+    });
+    panels.forEach((panel) => {
+      const active = panel.dataset.panel === name;
+      panel.classList.toggle("active", active);
+      panel.hidden = !active;
+    });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => activate(button.dataset.tab));
+  });
+});

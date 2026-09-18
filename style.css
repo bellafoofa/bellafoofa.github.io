@@ -2248,3 +2248,266 @@ p, .hero-lead, .lead,
   .detail-gallery { grid-template-columns:1fr; }
   .detail-actions .button { width:100%; justify-content:center; }
 }
+
+
+/* =========================================================
+   v23 — compact case studies + internal case-study tabs
+   ========================================================= */
+
+/* Keep the visual language close to the polished v19 layout. */
+.case-page-title {
+  padding: clamp(2rem, 5vw, 4rem) 0 1rem;
+}
+.case-page-title .container {
+  text-align: center;
+}
+.case-page-title h1 {
+  margin: .15rem 0 0;
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+}
+.case-page-title + .section {
+  padding-top: 1rem !important;
+}
+
+/* Keep home sections closer together without feeling cramped. */
+.hero.section {
+  padding-bottom: clamp(2.8rem, 5vw, 4.2rem) !important;
+}
+#about.section {
+  padding-top: 0 !important;
+  padding-bottom: clamp(2.2rem, 4vw, 3.2rem) !important;
+}
+#senior-project.section {
+  padding-top: clamp(2.3rem, 4vw, 3.5rem) !important;
+}
+
+/* Overview page: buttons/links stay inside content instead of floating oddly. */
+.case-card {
+  align-items: center !important;
+}
+.case-copy {
+  min-width: 0;
+}
+.case-open-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  font-weight: 800;
+}
+.archive-strip-section {
+  padding-top: .5rem !important;
+}
+.archive-strip {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  padding:1.3rem 1.5rem;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.archive-strip h2 { margin:.15rem 0 .35rem; font-size:clamp(1.45rem,2.8vw,2rem); }
+.archive-strip p { margin:0; max-width:760px; }
+
+/* Internal case-study pages */
+.study-hero.section {
+  padding-top: clamp(2.7rem, 5vw, 4.5rem) !important;
+  padding-bottom: clamp(1.8rem, 4vw, 3rem) !important;
+}
+.study-hero-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+  align-items:center;
+  gap:clamp(2rem,5vw,5rem);
+}
+.study-hero-copy h1 {
+  margin:.35rem 0 1rem;
+  font-size:clamp(3rem,6vw,5.7rem);
+  line-height:.95;
+}
+.study-summary {
+  max-width:760px;
+  font-size:clamp(1rem,1.5vw,1.15rem);
+}
+.back-link {
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  margin-bottom:1.1rem;
+  color:var(--accent-deep);
+  font-weight:800;
+  text-decoration:none;
+}
+.back-link:hover { transform:translateX(-2px); }
+.study-hero-image {
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:.65rem;
+  box-shadow:var(--shadow);
+}
+.study-hero-image img {
+  display:block;
+  width:100%;
+  max-height:520px;
+  object-fit:contain;
+  object-position:center;
+  border-radius:20px;
+}
+.study-skills { margin-top:1.25rem; }
+
+.study-tabs-section {
+  padding-top: .5rem !important;
+}
+.case-tabs {
+  display:flex;
+  gap:.65rem;
+  overflow-x:auto;
+  padding:.35rem;
+  margin:0 auto 1.35rem;
+  width:max-content;
+  max-width:100%;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+  scrollbar-width:none;
+}
+.case-tabs::-webkit-scrollbar { display:none; }
+.case-tab {
+  appearance:none;
+  border:0;
+  border-radius:999px;
+  padding:.72rem 1rem;
+  background:transparent;
+  color:var(--muted);
+  font:inherit;
+  font-weight:800;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.case-tab.active {
+  background:#d6e4d1;
+  color:#203027;
+}
+.case-tab-panel {
+  animation:tabfade .2s ease;
+}
+@keyframes tabfade { from {opacity:.45; transform:translateY(3px);} to {opacity:1; transform:none;} }
+
+.study-card-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+}
+.study-info-card {
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:1.25rem 1.3rem;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.study-info-card h3 {
+  margin:0 0 .55rem;
+  font-size:1.05rem;
+}
+.study-info-card p {
+  margin:0;
+  font-size:.95rem;
+  line-height:1.65;
+}
+
+.materials-head {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:2rem;
+  margin:0 0 1.4rem;
+}
+.materials-head h2 { margin:.2rem 0 .4rem; }
+.materials-head p { max-width:720px; margin:0; }
+.file-download { flex:0 0 auto; }
+
+.study-media-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.2rem;
+}
+.study-media-card {
+  margin:0;
+  padding:.65rem;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.study-media-card img {
+  width:100%;
+  height:auto;
+  max-height:720px;
+  object-fit:contain;
+  display:block;
+  border-radius:16px;
+  background:#f4f6f1;
+}
+.study-media-card figcaption {
+  padding:.7rem .25rem .15rem;
+  color:var(--muted);
+  line-height:1.5;
+}
+.quiet-note { color:var(--muted); }
+
+/* Strong dark-mode contrast for all info/fact boxes. */
+@media (prefers-color-scheme: dark) {
+  .case-facts > div,
+  .study-info-card {
+    background:#22342a !important;
+    border-color:rgba(219,233,219,.16) !important;
+  }
+  .case-facts strong,
+  .study-info-card h3 {
+    color:#f3f7f1 !important;
+  }
+  .case-facts span,
+  .study-info-card p {
+    color:#cbd7cc !important;
+  }
+  .case-tab.active {
+    background:#c8dcc3 !important;
+    color:#17271c !important;
+  }
+  .case-tab {
+    color:#d0dbd2 !important;
+  }
+  .study-media-card img {
+    background:#e8eee6 !important;
+  }
+}
+
+/* Photo captions stay compact and easy to scan. */
+.photo-card figcaption {
+  min-height:0 !important;
+  padding:.68rem .78rem .76rem !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .study-hero-grid { grid-template-columns:1fr; }
+  .study-hero-image { order:-1; }
+  .study-card-grid { grid-template-columns:1fr; }
+  .materials-head { align-items:flex-start; flex-direction:column; }
+  .study-media-grid { grid-template-columns:1fr; }
+  .archive-strip { align-items:flex-start; flex-direction:column; gap:1rem; }
+}
+@media (max-width: 560px) {
+  .study-hero.section { padding-top:2rem !important; }
+  .study-hero-copy h1 { font-size:clamp(2.7rem,15vw,4.3rem); }
+  .case-tabs {
+    width:100%;
+    justify-content:flex-start;
+    border-radius:18px;
+  }
+  .case-tab { padding:.68rem .82rem; }
+  .file-download { width:100%; justify-content:center; }
+}
