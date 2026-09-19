@@ -3582,3 +3582,21 @@ p, .hero-lead, .lead,
   max-width: none !important;
   margin-inline: auto !important;
 }
+
+/* v36: Pressure-Sensing Mobility Aid / PPA project */
+.preview-mobility > img,
+.case-mobility .case-image img {
+  object-fit: contain;
+  object-position: center;
+  background: #f1f6f1;
+  padding: 0.75rem;
+}
+.mobility-hero img {
+  object-fit: contain !important;
+  background: #f1f6f1;
+}
+@media (prefers-color-scheme: dark) {
+  .preview-mobility > img,
+  .case-mobility .case-image img,
+  .mobility-hero img { background: #eef4ee; }
+}
