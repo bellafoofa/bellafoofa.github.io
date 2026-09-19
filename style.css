@@ -3600,3 +3600,228 @@ p, .hero-lead, .lead,
   .case-mobility .case-image img,
   .mobility-hero img { background: #eef4ee; }
 }
+
+
+/* =========================================================
+   v37 — final automatic light/dark contrast + employer polish
+   The site follows the visitor's OS/browser preference.
+   These rules intentionally come last so pastel light-mode
+   treatments never leak into dark mode with low-contrast text.
+   ========================================================= */
+
+/* Small polish that improves scanability for recruiters. */
+.about-grid .panel,
+.quality-panel,
+.tools-panel,
+.current-item,
+.experience-card,
+.coursework-card,
+.lab-highlight-card,
+.study-info-card {
+  transition: border-color .18s ease, background-color .18s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101813;
+    --surface: rgba(27, 39, 31, .96);
+    --surface-strong: #1c2921;
+    --ink: #f4f7f2;
+    --muted: #c8d3ca;
+    --line: rgba(211, 226, 214, .16);
+    --accent: #b8d0b8;
+    --accent-deep: #dcebd9;
+    --accent-soft: #26382b;
+    --shadow: 0 18px 44px rgba(0,0,0,.26);
+  }
+
+  body {
+    color: var(--ink) !important;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(78,111,83,.18), transparent 30%),
+      radial-gradient(circle at 92% 12%, rgba(72,94,84,.16), transparent 27%),
+      linear-gradient(180deg, #101813 0%, #142019 48%, #0f1712 100%) !important;
+  }
+
+  .site-header { background: rgba(16,24,19,.90) !important; }
+  .nav-shell,
+  .panel,
+  .current-shell,
+  .senior-card,
+  .project-card,
+  .case-card,
+  .experience-card,
+  .quality-panel,
+  .tools-panel,
+  .coursework-card,
+  .certificate-note,
+  .gallery-cta,
+  .ai-playground-card,
+  .study-hero-image,
+  .study-info-card,
+  .study-media-card,
+  .case-tabs,
+  .photo-card {
+    border-color: var(--line) !important;
+  }
+
+  /* About / interests */
+  .about-grid .panel:first-child {
+    background: linear-gradient(145deg, #203629, #1b2a21) !important;
+  }
+  .about-grid .panel:last-child {
+    background: linear-gradient(145deg, #253541, #1d2a31) !important;
+  }
+  .about-grid .panel h2,
+  .about-grid .panel .eyebrow { color: #f4f7f2 !important; }
+  .about-grid .panel p:not(.eyebrow) { color: #cbd5cd !important; }
+
+  /* Every tag/pill gets a dark pastel fill with readable light text. */
+  .tag-list span,
+  .skill-row span,
+  .mini-tags span,
+  .pill,
+  .coursework-tags span {
+    background: #29402f !important;
+    color: #eef5ec !important;
+    border-color: rgba(211,226,214,.18) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+  .tag-list span:nth-child(3n+2),
+  .skill-row span:nth-child(3n+2),
+  .mini-tags span:nth-child(2n),
+  .pill:nth-child(2) {
+    background: #2a3d49 !important;
+    color: #edf4f8 !important;
+  }
+  .tag-list span:nth-child(3n),
+  .skill-row span:nth-child(3n),
+  .pill:nth-child(3) {
+    background: #3b3346 !important;
+    color: #f4eef8 !important;
+  }
+
+  /* Current / statistics */
+  .current-shell { background: #18271e !important; }
+  .current-item:nth-child(1), .stat-row > div:nth-child(1) { background: #21372a !important; }
+  .current-item:nth-child(2), .stat-row > div:nth-child(2) { background: #24343f !important; }
+  .current-item:nth-child(3), .stat-row > div:nth-child(3) { background: #332d3d !important; }
+  .stat-row > div:nth-child(4) { background: #3a3028 !important; }
+  .current-item strong,
+  .stat-row strong { color: #f1f6ef !important; }
+  .current-item > span,
+  .experience-top > span,
+  .stat-row span { color: #c7d8c8 !important; }
+  .current-item p { color: #cbd5cd !important; }
+
+  /* Experience, lab highlights, coursework */
+  .experience-card:nth-child(1),
+  .lab-highlight-card.tone-sage,
+  .coursework-card:nth-child(1) { background: #21372a !important; }
+  .experience-card:nth-child(2),
+  .lab-highlight-card.tone-blue,
+  .coursework-card:nth-child(2) { background: #24343f !important; }
+  .experience-card:nth-child(3),
+  .lab-highlight-card.tone-lilac,
+  .coursework-card:nth-child(3) { background: #332d3d !important; }
+  .lab-highlight-card.tone-peach,
+  .coursework-card:nth-child(4) { background: #3a3028 !important; }
+  .experience-card p,
+  .lab-highlight-card p,
+  .coursework-card li,
+  .certificate-note p { color: #cbd5cd !important; }
+  .experience-top strong,
+  .lab-highlight-card h3,
+  .coursework-card h3,
+  .certificate-note span,
+  .highlight-kicker { color: #f3f7f1 !important; }
+  .certificate-note { background: #1d2c22 !important; }
+
+  /* Quality + technical toolkit — fixes the screenshots where chips disappeared. */
+  .quality-panel,
+  .tools-panel { background: #1b2a21 !important; }
+  .quality-panel h2,
+  .tools-panel h2,
+  .quality-panel .eyebrow,
+  .tools-panel .eyebrow { color: #f4f7f2 !important; }
+  .quality-grid > div {
+    background: #24362a !important;
+    border-color: rgba(211,226,214,.16) !important;
+  }
+  .quality-grid strong { color: #e8f2e6 !important; }
+  .quality-grid span,
+  .tools-note { color: #cbd5cd !important; }
+
+  /* Project + AI prototype calls to action. */
+  .project-card:nth-child(n) .project-body { background: #1b2720 !important; }
+  .project-body h3,
+  .project-body p { color: #f2f6f0 !important; }
+  .project-body p { color: #cbd5cd !important; }
+  .text-link,
+  .live-demo-link,
+  .link-row a { color: #dcebd9 !important; }
+  .ai-playground-card {
+    background:
+      radial-gradient(circle at 86% 20%, rgba(76,59,90,.55), transparent 28%),
+      linear-gradient(130deg, #21372a, #24343f 58%, #332d3d) !important;
+  }
+  .ai-playground-card h2,
+  .ai-playground-card .eyebrow { color: #f4f7f2 !important; }
+  .ai-playground-card p:not(.eyebrow) { color: #d0d9d1 !important; }
+
+  /* Case-study facts, tabs and internal detail cards. */
+  .case-facts > div,
+  .study-info-card,
+  .quality-grid > div {
+    background: #22342a !important;
+    border-color: rgba(219,233,219,.16) !important;
+  }
+  .case-facts strong,
+  .study-info-card h3 { color: #f3f7f1 !important; }
+  .case-facts span,
+  .study-info-card p,
+  .study-media-card figcaption,
+  .quiet-note { color: #cbd7cc !important; }
+  .case-tab { color: #d5ded7 !important; }
+  .case-tab.active {
+    background: #c8dcc3 !important;
+    color: #17271c !important;
+  }
+
+  /* Keep secondary buttons light enough to read without giant dark pills. */
+  .button.primary {
+    background: #c9ddc5 !important;
+    color: #1d2c22 !important;
+  }
+  .button.secondary,
+  .button:not(.primary) {
+    background: #24362a !important;
+    color: #eef5ec !important;
+    border-color: rgba(211,226,214,.18) !important;
+  }
+
+  .hero-photo-label {
+    background: #edf3e9 !important;
+    color: #294331 !important;
+  }
+}
+
+/* Light-mode text on pastel chips should be dark, never white. */
+@media (prefers-color-scheme: light) {
+  .tag-list span,
+  .skill-row span,
+  .mini-tags span,
+  .pill,
+  .coursework-tags span {
+    color: #31463a !important;
+    text-shadow: none !important;
+  }
+  .tag-list span:nth-child(3n+2),
+  .skill-row span:nth-child(3n+2),
+  .mini-tags span:nth-child(2n),
+  .pill:nth-child(2) { color: #334650 !important; }
+  .tag-list span:nth-child(3n),
+  .skill-row span:nth-child(3n),
+  .pill:nth-child(3) { color: #4c4057 !important; }
+}
