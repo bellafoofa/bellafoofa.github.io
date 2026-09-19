@@ -1,80 +1,76 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Presence Plant case study by Isabella Chandler">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Presence Plant case study by Isabella Chandler" name="description"/>
 <title>Presence Plant | Isabella Chandler</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=33">
-<link rel="icon" type="image/png" href="../assets/pfp.png?v=28">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../style.css?v=34" rel="stylesheet"/>
+<link href="../assets/pfp.png?v=28" rel="icon" type="image/png"/>
 </head>
 <body>
-<div class="forest-bg" aria-hidden="true"></div>
+<div aria-hidden="true" class="forest-bg"></div>
 <header class="site-header">
 <div class="container nav-shell">
-<a class="brand" href="../index.html"><img class="brand-logo" src="../assets/pfp.png?v=28" alt=""><span>Isabella Chandler</span></a>
-<nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+<a class="brand" href="../index.html"><img alt="" class="brand-logo" src="../assets/pfp.png?v=28"/><span>Isabella Chandler</span></a>
+<nav aria-label="Primary navigation" class="site-nav" id="siteNav">
 <a href="../index.html#about">About</a>
 <a href="../index.html#senior-project">Senior Project</a>
 <a href="../index.html#projects">Projects</a>
+<a href="../index.html#experience">Experience</a>
 <a href="../index.html#coursework">Coursework</a>
 <a class="active" href="../projects.html">Case Studies</a>
 <a href="../photos.html">Photos</a>
-<a class="nav-resume" href="../assets/resume.pdf" download>Download Résumé</a>
-        <a href="../index.html#contact">Contact</a>
+<a class="nav-resume" download="" href="../assets/resume.pdf">Résumé ↓</a>
+<a href="../index.html#contact">Contact</a>
 </nav>
-<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="navToggle" type="button">☰</button>
 </div>
 </header>
-
 <main>
 <section class="study-hero section">
-  <div class="container study-hero-grid">
-    <div class="study-hero-copy">
-      <a class="back-link" href="../projects.html#presence-plant">← Case Studies</a>
-      <p class="eyebrow">Human-Computer Interaction + Robotics</p>
-      <h1>Presence Plant</h1>
-      <p class="study-summary">Ambient robotic desk companion concept that communicates focus and availability through friendly, organic movement instead of harsh Do Not Disturb signals.</p>
-      <div class="skill-row study-skills"><span>HCI</span><span>Ambient interaction</span><span>Sensor systems</span><span>ESP32-S3</span><span>Servo/LED concepts</span></div>
-    </div>
-    <div class="study-hero-image"><img src="../assets/projects/presence-plant.webp" alt="Presence Plant preview"></div>
-  </div>
+<div class="container study-hero-grid">
+<div class="study-hero-copy">
+<a class="back-link" href="../projects.html#presence-plant">← Case Studies</a>
+<p class="eyebrow">Human-Computer Interaction + Robotics</p>
+<h1>Presence Plant</h1>
+<p class="study-summary">Ambient robotic desk companion concept that communicates focus and availability through friendly, organic movement instead of harsh Do Not Disturb signals.</p>
+<div class="skill-row study-skills"><span>HCI</span><span>Ambient interaction</span><span>Sensor systems</span><span>ESP32-S3</span><span>Servo/LED concepts</span></div>
+</div>
+<div class="study-hero-image"><img alt="Presence Plant preview" src="../assets/projects/presence-plant.webp"/></div>
+</div>
 </section>
-
 <section class="study-tabs-section section compact-section">
-  <div class="container">
-    <div class="case-tabs" role="tablist" aria-label="Presence Plant sections">
-      <button class="case-tab active" role="tab" aria-selected="true" data-tab="overview">Overview</button>
-      <button class="case-tab" role="tab" aria-selected="false" data-tab="technical">Design & Technical</button>
-      <button class="case-tab" role="tab" aria-selected="false" data-tab="materials">Presentation & Files</button>
-    </div>
-
-    <div class="case-tab-panel active" data-panel="overview">
-      <div class="study-card-grid"><article class="study-info-card"><h3>User need</h3><p>Students sharing dorm rooms or small apartments need a low-friction way to communicate focus without seeming rude.</p></article><article class="study-info-card"><h3>Interaction idea</h3><p>Drooping/blooming movement and a simple expressive face shift the social signal from the person to the device.</p></article><article class="study-info-card"><h3>Target audience</h3><p>Focus-driven, socially minded, tech-native college students working in shared residential spaces.</p></article></div>
-    </div>
-
-    <div class="case-tab-panel" data-panel="technical" hidden>
-      <div class="study-card-grid"><article class="study-info-card"><h3>Sensing</h3><p>Concept sensors included mmWave presence sensing and a MEMS microphone array for ambient context.</p></article><article class="study-info-card"><h3>Processing + output</h3><p>An ESP32-S3 was proposed for local processing, with micro servos and a diffused RGB LED matrix for organic motion and affective feedback.</p></article><article class="study-info-card"><h3>HCI rationale</h3><p>The project explored physical posture/movement and social translucence as alternatives to static signs or app-based status.</p></article></div>
-    </div>
-
-    <div class="case-tab-panel" data-panel="materials" hidden>
-      <div class="materials-head">
-        <div>
-          <p class="eyebrow">Project archive</p>
-          <h2>Presentation, drawings, and supporting visuals.</h2>
-          <p>This material stays inside the case study so the main portfolio pages remain clean.</p>
-        </div>
-        
-      </div>
-      <div class="study-media-grid"><figure class="study-media-card"><img loading="lazy" src="../assets/case-studies/presence-plant/slide-01.webp" alt="User need: a friendly focus signal for students sharing dorms or small apartments."><figcaption>User need: a friendly focus signal for students sharing dorms or small apartments.</figcaption></figure><figure class="study-media-card"><img loading="lazy" src="../assets/case-studies/presence-plant/slide-02.webp" alt="Sensor, microcontroller, servo, LED, and HCI technology concepts."><figcaption>Sensor, microcontroller, servo, LED, and HCI technology concepts.</figcaption></figure><figure class="study-media-card"><img loading="lazy" src="../assets/case-studies/presence-plant/slide-03.webp" alt="Rationale for replacing awkward Do Not Disturb signals with ambient robotic movement."><figcaption>Rationale for replacing awkward Do Not Disturb signals with ambient robotic movement.</figcaption></figure><figure class="study-media-card"><img loading="lazy" src="../assets/case-studies/presence-plant/slide-04.webp" alt="Future-forward development timeline for prototyping and refinement."><figcaption>Future-forward development timeline for prototyping and refinement.</figcaption></figure><figure class="study-media-card"><img loading="lazy" src="../assets/case-studies/presence-plant/slide-05.webp" alt="Feasibility considerations for local sensing, processing, and consumer-grade manufacturing."><figcaption>Feasibility considerations for local sensing, processing, and consumer-grade manufacturing.</figcaption></figure></div>
-    </div>
-  </div>
+<div class="container">
+<div aria-label="Presence Plant sections" class="case-tabs" role="tablist">
+<button aria-selected="true" class="case-tab active" data-tab="overview" role="tab">Overview</button>
+<button aria-selected="false" class="case-tab" data-tab="technical" role="tab">Design &amp; Technical</button>
+<button aria-selected="false" class="case-tab" data-tab="materials" role="tab">Presentation &amp; Files</button>
+</div>
+<div class="case-tab-panel active" data-panel="overview">
+<div class="study-card-grid"><article class="study-info-card"><h3>User need</h3><p>Students sharing dorm rooms or small apartments need a low-friction way to communicate focus without seeming rude.</p></article><article class="study-info-card"><h3>Interaction idea</h3><p>Drooping/blooming movement and a simple expressive face shift the social signal from the person to the device.</p></article><article class="study-info-card"><h3>Target audience</h3><p>Focus-driven, socially minded, tech-native college students working in shared residential spaces.</p></article></div>
+<div class="process-strip-wrap"><p class="process-label">Engineering process</p><div class="process-flow"><div class="process-step"><span class="process-number">1</span><div><strong>Need</strong><small>Define focus signal</small></div></div><div class="process-step"><span class="process-number">2</span><div><strong>Sense</strong><small>Detect presence / context</small></div></div><div class="process-step"><span class="process-number">3</span><div><strong>Process</strong><small>Interpret locally</small></div></div><div class="process-step"><span class="process-number">4</span><div><strong>Move</strong><small>Create ambient motion</small></div></div><div class="process-step"><span class="process-number">5</span><div><strong>Signal</strong><small>Communicate availability</small></div></div></div></div></div>
+<div class="case-tab-panel" data-panel="technical" hidden="">
+<div class="study-card-grid"><article class="study-info-card"><h3>Sensing</h3><p>Concept sensors included mmWave presence sensing and a MEMS microphone array for ambient context.</p></article><article class="study-info-card"><h3>Processing + output</h3><p>An ESP32-S3 was proposed for local processing, with micro servos and a diffused RGB LED matrix for organic motion and affective feedback.</p></article><article class="study-info-card"><h3>HCI rationale</h3><p>The project explored physical posture/movement and social translucence as alternatives to static signs or app-based status.</p></article></div>
+</div>
+<div class="case-tab-panel" data-panel="materials" hidden="">
+<div class="materials-head">
+<div>
+<p class="eyebrow">Project archive</p>
+<h2>Presentation, drawings, and supporting visuals.</h2>
+<p>This material stays inside the case study so the main portfolio pages remain clean.</p>
+</div>
+</div>
+<div class="study-media-grid"><figure class="study-media-card"><img alt="User need: a friendly focus signal for students sharing dorms or small apartments." loading="lazy" src="../assets/case-studies/presence-plant/slide-01.webp"/><figcaption>User need: a friendly focus signal for students sharing dorms or small apartments.</figcaption></figure><figure class="study-media-card"><img alt="Sensor, microcontroller, servo, LED, and HCI technology concepts." loading="lazy" src="../assets/case-studies/presence-plant/slide-02.webp"/><figcaption>Sensor, microcontroller, servo, LED, and HCI technology concepts.</figcaption></figure><figure class="study-media-card"><img alt="Rationale for replacing awkward Do Not Disturb signals with ambient robotic movement." loading="lazy" src="../assets/case-studies/presence-plant/slide-03.webp"/><figcaption>Rationale for replacing awkward Do Not Disturb signals with ambient robotic movement.</figcaption></figure><figure class="study-media-card"><img alt="Future-forward development timeline for prototyping and refinement." loading="lazy" src="../assets/case-studies/presence-plant/slide-04.webp"/><figcaption>Future-forward development timeline for prototyping and refinement.</figcaption></figure><figure class="study-media-card"><img alt="Feasibility considerations for local sensing, processing, and consumer-grade manufacturing." loading="lazy" src="../assets/case-studies/presence-plant/slide-05.webp"/><figcaption>Feasibility considerations for local sensing, processing, and consumer-grade manufacturing.</figcaption></figure></div>
+</div>
+</div>
 </section>
 </main>
 <footer class="page-footer"><div class="container footer-simple"><span>Isabella Chandler · Biomedical Engineering Portfolio</span><a href="../projects.html">All Case Studies →</a></div></footer>
-<script src="../script.js?v=33"></script>
+<script src="../script.js?v=34"></script>
 </body>
 </html>
