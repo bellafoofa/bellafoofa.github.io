@@ -4285,3 +4285,59 @@ body::after {
     bottom: .85rem;
   }
 }
+
+/* =========================================================
+   v40 — dark-mode pill contrast hardening
+   Keeps pastel accents while guaranteeing readable labels.
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  /* Sage pills: light background + dark text for maximum contrast. */
+  .tag-list span:nth-child(3n + 1),
+  .skill-row span:nth-child(3n + 1),
+  .mini-tags span:nth-child(2n + 1),
+  .coursework-tags span:nth-child(3n + 1),
+  .pill:nth-child(3n + 1),
+  .tools-tags span:nth-child(3n + 1) {
+    background: #dce9d5 !important;
+    color: #213628 !important;
+    -webkit-text-fill-color: #213628 !important;
+    border-color: rgba(33, 54, 40, 0.14) !important;
+  }
+
+  /* Blue pills: deeper blue-gray + near-white text. */
+  .tag-list span:nth-child(3n + 2),
+  .skill-row span:nth-child(3n + 2),
+  .mini-tags span:nth-child(2n),
+  .coursework-tags span:nth-child(3n + 2),
+  .pill:nth-child(3n + 2),
+  .tools-tags span:nth-child(3n + 2) {
+    background: #3b4b5f !important;
+    color: #f7f9fc !important;
+    -webkit-text-fill-color: #f7f9fc !important;
+    border-color: rgba(236, 243, 250, 0.16) !important;
+  }
+
+  /* Lavender pills: richer plum + near-white text. */
+  .tag-list span:nth-child(3n),
+  .skill-row span:nth-child(3n),
+  .coursework-tags span:nth-child(3n),
+  .pill:nth-child(3n),
+  .tools-tags span:nth-child(3n) {
+    background: #504660 !important;
+    color: #fffaff !important;
+    -webkit-text-fill-color: #fffaff !important;
+    border-color: rgba(247, 239, 255, 0.16) !important;
+  }
+
+  /* Guard against inherited / browser text-fill weirdness on pill labels. */
+  .tag-list span,
+  .skill-row span,
+  .mini-tags span,
+  .coursework-tags span,
+  .pill,
+  .tools-tags span {
+    opacity: 1 !important;
+    text-shadow: none !important;
+    font-weight: 800 !important;
+  }
+}

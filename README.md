@@ -13,3 +13,5 @@ Upload the **contents** of this folder (not the enclosing folder) to the root of
 
 
 Version note: v39 includes a dark-mode contrast fix and a softer botanical visual refresh.
+
+Version note: v40 hardens dark-mode contrast for Interests and Technical Toolkit pills.
