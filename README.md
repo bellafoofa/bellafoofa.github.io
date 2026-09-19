@@ -96,3 +96,6 @@ Do not upload this ZIP file itself into the repository.
 - Converted large project PNG previews and gallery photos to WebP to reduce upload size.
 - This package is intentionally smaller and better suited to GitHub's browser uploader.
 - Upload the CONTENTS of this folder to the repository, not the ZIP itself.
+
+
+Version 33: persistent résumé navigation, square edge-to-edge photo mosaic, and project-development photos moved into their relevant case studies.

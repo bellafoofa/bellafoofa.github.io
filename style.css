@@ -2741,3 +2741,89 @@ p, .hero-lead, .lead,
   .photo-grid.photo-grid-compact .photo-card { margin-bottom: 1rem !important; border-radius: 18px !important; }
   .photo-grid.photo-grid-compact .photo-card[data-photo-id="photo-07"] img { height: 250px !important; }
 }
+
+/* =========================================================
+   v33 — employer resume access + clean edge-to-edge gallery
+   ========================================================= */
+.site-header .site-nav a.nav-resume {
+  padding: .48rem .72rem !important;
+  border: 1px solid rgba(181, 207, 181, .32) !important;
+  border-radius: 999px !important;
+  background: rgba(181, 207, 181, .12) !important;
+  font-weight: 800 !important;
+}
+.site-header .site-nav a.nav-resume:hover {
+  background: rgba(181, 207, 181, .22) !important;
+}
+
+/* Photos: one cohesive, square-edged mosaic with no green gutters. */
+.photo-grid.photo-grid-compact {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+.photo-grid-compact .photo-card {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  aspect-ratio: 1 / 1;
+  background: #18261d !important;
+}
+.photo-grid-compact .photo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  transition: transform .25s ease;
+}
+.photo-grid-compact .photo-card:hover img { transform: scale(1.018); }
+.photo-grid-compact .photo-card figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  margin: 0 !important;
+  padding: 1.8rem .85rem .72rem !important;
+  color: #fff !important;
+  font-size: clamp(.78rem, 1vw, .95rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  background: linear-gradient(transparent, rgba(8,15,10,.86));
+}
+/* Preserve the most important subject area on tall/person images. */
+.photo-grid-compact [data-photo-id="photo-01"] img { object-position: 50% 44% !important; }
+.photo-grid-compact [data-photo-id="photo-04"] img { object-position: 50% 40% !important; }
+.photo-grid-compact [data-photo-id="photo-09"] img { object-position: 50% 38% !important; }
+.photo-grid-compact [data-photo-id="photo-13"] img { object-position: 50% 42% !important; }
+.photo-grid-compact [data-photo-id="photo-20"] img { object-position: 50% 38% !important; }
+
+/* Case-study additions should read as documentation, not gallery leftovers. */
+.study-media-card img { border-radius: 8px !important; }
+.study-media-card { border-radius: 12px !important; }
+
+@media (max-width: 1050px) {
+  .photo-grid.photo-grid-compact { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 900px) {
+  .site-header .site-nav a.nav-resume {
+    border-radius: 11px !important;
+    text-align: center;
+  }
+  .photo-grid.photo-grid-compact { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 560px) {
+  .photo-grid.photo-grid-compact { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .photo-grid-compact .photo-card figcaption { padding: 1.5rem .55rem .5rem !important; font-size: .72rem !important; }
+}
