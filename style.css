@@ -3958,3 +3958,330 @@ p, .hero-lead, .lead,
 @media (max-width: 900px) {
   .senior-image { aspect-ratio: 4 / 3 !important; }
 }
+
+/* =========================================================
+   v39 — botanical dark-mode refresh + contrast fix
+   ========================================================= */
+
+:root {
+  --petal-pink: #f3edf6;
+  --petal-blue: #eaf1f8;
+  --petal-green: #e9f1e6;
+  --petal-yellow: #f7f2dd;
+}
+
+body {
+  background:
+    radial-gradient(circle at 9% 9%, rgba(173, 204, 179, 0.18), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(214, 196, 224, 0.14), transparent 20%),
+    radial-gradient(circle at 78% 86%, rgba(183, 205, 191, 0.16), transparent 24%),
+    linear-gradient(180deg, #f7fbf6 0%, #eef5ee 48%, #edf4ef 100%) !important;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.36;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(255,255,255,0.6) 0 12px, transparent 13px),
+    radial-gradient(circle at 18% 26%, rgba(255,255,255,0.55) 0 12px, transparent 13px),
+    radial-gradient(circle at 22% 22%, rgba(255,255,255,0.6) 0 12px, transparent 13px),
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,0.55) 0 12px, transparent 13px),
+    radial-gradient(circle at 18% 22%, rgba(226, 235, 197, 0.9) 0 7px, transparent 8px),
+    radial-gradient(circle at 84% 80%, rgba(255,255,255,0.55) 0 10px, transparent 11px),
+    radial-gradient(circle at 88% 84%, rgba(255,255,255,0.5) 0 10px, transparent 11px),
+    radial-gradient(circle at 92% 80%, rgba(255,255,255,0.55) 0 10px, transparent 11px),
+    radial-gradient(circle at 88% 76%, rgba(255,255,255,0.5) 0 10px, transparent 11px),
+    radial-gradient(circle at 88% 80%, rgba(208, 224, 194, 0.9) 0 6px, transparent 7px);
+  filter: blur(0.2px);
+}
+
+.site-header {
+  background: rgba(245, 249, 244, 0.84) !important;
+}
+
+.nav-shell {
+  background: rgba(255,255,255,0.76) !important;
+  border-color: rgba(68, 102, 76, 0.10) !important;
+}
+
+.hero .container,
+#about .panel,
+#quality-mindset .panel,
+#toolkit .panel {
+  position: relative;
+  overflow: hidden;
+}
+
+#about .panel:first-child {
+  background:
+    radial-gradient(circle at top right, rgba(196, 220, 198, 0.30), transparent 25%),
+    linear-gradient(135deg, rgba(251, 253, 250, 0.96), rgba(239, 247, 240, 0.94)) !important;
+}
+
+#about .panel:last-child {
+  background:
+    radial-gradient(circle at top right, rgba(202, 212, 235, 0.24), transparent 24%),
+    linear-gradient(135deg, rgba(245, 248, 253, 0.96), rgba(241, 238, 249, 0.95)) !important;
+}
+
+#about .panel::after {
+  content: "";
+  position: absolute;
+  right: 1.35rem;
+  bottom: 1rem;
+  width: 88px;
+  height: 88px;
+  pointer-events: none;
+  opacity: 0.22;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 79% 34%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 79% 66%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 50% 82%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 21% 66%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 21% 34%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 50% 50%, rgba(211, 225, 189, .96) 0 8px, transparent 9px);
+}
+
+#about .panel:last-child::after {
+  opacity: 0.18;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 79% 34%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 79% 66%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 50% 82%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 21% 66%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 21% 34%, rgba(255,255,255,.92) 0 11px, transparent 12px),
+    radial-gradient(circle at 50% 50%, rgba(203, 199, 225, .96) 0 8px, transparent 9px);
+}
+
+.tag-list span,
+.skill-row span,
+.mini-tags span,
+.pill,
+.coursework-tags span {
+  -webkit-text-fill-color: currentColor !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ink: #f5f8f4 !important;
+    --muted: #d4ddd5 !important;
+    --line: rgba(232, 240, 233, 0.14) !important;
+    --accent: #d6ead2 !important;
+    --accent-deep: #eff7ec !important;
+    --accent-soft: #2a3e31 !important;
+    --shadow: 0 20px 48px rgba(0,0,0,.26) !important;
+  }
+
+  body {
+    color: var(--ink) !important;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(133, 172, 141, 0.18), transparent 24%),
+      radial-gradient(circle at 88% 10%, rgba(149, 136, 184, 0.16), transparent 22%),
+      radial-gradient(circle at 78% 84%, rgba(101, 145, 124, 0.16), transparent 26%),
+      linear-gradient(180deg, #142119 0%, #16241e 52%, #111a16 100%) !important;
+  }
+
+  body::before {
+    background:
+      linear-gradient(rgba(214,229,216,0.032) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(214,229,216,0.032) 1px, transparent 1px) !important;
+  }
+
+  body::after {
+    opacity: 0.12;
+  }
+
+  .forest-bg {
+    background:
+      radial-gradient(circle at 17% 16%, rgba(151, 192, 160, 0.10), transparent 25%),
+      radial-gradient(circle at 83% 28%, rgba(139, 150, 201, 0.09), transparent 24%),
+      radial-gradient(circle at 56% 90%, rgba(166, 144, 186, 0.08), transparent 22%) !important;
+  }
+
+  .site-header {
+    background: rgba(17, 27, 22, 0.76) !important;
+    backdrop-filter: blur(16px);
+  }
+
+  .nav-shell {
+    background: rgba(27, 39, 32, 0.82) !important;
+    border: 1px solid rgba(236, 245, 237, 0.10) !important;
+    box-shadow: 0 16px 36px rgba(0,0,0,.20) !important;
+  }
+
+  .site-nav a,
+  .footer-simple,
+  .footer-simple a,
+  .hero-lead,
+  .section-heading > p,
+  .panel p,
+  .senior-copy p,
+  .project-body p,
+  .gallery-cta p,
+  .footer p,
+  .page-intro p,
+  .case-copy p,
+  .case-facts span,
+  .link-row,
+  .contact-links a,
+  .photo-card figcaption {
+    color: #d3ddd5 !important;
+  }
+
+  h1, h2, h3, h4,
+  .brand,
+  .brand span,
+  .project-body h3,
+  .senior-copy h2,
+  .case-copy h2,
+  .section-heading h2,
+  .panel h2,
+  .panel h3,
+  .gallery-cta h2,
+  .case-facts strong {
+    color: #f7fbf6 !important;
+  }
+
+  .eyebrow,
+  .text-link,
+  .link-row a,
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: #e5f2e2 !important;
+  }
+
+  .panel,
+  .senior-card,
+  .project-card,
+  .case-card,
+  .gallery-cta,
+  .photo-card,
+  .contact-links,
+  .case-gallery-card,
+  .study-hero-image,
+  .detail-preview,
+  .archive-strip,
+  .archive-placeholder {
+    background:
+      radial-gradient(circle at top right, rgba(165, 196, 173, 0.08), transparent 26%),
+      linear-gradient(135deg, rgba(30, 45, 36, 0.97), rgba(23, 35, 29, 0.95)) !important;
+    border-color: rgba(236, 245, 237, 0.10) !important;
+    color: #f5f8f4 !important;
+  }
+
+  #about .panel:first-child {
+    background:
+      radial-gradient(circle at top right, rgba(173, 208, 182, 0.12), transparent 26%),
+      linear-gradient(135deg, rgba(36, 54, 41, 0.98), rgba(27, 42, 33, 0.97)) !important;
+  }
+
+  #about .panel:last-child {
+    background:
+      radial-gradient(circle at top right, rgba(144, 156, 205, 0.14), transparent 24%),
+      linear-gradient(135deg, rgba(34, 44, 60, 0.97), rgba(39, 33, 52, 0.96)) !important;
+  }
+
+  #about .panel::after {
+    opacity: 0.10;
+  }
+
+  .hero-photo-card {
+    border-color: rgba(244, 248, 242, 0.92) !important;
+  }
+
+  .hero-photo-label {
+    background: #f1f7ee !important;
+    color: #254130 !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    text-shadow: none !important;
+  }
+
+  .button.primary {
+    background: linear-gradient(135deg, #d8e8d4, #edf5eb) !important;
+    color: #1a2d21 !important;
+    border-color: rgba(255,255,255,0.04) !important;
+    box-shadow: 0 12px 28px rgba(7, 10, 8, 0.18) !important;
+  }
+
+  .button.secondary,
+  .button:not(.primary) {
+    background: rgba(236, 245, 237, 0.08) !important;
+    color: #f5faf4 !important;
+    border-color: rgba(236, 245, 237, 0.13) !important;
+    box-shadow: none !important;
+  }
+
+  .button:hover {
+    filter: brightness(1.04);
+  }
+
+  .contact-links a,
+  .case-facts > div {
+    background: rgba(37, 55, 44, 0.88) !important;
+    border-color: rgba(236, 245, 237, 0.10) !important;
+    color: #eef4ee !important;
+  }
+
+  .contact-links span {
+    color: #cde1ce !important;
+  }
+
+  .tag-list span,
+  .skill-row span,
+  .mini-tags span,
+  .pill,
+  .coursework-tags span {
+    background: #33493d !important;
+    color: #f7fbf6 !important;
+    border-color: rgba(240, 247, 241, 0.12) !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #f7fbf6 !important;
+  }
+
+  .tag-list span:nth-child(3n + 2),
+  .skill-row span:nth-child(3n + 2),
+  .mini-tags span:nth-child(2n),
+  .pill:nth-child(2) {
+    background: #344557 !important;
+    color: #f3f8ff !important;
+    -webkit-text-fill-color: #f3f8ff !important;
+  }
+
+  .tag-list span:nth-child(3n),
+  .skill-row span:nth-child(3n),
+  .pill:nth-child(3) {
+    background: #4a3e5d !important;
+    color: #fbf7ff !important;
+    -webkit-text-fill-color: #fbf7ff !important;
+  }
+
+  .photo-card figcaption {
+    background: rgba(26, 41, 32, 0.94) !important;
+    border-top-color: rgba(236, 245, 237, 0.10) !important;
+  }
+
+  .case-tab {
+    color: #d7e0d8 !important;
+  }
+
+  .case-tab.active {
+    background: #d9e7d5 !important;
+    color: #213327 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  #about .panel::after {
+    width: 72px;
+    height: 72px;
+    right: 1rem;
+    bottom: .85rem;
+  }
+}
