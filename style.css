@@ -4341,3 +4341,39 @@ body::after {
     font-weight: 800 !important;
   }
 }
+
+
+/* =========================================================
+   v41 — explicit high-contrast dark-mode chips.
+   Added after all legacy theme rules so no older selector can
+   turn light sage chip labels white again.
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  html body .tag-list > span:nth-child(3n + 1),
+  html body .tools-tags > span:nth-child(3n + 1) {
+    background-color: #dce9d5 !important;
+    color: #203428 !important;
+    -webkit-text-fill-color: #203428 !important;
+  }
+
+  html body .tag-list > span:nth-child(3n + 2),
+  html body .tools-tags > span:nth-child(3n + 2) {
+    background-color: #405064 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  html body .tag-list > span:nth-child(3n),
+  html body .tools-tags > span:nth-child(3n) {
+    background-color: #574a69 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  html body #about .tag-list > span,
+  html body .tools-panel .tools-tags > span {
+    opacity: 1 !important;
+    filter: none !important;
+    text-shadow: none !important;
+  }
+}
