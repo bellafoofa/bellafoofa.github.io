@@ -2680,3 +2680,64 @@ p, .hero-lead, .lead,
     height:clamp(215px,20vw,300px) !important; object-fit:cover !important; object-position:center center !important;
   }
 }
+
+/* =========================================================
+   v32 — polished masonry photo gallery
+   ========================================================= */
+.photo-grid.photo-grid-compact {
+  display: block !important;
+  columns: 3 300px;
+  column-gap: 1.15rem;
+  max-width: 1180px;
+  margin-inline: auto;
+}
+.photo-grid.photo-grid-compact .photo-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1.15rem !important;
+  padding: 0 !important;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border-radius: 22px !important;
+  overflow: hidden;
+  vertical-align: top;
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.photo-grid.photo-grid-compact .photo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 34px rgba(0,0,0,.14);
+}
+.photo-grid.photo-grid-compact .photo-card img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: initial !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+/* Keep the coding image compact without affecting the rest of the gallery. */
+.photo-grid.photo-grid-compact .photo-card[data-photo-id="photo-07"] img {
+  height: 280px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+.photo-grid.photo-grid-compact .photo-card figcaption {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: .85rem 1rem .9rem !important;
+  font-size: .92rem !important;
+  line-height: 1.35 !important;
+}
+@media (max-width: 900px) {
+  .photo-grid.photo-grid-compact { columns: 2 260px; column-gap: .9rem; }
+  .photo-grid.photo-grid-compact .photo-card { margin-bottom: .9rem !important; }
+}
+@media (max-width: 560px) {
+  .photo-grid.photo-grid-compact { columns: 1; }
+  .photo-grid.photo-grid-compact .photo-card { margin-bottom: 1rem !important; border-radius: 18px !important; }
+  .photo-grid.photo-grid-compact .photo-card[data-photo-id="photo-07"] img { height: 250px !important; }
+}
