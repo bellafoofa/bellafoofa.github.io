@@ -1,36 +1,13 @@
-# Isabella Chandler Biomedical Engineering Portfolio — v34
+# Isabella Chandler Portfolio - v35
 
-This version builds on v33 and adds employer-focused content without changing the overall forest/biomedical visual style.
+This folder is ready to upload to the root of the GitHub Pages repository.
 
-## What changed
-- Added a compact **Currently** section with current senior-project/career focus.
-- Added a small **By the Numbers** row for high-value experience highlights.
-- Added **Experience Highlights** for Help Desk technical quality work, Student Government program operations, and BME lab support.
-- Added a **Quality & Validation Mindset** section.
-- Added a concise **Tools I've Worked With** section.
-- Reorganized coursework into four employer-scannable categories.
-- Strengthened the technical wording on selected project previews.
-- Added a five-step **Engineering Process** strip to every internal case-study page.
-- Added selected **Project Lesson** callouts where they add useful context.
-- Kept the résumé download in the site navigation and shortened the label to `Résumé ↓` so it stays compact.
-- Added an Experience link to the shared navigation on all pages.
-- Added responsive styling for desktop, iPad/tablet, phone, and automatic dark mode.
+## v35 updates
+- Resume link moved to the far right of the desktop navigation and renamed **Resume**.
+- New employer-ready resume is included at `assets/resume.pdf`.
+- Homepage updated with 2,100+ logged laptop checks, current/recent coursework, stronger Help Desk responsibilities, and Spring 2026 lab/design highlights.
+- SyncCare now includes a link to the live Gemini AI Studio prototype.
+- Photo gallery uses full uncropped images in an edge-to-edge masonry layout with square corners and overlay captions.
+- Color accents were expanded while preserving automatic system light/dark mode.
 
-## Updating the site
-Upload the **contents of this folder** to the root of your GitHub Pages repository.
-
-The root should contain:
-- `index.html`
-- `projects.html`
-- `photos.html`
-- `style.css`
-- `script.js`
-- `photo-captions.js`
-- `assets/`
-- `case-studies/`
-
-## Resume
-Replace `assets/resume.pdf` with a newer résumé later while keeping the same filename. All résumé links will continue to work automatically.
-
-## Photo captions
-Most gallery captions can still be edited from `photo-captions.js`. Keep the photo IDs unchanged and edit only the caption text.
+Upload the **contents** of this folder (not the enclosing folder) to the root of the GitHub Pages repository.
