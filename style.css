@@ -3825,3 +3825,136 @@ p, .hero-lead, .lead,
   .skill-row span:nth-child(3n),
   .pill:nth-child(3) { color: #4c4057 !important; }
 }
+
+/* =========================================================
+   v38 — Mopec framing + dark-mode contrast cleanup
+   ========================================================= */
+
+/* The Mopec preview artwork is 4:3. Match its frame to the source so the
+   left workflow column and right laptop have equal breathing room. */
+.senior-image {
+  aspect-ratio: 4 / 3 !important;
+}
+.senior-image img[src*="mopec"] {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 50% !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+/* Keep the Mopec case-study preview fully visible without a directional crop. */
+.case-mopec .case-image img {
+  object-fit: contain !important;
+  object-position: 50% 50% !important;
+  padding: .35rem !important;
+  transform: none !important;
+}
+
+/* Smart Mobility Tip: keep the original design drawing as the preview because
+   it communicates the actual concept more accurately than a speculative render. */
+.preview-mobility > img,
+.case-mobility .case-image img,
+.mobility-hero img {
+  object-position: 50% 50% !important;
+}
+
+/* Final dark-mode contrast guardrails. These intentionally override older
+   pastel rules so every chip, fact card, and caption remains readable. */
+@media (prefers-color-scheme: dark) {
+  .tag-list span,
+  .tools-tags span,
+  .skill-row span,
+  .mini-tags span,
+  .pill,
+  .coursework-tags span,
+  .study-skills span {
+    background: #29402f !important;
+    color: #f4f8f2 !important;
+    border-color: rgba(222,236,223,.18) !important;
+    opacity: 1 !important;
+    filter: none !important;
+    text-shadow: none !important;
+  }
+  .tag-list span:nth-child(3n+2),
+  .tools-tags span:nth-child(3n+2),
+  .skill-row span:nth-child(3n+2),
+  .mini-tags span:nth-child(2n),
+  .pill:nth-child(2),
+  .study-skills span:nth-child(3n+2) {
+    background: #2b3e4b !important;
+    color: #f3f7fb !important;
+  }
+  .tag-list span:nth-child(3n),
+  .tools-tags span:nth-child(3n),
+  .skill-row span:nth-child(3n),
+  .pill:nth-child(3),
+  .study-skills span:nth-child(3n) {
+    background: #40364c !important;
+    color: #faf4ff !important;
+  }
+
+  .case-facts > div,
+  .study-info-card,
+  .quality-grid > div,
+  .current-item,
+  .coursework-card,
+  .lab-highlight-card,
+  .experience-card {
+    color: #f4f7f2 !important;
+  }
+  .case-facts strong,
+  .study-info-card h3,
+  .quality-grid strong,
+  .current-item strong,
+  .coursework-card h3,
+  .lab-highlight-card h3,
+  .experience-card strong,
+  .experience-card h3 {
+    color: #f6f9f4 !important;
+  }
+  .case-facts span,
+  .study-info-card p,
+  .quality-grid span,
+  .current-item p,
+  .coursework-card li,
+  .lab-highlight-card p,
+  .experience-card p,
+  .tools-note,
+  .study-media-card figcaption {
+    color: #cbd7cc !important;
+  }
+
+  .interest-card,
+  .tools-panel,
+  .quality-panel {
+    color: #f4f7f2 !important;
+  }
+  .interest-card h2,
+  .interest-card h3,
+  .interest-card .eyebrow,
+  .tools-panel h2,
+  .tools-panel .eyebrow,
+  .quality-panel h2,
+  .quality-panel .eyebrow {
+    color: #f6f9f4 !important;
+  }
+
+  /* Avoid pale gray-on-gray blocks in case-study summaries. */
+  .case-facts > div,
+  .study-info-card {
+    background: #22352a !important;
+    border-color: rgba(222,236,223,.16) !important;
+  }
+}
+
+/* Keep the selected-project grid balanced after removing the technical
+   communication case study. */
+.project-grid {
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .senior-image { aspect-ratio: 4 / 3 !important; }
+}
