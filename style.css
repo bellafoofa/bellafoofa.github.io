@@ -4377,3 +4377,65 @@ body::after {
     text-shadow: none !important;
   }
 }
+
+/* =========================================================
+   v42 — authentic project-preview refresh
+   Keeps slide/design previews fully visible while giving them
+   a consistent, intentional frame across desktop/tablet/mobile.
+   ========================================================= */
+
+/* Design-slide previews: preserve the complete composition. */
+.preview-syncare > img,
+.preview-insole > img,
+.preview-nuitlume > img,
+.case-syncare .case-image img,
+.case-insole .case-image img,
+.case-nuitlume .case-image img,
+.study-hero-image img[src*="syncare.webp"],
+.study-hero-image img[src*="pressure-point-insole.webp"],
+.study-hero-image img[src*="nuitlume-preview.webp"] {
+  object-fit: contain !important;
+  object-position: 50% 50% !important;
+  padding: clamp(.28rem, .6vw, .5rem) !important;
+  transform: none !important;
+  background: #f4f6f1;
+}
+
+/* Mopec's computer-vision slide should never be skewed or clipped. */
+.senior-image img[src*="mopec.webp"],
+.case-mopec .case-image img,
+.study-hero-image img[src*="mopec.webp"] {
+  object-fit: contain !important;
+  object-position: 50% 50% !important;
+  padding: clamp(.28rem, .6vw, .5rem) !important;
+  transform: none !important;
+  background: #f4f6f1;
+}
+
+/* The ConnectUs expo photograph is close to the card ratio, so let it fill
+   the frame naturally with a centered crop. */
+.preview-connectus > img,
+.case-connectus .case-image img,
+.study-hero-image img[src*="connectus.webp"] {
+  object-fit: cover !important;
+  object-position: 50% 50% !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .preview-syncare > img,
+  .preview-insole > img,
+  .preview-nuitlume > img,
+  .case-syncare .case-image img,
+  .case-insole .case-image img,
+  .case-nuitlume .case-image img,
+  .case-mopec .case-image img,
+  .senior-image img[src*="mopec.webp"],
+  .study-hero-image img[src*="mopec.webp"],
+  .study-hero-image img[src*="syncare.webp"],
+  .study-hero-image img[src*="pressure-point-insole.webp"],
+  .study-hero-image img[src*="nuitlume-preview.webp"] {
+    background: #17231c !important;
+  }
+}

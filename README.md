@@ -15,3 +15,7 @@ Upload the **contents** of this folder (not the enclosing folder) to the root of
 Version note: v39 includes a dark-mode contrast fix and a softer botanical visual refresh.
 
 Version note: v40 hardens dark-mode contrast for Interests and Technical Toolkit pills.
+
+
+## v42 preview refresh
+Updated authentic preview artwork for Mopec, SyncCare, Pressure-Point Insole, NuitLume, and ConnectUs. Slide-based previews use full-composition framing; the ConnectUs expo photograph uses a centered fill crop. Cache version bumped to 42.
