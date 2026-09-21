@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+<meta content="HeadUp case study by Isabella Chandler" name="description"/>
+<title>HeadUp | Isabella Chandler</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../style.css?v=46" rel="stylesheet"/>
+<link href="../assets/pfp.png?v=46" rel="icon" type="image/png"/>
+</head>
+<body>
+<div aria-hidden="true" class="forest-bg"></div>
+<header class="site-header">
+<div class="container nav-shell">
+<a class="brand" href="../index.html"><img alt="" class="brand-logo" src="../assets/pfp.png?v=46"/><span>Isabella Chandler</span></a>
+<nav aria-label="Primary navigation" class="site-nav" id="siteNav"><a href="../index.html#about">About</a><a href="../index.html#senior-project">Senior Project</a><a href="../index.html#projects">Projects</a><a href="../index.html#coursework">Coursework</a><a class="active" href="../projects.html">Case Studies</a><a href="../photos.html">Photos</a><a href="../index.html#contact">Contact</a><a aria-label="Download resume PDF" class="nav-resume" download="" href="../assets/resume.pdf?v=46">Resume</a></nav>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="navToggle" type="button">☰</button>
+</div>
+</header>
+<main>
+<section class="study-hero section">
+<div class="container study-hero-grid">
+<div class="study-hero-copy">
+<a class="back-link" href="../projects.html#headup">← Case Studies</a>
+<p class="eyebrow">Bioinstrumentation</p>
+<h1>HeadUp</h1>
+<p class="study-summary">Posture-feedback wearable that calibrates to a user's upright posture and provides haptic/visual feedback after sustained slouching.</p>
+<div class="skill-row study-skills"><span>Accelerometer sensing</span><span>Calibration</span><span>Threshold logic</span><span>Haptic feedback</span><span>Testing</span></div>
+<div class="study-impact-strip" aria-label="Project contribution and outcome"><article><span class="impact-label">My contribution</span><p>Worked on accelerometer and CircuitPython troubleshooting, calibration logic, wearable feedback testing, and technical documentation.</p></article><article><span class="impact-label">Outcome / status</span><p>The prototype demonstrated a 15° / 3-second posture rule with vibration and light feedback after sustained slouching.</p></article></div>
+</div>
+<div class="study-hero-image"><img alt="HeadUp preview" src="../assets/projects/headup.webp?v=46"/></div>
+</div>
+</section>
+<section class="study-tabs-section section compact-section">
+<div class="container">
+<div aria-label="HeadUp sections" class="case-tabs" role="tablist">
+<button aria-selected="true" class="case-tab active" data-tab="overview" role="tab">Overview</button>
+<button aria-selected="false" class="case-tab" data-tab="technical" role="tab">Design &amp; Technical</button>
+<button aria-selected="false" class="case-tab" data-tab="materials" role="tab">Presentation &amp; Files</button>
+</div>
+<div class="case-tab-panel active" data-panel="overview">
+<div class="study-card-grid"><article class="study-info-card"><h3>Medical need</h3><p>Forward-head posture and sustained device use can contribute to neck strain and musculoskeletal discomfort.</p></article><article class="study-info-card"><h3>Wearable concept</h3><p>An adjustable torso strap uses vibration and light as perceivable feedback while keeping the device low-profile.</p></article><article class="study-info-card"><h3>Feedback rule</h3><p>The prototype identifies a slouch state after a 15° forward deviation persists for more than 3 consecutive seconds.</p></article></div>
+<div class="process-strip-wrap"><p class="process-label">Engineering process</p><div class="process-flow"><div class="process-step"><span class="process-number">1</span><div><strong>Sense</strong><small>Read posture motion</small></div></div><div class="process-step"><span class="process-number">2</span><div><strong>Calibrate</strong><small>Establish baseline</small></div></div><div class="process-step"><span class="process-number">3</span><div><strong>Detect</strong><small>Compare to threshold</small></div></div><div class="process-step"><span class="process-number">4</span><div><strong>Delay</strong><small>Reduce false alerts</small></div></div><div class="process-step"><span class="process-number">5</span><div><strong>Feedback</strong><small>Prompt posture correction</small></div></div></div></div></div>
+<div class="case-tab-panel" data-panel="technical" hidden="">
+<div class="study-card-grid"><article class="study-info-card"><h3>Calibration</h3><p>Button A stores the user's upright posture as the 0° baseline before real-time monitoring begins.</p></article><article class="study-info-card"><h3>Testing</h3><p>The team evaluated threshold detection, the 3-second delay, vibration strength, comfort, and one-touch calibration.</p></article><article class="study-info-card"><h3>Future work</h3><p>Auto-calibration, higher-rate filtering, flexible enclosure design, lighter power, and Bluetooth data logging.</p></article></div>
+</div>
+<div class="case-tab-panel" data-panel="materials" hidden="">
+<div class="materials-head">
+<div>
+<p class="eyebrow">Project archive</p>
+<h2>Presentation, drawings, and supporting visuals.</h2>
+
+</div>
+</div>
+<div class="study-media-grid"><figure class="study-media-card"><img alt="HeadUp accelerometer troubleshooting in the bioinstrumentation lab" loading="lazy" src="../assets/photos/photo-19.webp?v=46"/></figure><figure class="study-media-card"><img alt="HeadUp concept and target users for posture feedback." loading="lazy" src="../assets/case-studies/headup/slide-01.webp?v=46"/></figure><figure class="study-media-card"><img alt="Design parameters: adjustable fit, vibration/light feedback, and delayed activation." loading="lazy" src="../assets/case-studies/headup/slide-02.webp?v=46"/></figure><figure class="study-media-card"><img alt="Standard operating procedure for calibration and real-time posture monitoring." loading="lazy" src="../assets/case-studies/headup/slide-03.webp?v=46"/></figure><figure class="study-media-card"><img alt="Calibration and testing results for the 15° threshold and 3-second delay." loading="lazy" src="../assets/case-studies/headup/slide-04.webp?v=46"/></figure><figure class="study-media-card"><img alt="Future-work directions including auto-calibration, filtering, enclosure refinement, and data logging." loading="lazy" src="../assets/case-studies/headup/slide-05.webp?v=46"/></figure></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="page-footer"><div class="container footer-simple"><span>Isabella Chandler · Biomedical Engineering Portfolio</span><a href="../projects.html">All Case Studies →</a><span class="footer-updated-inline">Last updated: Fall 2026</span></div></footer>
+<script src="../script.js?v=46"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+<meta content="Smart Collar case study by Isabella Chandler" name="description"/>
+<title>Smart Collar | Isabella Chandler</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../style.css?v=46" rel="stylesheet"/>
+<link href="../assets/pfp.png?v=46" rel="icon" type="image/png"/>
+</head>
+<body>
+<div aria-hidden="true" class="forest-bg"></div>
+<header class="site-header">
+<div class="container nav-shell">
+<a class="brand" href="../index.html"><img alt="" class="brand-logo" src="../assets/pfp.png?v=46"/><span>Isabella Chandler</span></a>
+<nav aria-label="Primary navigation" class="site-nav" id="siteNav"><a href="../index.html#about">About</a><a href="../index.html#senior-project">Senior Project</a><a href="../index.html#projects">Projects</a><a href="../index.html#coursework">Coursework</a><a class="active" href="../projects.html">Case Studies</a><a href="../photos.html">Photos</a><a href="../index.html#contact">Contact</a><a aria-label="Download resume PDF" class="nav-resume" download="" href="../assets/resume.pdf?v=46">Resume</a></nav>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="navToggle" type="button">☰</button>
+</div>
+</header>
+<main>
+<section class="study-hero section">
+<div class="container study-hero-grid">
+<div class="study-hero-copy">
+<a class="back-link" href="../projects.html#smart-collar">← Case Studies</a>
+<p class="eyebrow">Embedded Systems + Wearable Technology</p>
+<h1>Smart Collar</h1>
+<p class="study-summary">Pet activity tracker linked to an automated feeder, connecting wearable motion data to physical device action.</p>
+<div class="skill-row study-skills"><span>CircuitPython</span><span>BLE</span><span>Motion/orientation tracking</span><span>Servo control</span><span>Prototype integration</span></div>
+<div class="study-impact-strip" aria-label="Project contribution and outcome"><article><span class="impact-label">My contribution</span><p>Built and debugged CircuitPython and BLE logic connecting pet activity tracking to servo-controlled feeder behavior, while documenting wiring and system flow.</p></article><article><span class="impact-label">Outcome / status</span><p>Created a working proof of concept in which activity data could trigger feeder action after a step threshold.</p></article></div>
+</div>
+<div class="study-hero-image"><img alt="Smart Collar preview" src="../assets/projects/smart-collar.webp?v=46"/></div>
+</div>
+</section>
+<section class="study-tabs-section section compact-section">
+<div class="container">
+<div aria-label="Smart Collar sections" class="case-tabs" role="tablist">
+<button aria-selected="true" class="case-tab active" data-tab="overview" role="tab">Overview</button>
+<button aria-selected="false" class="case-tab" data-tab="technical" role="tab">Design &amp; Technical</button>
+<button aria-selected="false" class="case-tab" data-tab="materials" role="tab">Presentation &amp; Files</button>
+</div>
+<div class="case-tab-panel active" data-panel="overview">
+<div class="study-card-grid"><article class="study-info-card"><h3>Product concept</h3><p>A customizable collar tag tracks pet activity and communicates with a food/treat dispenser.</p></article><article class="study-info-card"><h3>Feedback states</h3><p>The presentation used green for moving, blue for standing still, and pink after the pet reached its step goal.</p></article><article class="study-info-card"><h3>App concept</h3><p>Potential features included location/activity history, adjustable step goals, and step-goal progress.</p></article></div>
+<div class="process-strip-wrap"><p class="process-label">Engineering process</p><div class="process-flow"><div class="process-step"><span class="process-number">1</span><div><strong>Sense</strong><small>Read motion data</small></div></div><div class="process-step"><span class="process-number">2</span><div><strong>Connect</strong><small>Send data over BLE</small></div></div><div class="process-step"><span class="process-number">3</span><div><strong>Count</strong><small>Track activity / steps</small></div></div><div class="process-step"><span class="process-number">4</span><div><strong>Trigger</strong><small>Check the step goal</small></div></div><div class="process-step"><span class="process-number">5</span><div><strong>Act</strong><small>Drive the feeder servo</small></div></div></div></div><div class="lesson-callout"><strong>Debugging lesson</strong><p>Breaking the system into smaller subsystems—motion sensing, BLE communication, and servo control—made a difficult integration problem easier to troubleshoot.</p></div></div>
+<div class="case-tab-panel" data-panel="technical" hidden="">
+<div class="study-card-grid"><article class="study-info-card"><h3>Embedded workflow</h3><p>Motion/orientation data is used to estimate activity and trigger system behavior.</p></article><article class="study-info-card"><h3>Connected device action</h3><p>The feeder concept dispenses food or treats after a step goal is reached and the pet is near the device.</p></article><article class="study-info-card"><h3>Future work</h3><p>Smaller hardware, easier controls, a simpler app UI, and compatibility with other automatic feeders.</p></article></div>
+</div>
+<div class="case-tab-panel" data-panel="materials" hidden="">
+<div class="materials-head">
+<div>
+<p class="eyebrow">Project archive</p>
+<h2>Presentation, drawings, and supporting visuals.</h2>
+
+</div>
+</div>
+<div class="study-media-grid"><figure class="study-media-card"><img alt="Value proposition focused on pet activity, health, and customization." loading="lazy" src="../assets/case-studies/smart-collar/slide-01.webp?v=46"/></figure><figure class="study-media-card"><img alt="Collar tag behavior and automated food/treat dispenser concept." loading="lazy" src="../assets/case-studies/smart-collar/slide-02.webp?v=46"/></figure><figure class="study-media-card"><img alt="Potential orientation-tracking app with step goals and location/activity history." loading="lazy" src="../assets/case-studies/smart-collar/slide-03.webp?v=46"/></figure><figure class="study-media-card"><img alt="Future-work ideas for comfort, compatibility, and app development." loading="lazy" src="../assets/case-studies/smart-collar/slide-04.webp?v=46"/></figure></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="page-footer"><div class="container footer-simple"><span>Isabella Chandler · Biomedical Engineering Portfolio</span><a href="../projects.html">All Case Studies →</a><span class="footer-updated-inline">Last updated: Fall 2026</span></div></footer>
+<script src="../script.js?v=46"></script>
+</body>
+</html>
