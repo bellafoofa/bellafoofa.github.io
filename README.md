@@ -1,3 +1,5 @@
+Isabella portfolio v48 — clean caption-free case-study previews.
+
 # Isabella Chandler Portfolio - v38
 
 This folder is ready to upload to the root of the GitHub Pages repository.
@@ -23,7 +25,7 @@ Updated authentic preview artwork for Mopec, SyncCare, Pressure-Point Insole, Nu
 - v43: Presence Plant preview updated to the interaction storyboard; HeadUp preview updated to the design concept slide.
 
 
-## v46 employer-facing refinements
+## v47 employer-facing refinements
 - Added a concise **My contribution** block to every case study so team-project ownership is immediately clear.
 - Added an **Outcome / status** block to each case study to show what was achieved or where the work currently stands.
 - Added a subtle **Last updated: Fall 2026** line to portfolio footers.

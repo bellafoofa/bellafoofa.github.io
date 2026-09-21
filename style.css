@@ -4609,7 +4609,7 @@ body::after {
 
 
 /* =========================================================
-   v46 — employer-facing contribution + outcome context
+   v47 — employer-facing contribution + outcome context
    ========================================================= */
 .study-impact-strip {
   display: grid;
@@ -4657,3 +4657,64 @@ body::after {
   .study-impact-strip .impact-label { color: #d6e4cf !important; }
   .study-impact-strip p, .footer-updated, .footer-updated-inline { color: #cbd5cc !important; }
 }
+
+
+/* =========================================================
+   v47 — cache-safe preview cleanup + consistent 16:10 framing
+   ========================================================= */
+.project-card > img,
+.case-image,
+.case-headup .case-image,
+.case-plant .case-image,
+.senior-image {
+  aspect-ratio: 16 / 10 !important;
+}
+
+.project-card > img,
+.case-image img,
+.case-mopec .case-image img,
+.case-syncare .case-image img,
+.case-insole .case-image img,
+.case-nuitlume .case-image img,
+.case-connectus .case-image img,
+.case-headup .case-image img,
+.case-plant .case-image img,
+.case-mobility .case-image img,
+.preview-mobility > img,
+.senior-image img[src*="mopec-card-v47"] {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+  background: transparent !important;
+}
+
+/* The v47 preview files already include their own proportion-preserving matte.
+   Removing extra nested frames makes the cards look cleaner and less crowded. */
+.case-image {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 560px) {
+  .project-card > img,
+  .case-image,
+  .senior-image {
+    aspect-ratio: 16 / 10 !important;
+  }
+}
+
+
+/* v48 — caption-free case-study preview media */
+.case-image figcaption,
+.case-image .caption,
+.case-image .preview-caption,
+.project-card > figure > figcaption,
+.project-card .preview-caption {
+  display: none !important;
+}
+.case-image { overflow: hidden !important; }
+.case-image img { display:block !important; margin:0 auto !important; }
