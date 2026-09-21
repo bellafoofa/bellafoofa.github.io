@@ -4706,3 +4706,308 @@ body::after {
     aspect-ratio: 16 / 10 !important;
   }
 }
+
+/* =========================================================
+   v50 — preview cleanup + more colorful pastel refresh
+   Softer card styling, brighter accents, and cleaner preview frames.
+   ========================================================= */
+
+:root {
+  --page-mint: rgba(174, 216, 193, 0.26);
+  --page-lilac: rgba(200, 185, 237, 0.23);
+  --page-blush: rgba(245, 201, 208, 0.18);
+  --page-sky: rgba(176, 214, 238, 0.18);
+  --page-butter: rgba(244, 231, 184, 0.18);
+  --chip-shadow-v50: 0 8px 18px rgba(70, 78, 92, 0.08);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 10%, var(--page-mint), transparent 24%),
+    radial-gradient(circle at 92% 12%, var(--page-lilac), transparent 20%),
+    radial-gradient(circle at 52% 58%, var(--page-blush), transparent 26%),
+    radial-gradient(circle at 84% 84%, var(--page-sky), transparent 22%),
+    linear-gradient(180deg, #fcfcff 0%, #f6faf5 34%, #f9f5fc 66%, #f4f8ff 100%) !important;
+}
+
+body::before {
+  opacity: .6;
+  background:
+    linear-gradient(rgba(107, 125, 150, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 125, 150, 0.035) 1px, transparent 1px) !important;
+}
+
+.forest-bg {
+  background:
+    radial-gradient(circle at 14% 16%, rgba(112, 183, 147, 0.11), transparent 23%),
+    radial-gradient(circle at 86% 22%, rgba(179, 153, 227, 0.11), transparent 22%),
+    radial-gradient(circle at 54% 84%, rgba(253, 195, 196, 0.10), transparent 24%),
+    radial-gradient(circle at 26% 90%, rgba(180, 219, 246, 0.09), transparent 18%) !important;
+}
+
+.site-header {
+  background: rgba(249, 250, 248, 0.72) !important;
+  border-bottom: 1px solid rgba(152, 166, 183, 0.08);
+}
+
+.nav-shell {
+  background: rgba(255,255,255,0.80) !important;
+  border: 1px solid rgba(192, 198, 221, 0.26) !important;
+  box-shadow: 0 14px 34px rgba(79, 85, 114, 0.10) !important;
+}
+
+.panel,
+.card,
+.about-card,
+.interest-card,
+.senior-card,
+.project-card,
+.case-card,
+.gallery-cta,
+.photo-card,
+.study-summary,
+.study-metric,
+.study-block,
+.study-impact-strip article {
+  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.86)) !important;
+  border: 1px solid rgba(177, 186, 211, 0.18) !important;
+  box-shadow: 0 20px 44px rgba(67, 74, 101, 0.08), inset 0 1px 0 rgba(255,255,255,0.55) !important;
+  backdrop-filter: blur(10px);
+}
+
+.project-card,
+.case-card,
+.senior-card {
+  overflow: hidden !important;
+  border-radius: 28px !important;
+}
+
+.project-card .project-body,
+.case-card .case-copy,
+.senior-card .senior-copy,
+.study-hero-copy {
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0)) !important;
+}
+
+.project-card:nth-child(3n+1) .project-body,
+.case-card:nth-child(3n+1) .case-copy,
+.study-hero .tag-list span:nth-child(3n+1) {
+  background: linear-gradient(180deg, rgba(238, 247, 239, 0.90), rgba(255,255,255,0.84)) !important;
+}
+
+.project-card:nth-child(3n+2) .project-body,
+.case-card:nth-child(3n+2) .case-copy {
+  background: linear-gradient(180deg, rgba(238, 241, 252, 0.92), rgba(255,255,255,0.84)) !important;
+}
+
+.project-card:nth-child(3n) .project-body,
+.case-card:nth-child(3n) .case-copy {
+  background: linear-gradient(180deg, rgba(248, 238, 248, 0.92), rgba(255,255,255,0.84)) !important;
+}
+
+.mini-tags span,
+.skill-row span,
+.tag-list span,
+.pill,
+.coursework-tags span,
+.hero-photo-label,
+.timeline-label {
+  border-radius: 999px !important;
+  border: 1px solid rgba(168, 178, 204, 0.18) !important;
+  box-shadow: var(--chip-shadow-v50) !important;
+  font-weight: 700 !important;
+}
+
+.mini-tags span,
+.tag-list span,
+.pill,
+.coursework-tags span,
+.hero-photo-label {
+  background: linear-gradient(180deg, rgba(246,250,244,0.98), rgba(234,242,248,0.93)) !important;
+  color: #334238 !important;
+}
+
+.skill-row span {
+  background: linear-gradient(180deg, rgba(236, 243, 253, 0.96), rgba(241, 235, 251, 0.96)) !important;
+  color: #34435a !important;
+}
+
+.project-card:nth-child(3n+1) .mini-tags span,
+.project-card:nth-child(3n+1) .skill-row span,
+.case-card:nth-child(3n+1) .pill {
+  background: linear-gradient(180deg, rgba(242, 250, 238, 0.98), rgba(228, 243, 233, 0.96)) !important;
+  color: #314b39 !important;
+}
+
+.project-card:nth-child(3n+2) .mini-tags span,
+.project-card:nth-child(3n+2) .skill-row span,
+.case-card:nth-child(3n+2) .pill {
+  background: linear-gradient(180deg, rgba(236, 242, 255, 0.98), rgba(230, 236, 250, 0.96)) !important;
+  color: #33476a !important;
+}
+
+.project-card:nth-child(3n) .mini-tags span,
+.project-card:nth-child(3n) .skill-row span,
+.case-card:nth-child(3n) .pill {
+  background: linear-gradient(180deg, rgba(247, 239, 251, 0.98), rgba(239, 234, 247, 0.96)) !important;
+  color: #58426a !important;
+}
+
+.button.primary,
+.button.secondary,
+.theme-toggle {
+  border-radius: 999px !important;
+  border: 1px solid rgba(180, 188, 214, 0.26) !important;
+  box-shadow: 0 12px 26px rgba(88, 95, 126, 0.10) !important;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, #f0f7e8 0%, #ddebe2 50%, #ebe3f7 100%) !important;
+  color: #25352b !important;
+}
+
+.button.secondary,
+.theme-toggle {
+  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(240,244,251,0.94)) !important;
+  color: var(--ink) !important;
+}
+
+.text-link,
+.link-row a,
+.project-link-row a,
+.footer-simple a {
+  font-weight: 700 !important;
+}
+
+#projects .section-heading h2,
+#experience .section-heading h2,
+#coursework .section-heading h2,
+#contact .section-heading h2,
+#projects-archive .section-heading h1,
+#photos-page .section-heading h1 {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+}
+
+/* Cleaner preview presentation: let the image itself do the work. */
+.project-card > img,
+.case-image img,
+.study-hero-image img,
+.senior-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.case-image,
+.senior-image,
+.study-hero-image {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+}
+
+.project-card > img {
+  border-bottom: 1px solid rgba(166, 177, 201, 0.14) !important;
+}
+
+.case-image {
+  box-shadow: 0 12px 28px rgba(74, 82, 108, 0.06) !important;
+}
+
+/* Dark mode refresh */
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(84, 151, 123, 0.18), transparent 24%),
+    radial-gradient(circle at 88% 16%, rgba(131, 111, 186, 0.20), transparent 22%),
+    radial-gradient(circle at 50% 72%, rgba(182, 108, 136, 0.14), transparent 28%),
+    linear-gradient(180deg, #0f1518 0%, #131a24 46%, #17131f 100%) !important;
+}
+
+html[data-theme="dark"] .forest-bg {
+  background:
+    radial-gradient(circle at 14% 16%, rgba(86, 177, 139, 0.14), transparent 24%),
+    radial-gradient(circle at 86% 22%, rgba(164, 143, 228, 0.15), transparent 22%),
+    radial-gradient(circle at 50% 84%, rgba(216, 133, 163, 0.11), transparent 26%) !important;
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(15, 20, 25, 0.74) !important;
+  border-bottom-color: rgba(178, 196, 219, 0.08) !important;
+}
+
+html[data-theme="dark"] .nav-shell,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .about-card,
+html[data-theme="dark"] .interest-card,
+html[data-theme="dark"] .senior-card,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .case-card,
+html[data-theme="dark"] .gallery-cta,
+html[data-theme="dark"] .photo-card,
+html[data-theme="dark"] .study-summary,
+html[data-theme="dark"] .study-metric,
+html[data-theme="dark"] .study-block,
+html[data-theme="dark"] .study-impact-strip article {
+  background: linear-gradient(180deg, rgba(21,27,34,0.96), rgba(21,25,31,0.92)) !important;
+  border: 1px solid rgba(169, 185, 214, 0.12) !important;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.03) !important;
+}
+
+html[data-theme="dark"] .project-card:nth-child(3n+1) .project-body,
+html[data-theme="dark"] .case-card:nth-child(3n+1) .case-copy {
+  background: linear-gradient(180deg, rgba(33, 55, 44, 0.90), rgba(21,27,34,0.92)) !important;
+}
+
+html[data-theme="dark"] .project-card:nth-child(3n+2) .project-body,
+html[data-theme="dark"] .case-card:nth-child(3n+2) .case-copy {
+  background: linear-gradient(180deg, rgba(33, 43, 67, 0.90), rgba(21,27,34,0.92)) !important;
+}
+
+html[data-theme="dark"] .project-card:nth-child(3n) .project-body,
+html[data-theme="dark"] .case-card:nth-child(3n) .case-copy {
+  background: linear-gradient(180deg, rgba(58, 38, 70, 0.88), rgba(21,27,34,0.92)) !important;
+}
+
+html[data-theme="dark"] .mini-tags span,
+html[data-theme="dark"] .tag-list span,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .coursework-tags span,
+html[data-theme="dark"] .hero-photo-label {
+  background: linear-gradient(180deg, rgba(34, 46, 41, 0.96), rgba(32, 37, 44, 0.96)) !important;
+  color: #e7efe8 !important;
+  border-color: rgba(182, 196, 207, 0.14) !important;
+}
+
+html[data-theme="dark"] .skill-row span {
+  background: linear-gradient(180deg, rgba(36, 48, 72, 0.96), rgba(48, 38, 70, 0.94)) !important;
+  color: #eef2ff !important;
+  border-color: rgba(182, 196, 207, 0.14) !important;
+}
+
+html[data-theme="dark"] .button.primary {
+  background: linear-gradient(135deg, rgba(202, 225, 190, 0.96), rgba(191, 214, 201, 0.96), rgba(209, 191, 232, 0.96)) !important;
+  color: #16221b !important;
+}
+
+html[data-theme="dark"] .button.secondary,
+html[data-theme="dark"] .theme-toggle {
+  background: linear-gradient(135deg, rgba(33, 42, 54, 0.98), rgba(28, 33, 44, 0.98)) !important;
+  color: #e6edf5 !important;
+}
+
+html[data-theme="dark"] .project-card > img,
+html[data-theme="dark"] .case-image img,
+html[data-theme="dark"] .study-hero-image img,
+html[data-theme="dark"] .senior-image img {
+  border-bottom-color: rgba(180, 196, 212, 0.08) !important;
+}
