@@ -4379,7 +4379,7 @@ body::after {
 }
 
 /* =========================================================
-   v42 — authentic project-preview refresh
+   v43 — authentic project-preview refresh
    Keeps slide/design previews fully visible while giving them
    a consistent, intentional frame across desktop/tablet/mobile.
    ========================================================= */
@@ -4436,6 +4436,48 @@ body::after {
   .study-hero-image img[src*="syncare.webp"],
   .study-hero-image img[src*="pressure-point-insole.webp"],
   .study-hero-image img[src*="nuitlume-preview.webp"] {
+    background: #17231c !important;
+  }
+}
+
+/* =========================================================
+   v43 — Presence Plant + HeadUp preview refresh
+   Use the full storyboard/design-concept compositions without
+   awkward cropping in project cards or case-study listings.
+   ========================================================= */
+.preview-headup > img,
+.preview-plant > img {
+  aspect-ratio: 16 / 9 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  transform: none !important;
+  background: #f7f7f4;
+}
+
+.case-headup .case-image,
+.case-plant .case-image {
+  aspect-ratio: 16 / 9 !important;
+}
+
+.case-headup .case-image img,
+.case-plant .case-image img,
+.study-hero-image img[src*="headup.webp"],
+.study-hero-image img[src*="presence-plant.webp"] {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  transform: none !important;
+  background: #f7f7f4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .preview-headup > img,
+  .preview-plant > img,
+  .case-headup .case-image img,
+  .case-plant .case-image img,
+  .study-hero-image img[src*="headup.webp"],
+  .study-hero-image img[src*="presence-plant.webp"] {
     background: #17231c !important;
   }
 }
