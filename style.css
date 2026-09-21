@@ -4606,3 +4606,54 @@ body::after {
     aspect-ratio: 4 / 3 !important;
   }
 }
+
+
+/* =========================================================
+   v45 — employer-facing contribution + outcome context
+   ========================================================= */
+.study-impact-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+  margin-top: 1rem;
+}
+.study-impact-strip article {
+  min-width: 0;
+  padding: .9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface-strong);
+  box-shadow: 0 8px 20px rgba(35, 57, 41, 0.04);
+}
+.study-impact-strip .impact-label {
+  display: block;
+  margin-bottom: .28rem;
+  color: var(--accent-deep);
+  font-size: .74rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.study-impact-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.footer-updated, .footer-updated-inline {
+  color: var(--muted);
+  font-size: .78rem;
+  letter-spacing: .02em;
+}
+.footer-updated { padding-top: 1rem; text-align: center; }
+.footer-simple .footer-updated-inline { margin-left: auto; white-space: nowrap; }
+@media (max-width: 760px) {
+  .study-impact-strip { grid-template-columns: 1fr; }
+  .footer-simple .footer-updated-inline { width: 100%; margin-left: 0; text-align: center; }
+}
+@media (prefers-color-scheme: dark) {
+  .study-impact-strip article { background: rgba(31, 48, 37, .96) !important; border-color: rgba(209, 226, 205, .15) !important; }
+  .study-impact-strip .impact-label { color: #d6e4cf !important; }
+  .study-impact-strip p, .footer-updated, .footer-updated-inline { color: #cbd5cc !important; }
+}

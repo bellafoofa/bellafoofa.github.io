@@ -21,3 +21,10 @@ Version note: v40 hardens dark-mode contrast for Interests and Technical Toolkit
 Updated authentic preview artwork for Mopec, SyncCare, Pressure-Point Insole, NuitLume, and ConnectUs. Slide-based previews use full-composition framing; the ConnectUs expo photograph uses a centered fill crop. Cache version bumped to 42.
 
 - v43: Presence Plant preview updated to the interaction storyboard; HeadUp preview updated to the design concept slide.
+
+
+## v45 employer-facing refinements
+- Added a concise **My contribution** block to every case study so team-project ownership is immediately clear.
+- Added an **Outcome / status** block to each case study to show what was achieved or where the work currently stands.
+- Added a subtle **Last updated: Fall 2026** line to portfolio footers.
+- Kept deeper artifacts inside the case-study archives so the main portfolio stays selective and easy to scan.
