@@ -4706,15 +4706,3 @@ body::after {
     aspect-ratio: 16 / 10 !important;
   }
 }
-
-
-/* v48 — caption-free case-study preview media */
-.case-image figcaption,
-.case-image .caption,
-.case-image .preview-caption,
-.project-card > figure > figcaption,
-.project-card .preview-caption {
-  display: none !important;
-}
-.case-image { overflow: hidden !important; }
-.case-image img { display:block !important; margin:0 auto !important; }

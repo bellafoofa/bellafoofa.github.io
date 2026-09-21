@@ -1,5 +1,3 @@
-Isabella portfolio v48 — clean caption-free case-study previews.
-
 # Isabella Chandler Portfolio - v38
 
 This folder is ready to upload to the root of the GitHub Pages repository.
