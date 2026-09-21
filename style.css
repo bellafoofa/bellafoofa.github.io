@@ -5011,3 +5011,700 @@ html[data-theme="dark"] .study-hero-image img,
 html[data-theme="dark"] .senior-image img {
   border-bottom-color: rgba(180, 196, 212, 0.08) !important;
 }
+
+/* =========================================================
+   v51 — softer editorial refresh inspired by the Presence Plant vibe.
+   Goal: cute + polished + student-portfolio, without the dark green feel.
+   ========================================================= */
+
+:root {
+  --bg: #f6f3f4;
+  --surface: rgba(255, 252, 251, 0.88);
+  --surface-strong: rgba(255, 253, 252, 0.96);
+  --ink: #2f2a33;
+  --muted: #675f72;
+  --line: rgba(121, 111, 137, 0.14);
+  --accent: #857b95;
+  --accent-deep: #5d5767;
+  --accent-soft: #efe8ef;
+  --lavender-soft: #ebe6f4;
+  --blush-soft: #f6ebe9;
+  --blue-soft: #e8edf6;
+  --sage-soft: #e6ece4;
+  --cream-soft: #fbf7f3;
+  --shadow: 0 22px 48px rgba(91, 80, 103, 0.10);
+}
+
+body {
+  color: var(--ink) !important;
+  background:
+    radial-gradient(circle at 10% 16%, rgba(193, 206, 188, 0.22), transparent 22%),
+    radial-gradient(circle at 82% 14%, rgba(216, 204, 229, 0.26), transparent 24%),
+    radial-gradient(circle at 50% 72%, rgba(245, 218, 221, 0.22), transparent 24%),
+    linear-gradient(180deg, #fbf8f6 0%, #f6f4f5 42%, #f4f2f7 100%) !important;
+}
+
+body::before {
+  background:
+    linear-gradient(rgba(126, 122, 143, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 122, 143, 0.02) 1px, transparent 1px) !important;
+  background-size: 54px 54px !important;
+  opacity: .38 !important;
+}
+
+.forest-bg {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(186, 205, 183, 0.14), transparent 22%),
+    radial-gradient(circle at 86% 24%, rgba(208, 194, 232, 0.14), transparent 22%),
+    radial-gradient(circle at 56% 90%, rgba(228, 207, 217, 0.13), transparent 18%) !important;
+}
+
+.forest-bg::before {
+  border-color: rgba(160, 152, 181, 0.12) !important;
+  box-shadow:
+    -54px 70px 0 -53px rgba(214, 203, 233, 0.32),
+    -125px 18px 0 -122px rgba(206, 218, 201, 0.24),
+    -155px 112px 0 -152px rgba(223, 206, 216, 0.22),
+    -92px 156px 0 -89px rgba(213, 207, 231, 0.20) !important;
+}
+
+.forest-bg::after {
+  background:
+    linear-gradient(115deg, transparent 0 27%, rgba(168, 160, 189, 0.12) 27% 28%, transparent 28% 42%, rgba(168, 160, 189, 0.12) 42% 43%, transparent 43% 58%, rgba(168, 160, 189, 0.12) 58% 59%, transparent 59%) !important;
+}
+
+.site-header {
+  background: rgba(248, 246, 246, 0.84) !important;
+  border-bottom: 1px solid rgba(255,255,255,.45);
+}
+
+.nav-shell {
+  background: rgba(255,255,255,0.74) !important;
+  border: 1px solid rgba(255,255,255,0.92) !important;
+  box-shadow: 0 14px 34px rgba(104, 95, 121, 0.10) !important;
+}
+
+.brand,
+.brand span,
+h1, h2, h3,
+.current-heading h2,
+.section-heading h2,
+#about h2,
+#senior-project h3,
+.project-body h3,
+.experience-top strong,
+.coursework-card h3,
+.footer h2 {
+  color: #302933 !important;
+}
+
+.site-nav a,
+.link-row a,
+.hero-lead,
+.current-item p,
+.panel p:not(.eyebrow),
+.section-heading p:not(.eyebrow),
+.project-body p,
+.experience-card p,
+.coursework-card li,
+.footer p,
+.current-item span,
+.contact-links span,
+.tools-note,
+.certificate-note p {
+  color: #665f6d !important;
+}
+
+.site-nav a.active,
+.site-nav a:hover,
+.text-link:hover,
+.link-row a:hover,
+.footer-simple a:hover,
+.project-link-row a:hover,
+.contact-links a:hover {
+  color: #584f67 !important;
+}
+
+.hero {
+  padding-top: 2.8rem !important;
+}
+
+.hero-grid {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,255,255,0.84), rgba(255,255,255,0.70)) !important;
+  border: 1px solid rgba(255,255,255,0.82) !important;
+  border-radius: 40px !important;
+  box-shadow: 0 24px 60px rgba(107, 96, 122, 0.10) !important;
+  padding: clamp(1.75rem, 2vw + 1rem, 3rem) !important;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+}
+
+.hero-grid::before,
+.hero-grid::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-grid::before {
+  width: 220px;
+  height: 220px;
+  top: -90px;
+  left: -60px;
+  background: radial-gradient(circle, rgba(214, 223, 203, 0.54), transparent 68%);
+}
+
+.hero-grid::after {
+  width: 260px;
+  height: 260px;
+  right: -110px;
+  bottom: -110px;
+  background: radial-gradient(circle, rgba(225, 214, 238, 0.55), transparent 68%);
+}
+
+.hero-copy {
+  text-align: left !important;
+  justify-self: stretch !important;
+  max-width: none !important;
+}
+
+.hero-copy h1,
+.hero-copy p {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.eyebrow {
+  color: #7a7189 !important;
+}
+
+.hero-copy .eyebrow {
+  letter-spacing: .16em !important;
+}
+
+.hero-lead {
+  max-width: 720px;
+  font-size: 1.08rem !important;
+  line-height: 1.7 !important;
+}
+
+.hero-buttons {
+  margin-top: 1.4rem !important;
+}
+
+.button.primary,
+.button.secondary,
+.nav-resume,
+.theme-toggle {
+  border-radius: 999px !important;
+  border: 1px solid rgba(160, 150, 177, 0.18) !important;
+  box-shadow: 0 10px 22px rgba(97, 86, 109, 0.08) !important;
+}
+
+.button.primary,
+.nav-resume {
+  background: linear-gradient(135deg, #f3edd8 0%, #ebe8f6 100%) !important;
+  color: #342e39 !important;
+}
+
+.button.secondary,
+.theme-toggle {
+  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(238,236,244,0.92)) !important;
+  color: #4f4a5a !important;
+}
+
+.link-row {
+  justify-content: flex-start !important;
+  gap: 1rem 1.2rem !important;
+}
+
+.hero-snapshots {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-end;
+  margin: 1.35rem 0 1.2rem;
+  flex-wrap: wrap;
+}
+
+.snapshot-card {
+  width: clamp(100px, 14vw, 128px);
+  aspect-ratio: 10 / 17;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255,255,255,0.92);
+  box-shadow: 0 16px 34px rgba(97, 86, 109, 0.13);
+  position: relative;
+}
+
+.snapshot-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.26);
+  pointer-events: none;
+}
+
+.snapshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tilt-left { transform: rotate(-7deg); }
+.tilt-center { transform: translateY(8px); }
+.tilt-right { transform: rotate(6deg); }
+
+.hero-photo-wrap {
+  justify-self: center !important;
+}
+
+.hero-photo-card {
+  background: rgba(255,255,255,0.86) !important;
+  border: 1px solid rgba(255,255,255,0.9) !important;
+  box-shadow: 0 20px 48px rgba(101, 91, 115, 0.12) !important;
+  padding: 0.62rem !important;
+  border-radius: 28px !important;
+}
+
+.hero-photo-card img {
+  border-radius: 22px !important;
+}
+
+.hero-photo-label {
+  background: rgba(252, 250, 248, 0.95) !important;
+  color: #5b5464 !important;
+  border: 1px solid rgba(255,255,255,0.86) !important;
+  box-shadow: 0 12px 24px rgba(97, 86, 109, 0.08) !important;
+}
+
+.current-section,
+#about,
+#senior-project,
+#projects,
+#experience,
+#coursework,
+#ai-playground,
+.gallery-cta,
+.footer {
+  position: relative;
+}
+
+.current-shell,
+.panel,
+.senior-card,
+.project-card,
+.experience-card,
+.quality-panel,
+.tools-panel,
+.coursework-card,
+.ai-playground-card,
+.gallery-cta,
+.contact-links a,
+.study-summary,
+.study-metric,
+.study-block,
+.study-impact-strip article,
+.case-card,
+.photo-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.76)) !important;
+  border: 1px solid rgba(255,255,255,0.9) !important;
+  box-shadow: 0 16px 38px rgba(108, 98, 123, 0.09) !important;
+  backdrop-filter: blur(14px);
+}
+
+.current-shell {
+  padding: clamp(1.35rem, 1.5vw + 1rem, 1.9rem) !important;
+  border-radius: 34px !important;
+  background: linear-gradient(135deg, rgba(253,250,248,0.82), rgba(244,239,247,0.82)) !important;
+}
+
+.current-heading {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.current-heading h2 {
+  font-size: clamp(2rem, 3.2vw, 3.4rem) !important;
+  max-width: 11ch;
+}
+
+.current-grid {
+  gap: 1rem !important;
+}
+
+.current-item {
+  border-radius: 28px !important;
+  padding: 1.2rem 1.2rem 1.15rem !important;
+  border: 1px solid rgba(255,255,255,0.92) !important;
+}
+
+.current-item:nth-child(1) { background: linear-gradient(145deg, rgba(230,236,227,0.95), rgba(252,250,247,0.94)) !important; }
+.current-item:nth-child(2) { background: linear-gradient(145deg, rgba(234,239,248,0.96), rgba(249,249,252,0.94)) !important; }
+.current-item:nth-child(3) { background: linear-gradient(145deg, rgba(239,232,247,0.96), rgba(252,249,252,0.94)) !important; }
+
+.current-item strong,
+.stat-row strong,
+.panel h2,
+.section-heading h2,
+.project-body h3,
+.coursework-card h3,
+.experience-top strong,
+.senior-copy h3,
+.ai-playground-card h2,
+.footer h2 {
+  color: #302933 !important;
+}
+
+.stat-row {
+  gap: 0.8rem !important;
+  margin-top: 1rem !important;
+}
+
+.stat-row > div {
+  background: rgba(255,255,255,0.70) !important;
+  border: 1px solid rgba(255,255,255,0.92) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 24px rgba(105, 93, 120, 0.08) !important;
+}
+
+.stat-row > div:nth-child(1) { background: linear-gradient(135deg, rgba(230,236,227,0.92), rgba(248,245,243,0.92)) !important; }
+.stat-row > div:nth-child(2) { background: linear-gradient(135deg, rgba(234,239,248,0.92), rgba(248,247,250,0.92)) !important; }
+.stat-row > div:nth-child(3) { background: linear-gradient(135deg, rgba(239,232,247,0.92), rgba(248,245,248,0.92)) !important; }
+.stat-row > div:nth-child(4) { background: linear-gradient(135deg, rgba(248,239,229,0.92), rgba(251,248,243,0.92)) !important; }
+
+.about-grid,
+.quality-tools-grid {
+  gap: 1.15rem !important;
+}
+
+#about .panel:first-child {
+  background: linear-gradient(145deg, rgba(245,248,241,0.88), rgba(255,252,249,0.84)) !important;
+}
+
+#about .panel:last-child {
+  background: linear-gradient(145deg, rgba(242,240,248,0.90), rgba(255,251,253,0.86)) !important;
+}
+
+.tag-list span,
+.pill,
+.skill-row span,
+.mini-tags span,
+.coursework-tags span,
+.hero-photo-label {
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 22px rgba(97, 86, 109, 0.08) !important;
+}
+
+.tag-list span,
+.pill,
+.coursework-tags span {
+  background: linear-gradient(135deg, rgba(248,246,239,0.96), rgba(235,239,246,0.96)) !important;
+  color: #4e4955 !important;
+  border: 1px solid rgba(255,255,255,0.92) !important;
+}
+
+.mini-tags span,
+.skill-row span {
+  background: linear-gradient(135deg, rgba(240,236,248,0.96), rgba(236,241,248,0.96)) !important;
+  color: #544d61 !important;
+  border: 1px solid rgba(255,255,255,0.92) !important;
+}
+
+.senior-card {
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 420px) !important;
+  gap: 1.4rem !important;
+  overflow: hidden !important;
+  border-radius: 34px !important;
+}
+
+.senior-copy {
+  padding: 1.4rem 1.4rem 1.4rem 1.55rem !important;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0)) !important;
+}
+
+.senior-image,
+.case-image,
+.study-hero-image {
+  padding: 0.9rem !important;
+  background: linear-gradient(180deg, rgba(251,250,248,0.88), rgba(241,239,245,0.86)) !important;
+  border: 1px solid rgba(255,255,255,0.88) !important;
+  border-radius: 28px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45);
+}
+
+.senior-image img,
+.case-image img,
+.study-hero-image img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 20px !important;
+  background: #fff !important;
+}
+
+.project-grid {
+  gap: 1.2rem !important;
+}
+
+.project-card {
+  overflow: hidden !important;
+  border-radius: 30px !important;
+}
+
+.project-card > img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  border-bottom: 1px solid rgba(233, 226, 241, 0.9) !important;
+}
+
+.project-body {
+  padding: 1.15rem 1.15rem 1.25rem !important;
+}
+
+.project-card:nth-child(4n+1) .project-body { background: linear-gradient(180deg, rgba(247,244,237,0.88), rgba(255,255,255,0.78)) !important; }
+.project-card:nth-child(4n+2) .project-body { background: linear-gradient(180deg, rgba(239,235,248,0.90), rgba(255,255,255,0.78)) !important; }
+.project-card:nth-child(4n+3) .project-body { background: linear-gradient(180deg, rgba(233,240,248,0.90), rgba(255,255,255,0.78)) !important; }
+.project-card:nth-child(4n)   .project-body { background: linear-gradient(180deg, rgba(236,242,235,0.88), rgba(255,255,255,0.78)) !important; }
+
+.experience-card:nth-child(1) { background: linear-gradient(145deg, rgba(247,244,237,0.92), rgba(255,252,249,0.90)) !important; }
+.experience-card:nth-child(2) { background: linear-gradient(145deg, rgba(235,238,248,0.94), rgba(255,252,253,0.90)) !important; }
+.experience-card:nth-child(3) { background: linear-gradient(145deg, rgba(241,236,247,0.94), rgba(255,252,253,0.90)) !important; }
+
+.lab-highlight-card,
+.tools-panel,
+.quality-panel,
+.certificate-note {
+  border-radius: 28px !important;
+}
+
+.tools-tags span {
+  background: linear-gradient(135deg, rgba(248,246,239,0.96), rgba(236,239,247,0.96)) !important;
+  color: #544d61 !important;
+}
+
+.contact-links a {
+  color: #51495f !important;
+}
+
+.gallery-cta {
+  border-radius: 32px !important;
+}
+
+.footer {
+  padding-top: 2.6rem !important;
+}
+
+/* Case studies archive and project cards on secondary pages */
+.case-card {
+  border-radius: 30px !important;
+  overflow: hidden !important;
+}
+
+.case-copy {
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0)) !important;
+}
+
+/* Dark mode: moody plum / slate, not green */
+html[data-theme="dark"] body {
+  color: #f1ebf4 !important;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(124, 124, 148, 0.22), transparent 20%),
+    radial-gradient(circle at 84% 12%, rgba(154, 133, 180, 0.20), transparent 24%),
+    radial-gradient(circle at 52% 84%, rgba(161, 112, 132, 0.12), transparent 24%),
+    linear-gradient(180deg, #18161d 0%, #1b1a22 42%, #151720 100%) !important;
+}
+
+html[data-theme="dark"] .forest-bg {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(102, 111, 136, 0.18), transparent 22%),
+    radial-gradient(circle at 86% 24%, rgba(123, 103, 154, 0.18), transparent 22%),
+    radial-gradient(circle at 56% 90%, rgba(151, 105, 126, 0.12), transparent 18%) !important;
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(22, 22, 29, 0.84) !important;
+}
+
+html[data-theme="dark"] .nav-shell,
+html[data-theme="dark"] .hero-grid,
+html[data-theme="dark"] .current-shell,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .senior-card,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .experience-card,
+html[data-theme="dark"] .quality-panel,
+html[data-theme="dark"] .tools-panel,
+html[data-theme="dark"] .coursework-card,
+html[data-theme="dark"] .ai-playground-card,
+html[data-theme="dark"] .gallery-cta,
+html[data-theme="dark"] .contact-links a,
+html[data-theme="dark"] .case-card,
+html[data-theme="dark"] .photo-card,
+html[data-theme="dark"] .study-summary,
+html[data-theme="dark"] .study-metric,
+html[data-theme="dark"] .study-block,
+html[data-theme="dark"] .study-impact-strip article {
+  background: linear-gradient(180deg, rgba(31, 31, 40, 0.96), rgba(28, 28, 37, 0.93)) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: 0 18px 46px rgba(0,0,0,0.26) !important;
+}
+
+html[data-theme="dark"] .brand,
+html[data-theme="dark"] .brand span,
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] .current-item strong,
+html[data-theme="dark"] .stat-row strong,
+html[data-theme="dark"] .experience-top strong,
+html[data-theme="dark"] .footer h2,
+html[data-theme="dark"] .coursework-card h3 {
+  color: #f3edf6 !important;
+}
+
+html[data-theme="dark"] .site-nav a,
+html[data-theme="dark"] .hero-lead,
+html[data-theme="dark"] .link-row a,
+html[data-theme="dark"] .current-item p,
+html[data-theme="dark"] .current-item span,
+html[data-theme="dark"] .panel p:not(.eyebrow),
+html[data-theme="dark"] .project-body p,
+html[data-theme="dark"] .experience-card p,
+html[data-theme="dark"] .coursework-card li,
+html[data-theme="dark"] .footer p,
+html[data-theme="dark"] .contact-links a,
+html[data-theme="dark"] .tools-note,
+html[data-theme="dark"] .certificate-note p,
+html[data-theme="dark"] .section-heading p:not(.eyebrow) {
+  color: #c9c2d3 !important;
+}
+
+html[data-theme="dark"] .eyebrow {
+  color: #b3a6c8 !important;
+}
+
+html[data-theme="dark"] .button.primary,
+html[data-theme="dark"] .nav-resume {
+  background: linear-gradient(135deg, rgba(238, 228, 212, 0.95), rgba(205, 197, 232, 0.95)) !important;
+  color: #241f2a !important;
+}
+
+html[data-theme="dark"] .button.secondary,
+html[data-theme="dark"] .theme-toggle {
+  background: linear-gradient(135deg, rgba(48,48,63,0.98), rgba(37,37,51,0.98)) !important;
+  color: #eee8f3 !important;
+}
+
+html[data-theme="dark"] .hero-photo-card,
+html[data-theme="dark"] .hero-photo-label,
+html[data-theme="dark"] .snapshot-card,
+html[data-theme="dark"] .senior-image,
+html[data-theme="dark"] .case-image,
+html[data-theme="dark"] .study-hero-image,
+html[data-theme="dark"] .stat-row > div,
+html[data-theme="dark"] .current-item,
+html[data-theme="dark"] .tag-list span,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .coursework-tags span,
+html[data-theme="dark"] .mini-tags span,
+html[data-theme="dark"] .skill-row span,
+html[data-theme="dark"] .tools-tags span {
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html[data-theme="dark"] .tag-list span,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .coursework-tags span {
+  background: linear-gradient(135deg, rgba(62, 58, 74, 0.96), rgba(44, 49, 62, 0.96)) !important;
+  color: #efe9f5 !important;
+}
+
+html[data-theme="dark"] .mini-tags span,
+html[data-theme="dark"] .skill-row span,
+html[data-theme="dark"] .tools-tags span {
+  background: linear-gradient(135deg, rgba(55, 51, 70, 0.96), rgba(43, 48, 60, 0.96)) !important;
+  color: #e8e4ef !important;
+}
+
+html[data-theme="dark"] .current-item:nth-child(1),
+html[data-theme="dark"] #about .panel:first-child,
+html[data-theme="dark"] .project-card:nth-child(4n) .project-body {
+  background: linear-gradient(145deg, rgba(42, 47, 47, 0.96), rgba(31,31,40,0.94)) !important;
+}
+
+html[data-theme="dark"] .current-item:nth-child(2),
+html[data-theme="dark"] .project-card:nth-child(4n+3) .project-body,
+html[data-theme="dark"] .experience-card:nth-child(2) {
+  background: linear-gradient(145deg, rgba(39, 45, 61, 0.96), rgba(31,31,40,0.94)) !important;
+}
+
+html[data-theme="dark"] .current-item:nth-child(3),
+html[data-theme="dark"] #about .panel:last-child,
+html[data-theme="dark"] .project-card:nth-child(4n+2) .project-body,
+html[data-theme="dark"] .experience-card:nth-child(3) {
+  background: linear-gradient(145deg, rgba(48, 39, 60, 0.96), rgba(31,31,40,0.94)) !important;
+}
+
+html[data-theme="dark"] .stat-row > div:nth-child(4),
+html[data-theme="dark"] .experience-card:nth-child(1),
+html[data-theme="dark"] .project-card:nth-child(4n+1) .project-body {
+  background: linear-gradient(145deg, rgba(59, 49, 46, 0.96), rgba(31,31,40,0.94)) !important;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .hero-copy {
+    text-align: center !important;
+  }
+
+  .hero-copy h1,
+  .hero-copy p,
+  .link-row {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+  }
+
+  .hero-snapshots {
+    justify-content: center;
+  }
+
+  .senior-card {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-grid {
+    padding: 1.25rem !important;
+    border-radius: 28px !important;
+  }
+
+  .snapshot-card {
+    width: 90px;
+    border-radius: 18px;
+  }
+
+  .current-heading h2 {
+    max-width: none;
+  }
+}
