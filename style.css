@@ -4481,3 +4481,128 @@ body::after {
     background: #17231c !important;
   }
 }
+
+/* =========================================================
+   v44 — cleaner case-study imagery + employer-facing polish
+   Full compositions stay visible. Preview/gallery frames are
+   consistent across desktop, tablet, and mobile without cropping.
+   ========================================================= */
+
+:root {
+  --preview-matte: #f6f8f4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --preview-matte: #111b15;
+  }
+}
+
+/* Selected-project cards: use one calm, consistent preview window. */
+.project-card > img {
+  width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: 50% 50% !important;
+  padding: clamp(.3rem, .55vw, .48rem) !important;
+  transform: none !important;
+  background: var(--preview-matte) !important;
+}
+
+/* Case-study index previews: identical framing regardless of source ratio. */
+.case-image,
+.case-headup .case-image,
+.case-plant .case-image {
+  aspect-ratio: 16 / 10 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: clamp(.35rem, .6vw, .55rem) !important;
+  background: var(--preview-matte) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 18px !important;
+}
+
+.case-image img,
+.case-mopec .case-image img,
+.case-syncare .case-image img,
+.case-insole .case-image img,
+.case-nuitlume .case-image img,
+.case-connectus .case-image img,
+.case-headup .case-image img,
+.case-plant .case-image img,
+.case-mobility .case-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: 50% 50% !important;
+  padding: 0 !important;
+  transform: none !important;
+  background: transparent !important;
+  border-radius: 12px !important;
+}
+
+/* Internal case-study archive: consistent visual tiles, no visible captions.
+   Descriptive alt text remains on every image for accessibility. */
+.study-media-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: clamp(.75rem, 1.4vw, 1rem) !important;
+  align-items: stretch !important;
+}
+
+.study-media-card {
+  display: grid !important;
+  place-items: center !important;
+  margin: 0 !important;
+  padding: clamp(.45rem, .7vw, .65rem) !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  background: var(--surface) !important;
+}
+
+.study-media-card img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: 50% 50% !important;
+  padding: 0 !important;
+  border-radius: 12px !important;
+  background: var(--preview-matte) !important;
+}
+
+.study-media-card figcaption {
+  display: none !important;
+}
+
+.materials-head {
+  margin-bottom: 1rem !important;
+}
+
+/* Slightly tighter archive heading now that image captions are gone. */
+.materials-head h2 {
+  margin-bottom: .2rem !important;
+}
+
+@media (max-width: 900px) {
+  .study-media-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .project-card > img,
+  .case-image,
+  .case-headup .case-image,
+  .case-plant .case-image,
+  .study-media-card img {
+    aspect-ratio: 16 / 10 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-card > img,
+  .case-image,
+  .study-media-card img {
+    aspect-ratio: 4 / 3 !important;
+  }
+}
