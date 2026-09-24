@@ -42,3 +42,31 @@ body{font-family:'Roboto Mono','Courier New',monospace}.hero h1,.manifest h2,.he
 .visualBreak{margin-left:clamp(28px,6vw,90px);margin-right:clamp(28px,6vw,90px);border-left:0;border-right:0;background:var(--soft)}
 .visualBreak .photoFirst{padding-left:14px;border-left:14px solid #14213d;background:#14213d}
 @media(max-width:800px){.plantLogo span{font-size:21px}.visualBreak .photoFirst{padding-left:7px;border-left-width:8px}.qDetail .detailList b{font-size:22px}}
+/* A9 — retro CRT / old-school biomedical workstation polish */
+:root{--crt-green:#79f29b;--crt-amber:#ffb84d;--crt-red:#ff5d73;--crt-blue:#63d7ff;--navy:#14213d}
+body{background-image:linear-gradient(rgba(20,33,61,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(20,33,61,.025) 1px,transparent 1px);background-size:24px 24px}
+html.dark body{background-image:linear-gradient(rgba(121,242,155,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(99,215,255,.025) 1px,transparent 1px);background-size:24px 24px}
+header{box-shadow:0 2px 0 var(--crt-green);backdrop-filter:blur(10px)}
+.logo span{color:var(--crt-green);text-shadow:1px 0 var(--crt-blue)}
+nav a:hover{background:var(--crt-green);color:#061008}
+#theme{background:var(--crt-amber);box-shadow:3px 3px 0 var(--crt-red);font-family:VT323;font-size:18px}
+.hero h1 span{color:var(--crt-red);text-shadow:5px 0 0 rgba(99,215,255,.55),-2px 0 0 rgba(121,242,155,.45)}
+.heroBtns a{box-shadow:4px 4px 0 var(--crt-green)}.heroBtns a:nth-child(2){box-shadow:4px 4px 0 var(--crt-red)}.heroBtns a:nth-child(3){box-shadow:4px 4px 0 var(--crt-blue)}
+.window{position:relative;border-color:var(--navy);box-shadow:12px 12px 0 var(--crt-green);overflow:hidden}.window:after{content:"";pointer-events:none;position:absolute;inset:38px 10px 10px;background:repeating-linear-gradient(to bottom,transparent 0 3px,rgba(4,16,10,.09) 4px);mix-blend-mode:multiply}.window>div{background:#07100b;color:var(--crt-green);letter-spacing:1px}
+.ticker{background:#07100b;color:var(--crt-green);border-color:var(--crt-green);text-shadow:0 0 6px rgba(121,242,155,.45)}
+.eyebrow,.head>b,.current>b{color:var(--crt-green);text-shadow:0 0 5px rgba(121,242,155,.25)}
+.expGrid article:nth-child(1){border-color:var(--crt-green)}.expGrid article:nth-child(2){border-color:var(--crt-blue)}.expGrid article:nth-child(3){border-color:var(--crt-red)}
+.skillScreen{border-color:var(--navy);box-shadow:10px 10px 0 var(--crt-green);background:#07100b}.skillScreen b{color:var(--crt-green)}
+.skillScreen>div:nth-child(2) b{color:var(--crt-blue)}.skillScreen>div:nth-child(3) b{color:var(--crt-amber)}.skillScreen>div:nth-child(4) b{color:var(--crt-red)}
+.feature img{box-shadow:12px 12px 0 var(--crt-red)}.feature.reverse img{box-shadow:-12px 12px 0 var(--crt-green)}
+.tiles article:nth-child(3n+1) img{box-shadow:8px 8px 0 var(--crt-green)}.tiles article:nth-child(3n+2) img{box-shadow:8px 8px 0 var(--crt-blue)}.tiles article:nth-child(3n) img{box-shadow:8px 8px 0 var(--crt-red)}
+.q{background:var(--navy);background-image:radial-gradient(circle at 12% 20%,rgba(121,242,155,.12),transparent 24%),radial-gradient(circle at 88% 70%,rgba(255,93,115,.12),transparent 25%)}
+.qDetail .detailList li{border-left-color:var(--crt-green)}.qDetail .detailList li:nth-child(even){border-left-color:var(--crt-amber)}
+.current{background-image:linear-gradient(90deg,transparent 0 97%,rgba(121,242,155,.12) 97%)}
+.pixelArt span:nth-child(1){background:var(--crt-red)}.pixelArt span:nth-child(2){background:var(--crt-green)}.pixelArt span:nth-child(3){background:var(--crt-blue)}.pixelArt span:nth-child(4){background:var(--crt-amber)}.pixelArt span:nth-child(5){background:#fff}
+.spriteShelf{background:#07100b;color:var(--crt-green);border-color:var(--crt-green)}
+.alien{background:var(--crt-green)}.dna{color:var(--crt-blue)}.heart{color:var(--crt-red)}.pixelFlower{background:var(--crt-amber)}.codeBug{border-color:var(--crt-blue);color:var(--crt-green)}
+footer{border-top:2px solid var(--crt-green);background-image:linear-gradient(90deg,rgba(121,242,155,.05),transparent 45%)}
+.contactLinks a:hover{background:var(--crt-green)}
+/* subtle phosphor glow only on dark mode */
+html.dark .hero h1,html.dark .manifest h2,html.dark .head h2,html.dark .feature h3,html.dark footer h2{text-shadow:0 0 12px rgba(121,242,155,.09)}
