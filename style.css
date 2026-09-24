@@ -28,3 +28,10 @@ body{font-family:'Roboto Mono','Courier New',monospace}.hero h1,.manifest h2,.he
 .qDetail img{width:100%;display:block;max-height:390px;object-fit:contain;background:rgba(255,255,255,.08);margin-bottom:24px}
 .current p{font-size:15px;max-width:880px}
 @media(max-width:800px){.skillDecor{grid-template-columns:1fr!important}.visualBreak{margin-left:5vw;margin-right:5vw}.visualBreak .photoFirst{padding-left:8px}}
+/* A6 visual reliability + requested spacing */
+.visualBreak{margin-left:clamp(28px,6vw,90px);margin-right:clamp(28px,6vw,90px);overflow:hidden}
+.visualBreak .photoFirst{border-left:4px solid var(--ink);padding-left:10px}
+.skills{position:relative}
+.skills::after{content:"";display:block;min-height:220px;background:url('assets/bme-scan.png') center/contain no-repeat;margin-top:18px;opacity:.92}
+.imagingWorkflowArt{width:100%;max-width:760px;display:block;margin:22px auto;object-fit:contain}
+.tiles img,.feature>img{display:block;width:100%;object-fit:cover;background:#ececec}
