@@ -150,3 +150,121 @@ a,button{touch-action:manipulation}button,a{min-height:34px}.heroBtns a,.syncare
 @media(max-width:1050px){.manifestGrid{gap:5vw}.tiles article>img{aspect-ratio:4/3}.visualBreak>img{aspect-ratio:4/3}.certificateBadge{margin-top:5vw}}
 @media(max-width:700px){.manifest{padding-left:6vw;padding-right:6vw}.manifestGrid .thinkDiagram{max-height:none;box-shadow:6px 6px 0 var(--mint)}.manifest:after{display:none}.tiles article>img{aspect-ratio:16/11}.visualBreak{border-left:8px solid var(--ink)!important;padding-left:0!important}.visualBreak>img{aspect-ratio:16/10}.certificateBadge{margin:8vw 6vw 0;max-width:none}.certificateBadge b{font-size:22px}.certificateBadge small{font-size:12px}}
 @media(max-width:420px){.tiles article>img{aspect-ratio:4/3}.visualBreak>img{aspect-ratio:4/3}.certificateBadge{padding:14px}.certIcon{font-size:28px}}
+
+/* A16 — visible troubleshooting art + softer headline */
+.hero h1{color:#6677b8!important;text-shadow:4px 4px 0 #eee2ff}
+.hero h1 span{color:#e17dad!important;text-shadow:5px 0 0 rgba(155,205,235,.62),-2px 0 0 rgba(184,224,198,.48)!important}
+.manifest h2{color:#6677b8!important;text-shadow:3px 3px 0 #eee2ff}
+.manifest h2 br:last-of-type{color:inherit}
+.manifestGrid .thinkDiagram{display:block!important;visibility:visible!important;opacity:1!important;min-height:260px;background:#fffaf4!important}
+@media(max-width:700px){.hero h1{color:#6677b8!important;text-shadow:3px 3px 0 #eee2ff}.manifestGrid .thinkDiagram{min-height:180px}}
+
+/* A17 — photo archive strip cleanup */
+.visualBreak{
+  border-left:0 !important;
+  background:var(--baby-blue) !important;
+  padding-left:0 !important;
+}
+.visualBreak .photoFirst{
+  border-left:0 !important;
+  padding-left:0 !important;
+  background:var(--baby-blue) !important;
+}
+.visualBreak>div{
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+  padding:clamp(28px,3.5vw,62px) clamp(24px,3.2vw,58px) !important;
+  overflow:hidden;
+}
+.visualBreak>div>b{
+  display:block;
+  font-size:clamp(12px,1.15vw,18px);
+  margin-bottom:clamp(20px,2.5vw,38px);
+}
+.visualBreak h2{
+  font-size:clamp(38px,3.35vw,58px) !important;
+  line-height:.92 !important;
+  letter-spacing:.01em;
+  margin:0 0 clamp(28px,3vw,48px) !important;
+  max-width:10.5em;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.visualBreak a{
+  font-size:clamp(14px,1.35vw,21px);
+  line-height:1.25;
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+}
+@media(max-width:1050px){
+  .visualBreak{grid-template-columns:repeat(3,1fr) !important}
+  .visualBreak>div{grid-column:1/-1 !important;min-height:300px}
+  .visualBreak h2{font-size:clamp(46px,7vw,72px) !important;max-width:12em}
+}
+@media(max-width:700px){
+  .visualBreak{grid-template-columns:1fr !important;border-left:0 !important}
+  .visualBreak>div{grid-column:auto !important;min-height:0;padding:38px 26px 44px !important}
+  .visualBreak h2{font-size:clamp(42px,13vw,64px) !important;max-width:9em}
+}
+
+/* A18: replace remaining black ticker with a complementary pastel periwinkle */
+.ticker{
+  background:#8f9de8 !important;
+  color:#fffafc !important;
+  border-color:#e982b4 !important;
+  text-shadow:none !important;
+}
+html.dark .ticker{
+  background:#6978bd !important;
+  color:#fffafc !important;
+}
+
+/* A19 — cleaner desktop navigation spacing/alignment */
+header{
+  min-height:72px;
+  height:auto;
+  padding:10px clamp(22px,4vw,72px);
+  gap:22px;
+}
+header nav{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:clamp(20px,3vw,52px);
+  flex-wrap:nowrap;
+}
+header nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  font-size:clamp(16px,1.35vw,22px);
+  line-height:1;
+  letter-spacing:.04em;
+  padding:9px 2px;
+}
+#theme{
+  flex:0 0 auto;
+  margin-left:clamp(8px,1.5vw,22px);
+  width:54px;
+  height:54px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  line-height:1;
+}
+@media(max-width:1050px){
+  header{gap:12px;padding-inline:24px}
+  header nav{gap:20px}
+  header nav a{font-size:17px}
+  #theme{width:48px;height:48px;margin-left:8px}
+}
+@media(max-width:700px){
+  header{padding:8px 14px;gap:8px}
+  header nav{justify-content:flex-start;gap:18px;padding:9px 0 3px}
+  header nav a{font-size:15px;padding:6px 0}
+  #theme{width:42px;height:42px;margin-left:auto}
+}
