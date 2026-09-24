@@ -1,64 +1,23 @@
-const navToggle = document.getElementById("navToggle");
-const siteNav = document.getElementById("siteNav");
 
-// Theme is automatic: CSS follows the visitor's browser/device preference.
-// There is intentionally no manual light/dark toggle.
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (
-      window.innerWidth <= 900 &&
-      siteNav.classList.contains("open") &&
-      !siteNav.contains(event.target) &&
-      !navToggle.contains(event.target)
-    ) {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
-// Internal case-study tabs
-document.querySelectorAll(".case-tabs").forEach((tabList) => {
-  const section = tabList.closest(".study-tabs-section");
-  if (!section) return;
-
-  const buttons = [...tabList.querySelectorAll(".case-tab")];
-  const panels = [...section.querySelectorAll(".case-tab-panel")];
-
-  const activate = (name) => {
-    buttons.forEach((button) => {
-      const active = button.dataset.tab === name;
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-selected", String(active));
-    });
-    panels.forEach((panel) => {
-      const active = panel.dataset.panel === name;
-      panel.classList.toggle("active", active);
-      panel.hidden = !active;
-    });
+(function () {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('bella-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initial = saved || (prefersDark ? 'dark' : 'light');
+  root.setAttribute('data-theme', initial);
+  const updateIcon = () => {
+    if (!toggle) return;
+    const dark = root.getAttribute('data-theme') === 'dark';
+    toggle.textContent = dark ? '☀︎' : '☾';
   };
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => activate(button.dataset.tab));
-  });
-});
+  updateIcon();
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('bella-theme', next);
+      updateIcon();
+    });
+  }
+})();
