@@ -1,1 +1,1 @@
-ITERATION B — a completely separate Bio/OS field-computer concept. It does not inherit Iteration A layout. All displayed photos are physically bundled into /assets. Photo section retained as requested.
+ITERATION A.A — refinement of Iteration A. Verified embedded images are physically included in /assets, so the site does not depend on missing GitHub asset paths. ConnectUs uses the final expo table image. Future media slots remain intentionally unassigned until the class/project source is verified.

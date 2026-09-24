@@ -1,1 +1,1 @@
-const r=document.documentElement,b=document.getElementById('mode');let t=localStorage.getItem('bioos-theme');if(t)r.dataset.theme=t;b.onclick=()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';localStorage.setItem('bioos-theme',r.dataset.theme)};
+const r=document.documentElement,b=document.getElementById('mode');let t=localStorage.getItem('ic-theme');if(t)r.dataset.theme=t;b.onclick=()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';localStorage.setItem('ic-theme',r.dataset.theme)};
