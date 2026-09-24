@@ -1,13 +1,24 @@
-PORTFOLIO UPDATE — Sep 24, 2026
+ISABELLA RETRO BME PORTFOLIO — ITERATION A
 
-Upload index.html to the root of your GitHub Pages repository, replacing the current index.html.
+Direction:
+- retro computer / editorial zine / 8-bit scientific desktop
+- pure white light mode; pure black dark mode
+- no green/purple page background
+- no pill/bubble tag UI
+- stronger visual hierarchy and less resume-like information dumping
+- borderless square visual archive
+- motion: CRT scan, ticker, pixel-step reveal, custom cursor
+- custom favicon/logo used in browser tab and navigation
 
-This update:
-- preserves the current forest-green single-file portfolio design
-- adds Jump Biomechanics Analysis to Selected Projects and Case Studies
-- uses a curated collage of the static squat-jump tracking frames + COG graph
-- upgrades ConnectUs imagery to show participant testing, CAD, and Arduino/electronics work
-- strengthens ConnectUs wording around accessibility, human-centered design, testing, and iteration
+Content hierarchy:
+1. Mopec senior design
+2. HeadUp bioinstrumentation
+3. Smart Collar embedded systems
+4. ConnectUs accessible design (uses the original/final-showcase preview asset from the prior site)
+5. Presence Plant as HCI/robotics concept
+6. technical lab-note areas for future imaging, microscopy, biomechanics, tissue, nanotech, COMSOL, CAD, video/GIF uploads
+7. strongest experience: 2,000+ device operations, $10K+ programming leadership, BME lab support, QSE
 
-The two JPG files are included as convenient standalone portfolio assets, although the updated
-index.html embeds the curated images directly and does not depend on them.
+IMPORTANT:
+The site intentionally leaves future media slots rather than assigning unrelated class images to projects.
+When new microscope/lab/video/Canvas files are available, place each artifact only with its verified class/project.

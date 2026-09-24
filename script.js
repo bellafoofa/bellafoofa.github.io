@@ -1,84 +1,10 @@
-const themeToggle = document.getElementById("themeToggle");
-const themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
 
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  if (themeToggle) themeToggle.textContent = theme === "dark" ? "☀︎" : "☾";
-}
-
-const savedTheme = localStorage.getItem("isabella-theme");
-applyTheme(savedTheme || (themeMedia.matches ? "dark" : "light"));
-
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    localStorage.setItem("isabella-theme", next);
-    applyTheme(next);
-  });
-}
-
-if (!savedTheme) {
-  themeMedia.addEventListener?.("change", (event) => applyTheme(event.matches ? "dark" : "light"));
-}
-
-const navToggle = document.getElementById("navToggle");
-const siteNav = document.getElementById("siteNav");
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (
-      window.innerWidth <= 900 &&
-      siteNav.classList.contains("open") &&
-      !siteNav.contains(event.target) &&
-      !navToggle.contains(event.target)
-    ) {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
-// Internal case-study tabs
-document.querySelectorAll(".case-tabs").forEach((tabList) => {
-  const section = tabList.closest(".study-tabs-section");
-  if (!section) return;
-
-  const buttons = [...tabList.querySelectorAll(".case-tab")];
-  const panels = [...section.querySelectorAll(".case-tab-panel")];
-
-  const activate = (name) => {
-    buttons.forEach((button) => {
-      const active = button.dataset.tab === name;
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-selected", String(active));
-    });
-    panels.forEach((panel) => {
-      const active = panel.dataset.panel === name;
-      panel.classList.toggle("active", active);
-      panel.hidden = !active;
-    });
-  };
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => activate(button.dataset.tab));
-  });
-});
+const root=document.documentElement;
+const btn=document.getElementById('theme');
+const saved=localStorage.getItem('portfolio-theme');
+if(saved) root.dataset.theme=saved;
+btn.addEventListener('click',()=>{const n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;localStorage.setItem('portfolio-theme',n)});
+const dot=document.querySelector('.cursor-dot');
+window.addEventListener('pointermove',e=>{dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px'});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'steps(8,end)',fill:'both'})}),{threshold:.08});
+document.querySelectorAll('.feature,.project-tile,.lab-note,.timeline article').forEach(x=>obs.observe(x));
