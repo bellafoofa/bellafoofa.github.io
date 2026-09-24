@@ -1,1 +1,1 @@
-const r=document.documentElement,b=document.getElementById('mode');let t=localStorage.getItem('ic-theme');if(t)r.dataset.theme=t;b.onclick=()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';localStorage.setItem('ic-theme',r.dataset.theme)};
+const r=document.documentElement,b=document.getElementById('theme');const s=localStorage.getItem('ic-ac-theme');if(s==='dark')r.classList.add('dark');b.onclick=()=>{r.classList.toggle('dark');localStorage.setItem('ic-ac-theme',r.classList.contains('dark')?'dark':'light')};
