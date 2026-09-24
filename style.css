@@ -4391,9 +4391,9 @@ body::after {
 .case-syncare .case-image img,
 .case-insole .case-image img,
 .case-nuitlume .case-image img,
-.study-hero-image img[src*="syncare.webp"],
-.study-hero-image img[src*="pressure-point-insole.webp"],
-.study-hero-image img[src*="nuitlume-preview.webp"] {
+.study-hero-image img[src*="syncare.jpg"],
+.study-hero-image img[src*="pressure-point-insole.jpg"],
+.study-hero-image img[src*="nuitlume-preview.jpg"] {
   object-fit: contain !important;
   object-position: 50% 50% !important;
   padding: clamp(.28rem, .6vw, .5rem) !important;
@@ -4402,9 +4402,9 @@ body::after {
 }
 
 /* Mopec's computer-vision slide should never be skewed or clipped. */
-.senior-image img[src*="mopec.webp"],
+.senior-image img[src*="mopec.jpg"],
 .case-mopec .case-image img,
-.study-hero-image img[src*="mopec.webp"] {
+.study-hero-image img[src*="mopec.jpg"] {
   object-fit: contain !important;
   object-position: 50% 50% !important;
   padding: clamp(.28rem, .6vw, .5rem) !important;
@@ -4416,7 +4416,7 @@ body::after {
    the frame naturally with a centered crop. */
 .preview-connectus > img,
 .case-connectus .case-image img,
-.study-hero-image img[src*="connectus.webp"] {
+.study-hero-image img[src*="connectus.jpg"] {
   object-fit: cover !important;
   object-position: 50% 50% !important;
   padding: 0 !important;
@@ -4431,11 +4431,11 @@ body::after {
   .case-insole .case-image img,
   .case-nuitlume .case-image img,
   .case-mopec .case-image img,
-  .senior-image img[src*="mopec.webp"],
-  .study-hero-image img[src*="mopec.webp"],
-  .study-hero-image img[src*="syncare.webp"],
-  .study-hero-image img[src*="pressure-point-insole.webp"],
-  .study-hero-image img[src*="nuitlume-preview.webp"] {
+  .senior-image img[src*="mopec.jpg"],
+  .study-hero-image img[src*="mopec.jpg"],
+  .study-hero-image img[src*="syncare.jpg"],
+  .study-hero-image img[src*="pressure-point-insole.jpg"],
+  .study-hero-image img[src*="nuitlume-preview.jpg"] {
     background: #17231c !important;
   }
 }
@@ -4462,8 +4462,8 @@ body::after {
 
 .case-headup .case-image img,
 .case-plant .case-image img,
-.study-hero-image img[src*="headup.webp"],
-.study-hero-image img[src*="presence-plant.webp"] {
+.study-hero-image img[src*="headup.jpg"],
+.study-hero-image img[src*="presence-plant.jpg"] {
   object-fit: contain !important;
   object-position: center center !important;
   padding: 0 !important;
@@ -4476,8 +4476,8 @@ body::after {
   .preview-plant > img,
   .case-headup .case-image img,
   .case-plant .case-image img,
-  .study-hero-image img[src*="headup.webp"],
-  .study-hero-image img[src*="presence-plant.webp"] {
+  .study-hero-image img[src*="headup.jpg"],
+  .study-hero-image img[src*="presence-plant.jpg"] {
     background: #17231c !important;
   }
 }
@@ -5697,3 +5697,68 @@ html[data-theme="dark"] .study-hero-image img {
   .photo-grid.photo-grid-compact { columns: 1 !important; width: 100% !important; }
   .photo-grid.photo-grid-compact .photo-card figcaption { font-size: .86rem !important; }
 }
+
+/* v54 — concise, lively BME portfolio + contrast hardening */
+.brand-mark{position:relative;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(145deg,#f3bfd2,#c9d9f2 52%,#d8e6cf);box-shadow:0 5px 18px rgba(74,52,84,.15);border:1px solid rgba(71,58,78,.12);flex:0 0 auto}.brand-mark b{font:700 10px/1 "Space Mono",monospace;letter-spacing:-.08em;color:#3b3040}.brand-mark:before,.brand-mark:after,.brand-mark i:before{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#fff}.brand-mark:before{left:6px;top:8px}.brand-mark:after{right:6px;bottom:8px}.brand-mark i:before{right:7px;top:7px}.brand-mark i{position:absolute;inset:0;background:linear-gradient(35deg,transparent 48%,rgba(255,255,255,.65) 49% 51%,transparent 52%);border-radius:inherit}
+.clean-bullets{margin:18px 0 22px;padding:0;list-style:none;display:grid;gap:10px;color:var(--muted)}.clean-bullets li{position:relative;padding-left:20px;line-height:1.45}.clean-bullets li:before{content:"✦";position:absolute;left:0;top:.05em;font-size:.72em;color:#b77c9a}
+.current-item p{line-height:1.55}.experience-card{position:relative;overflow:hidden}.experience-card:after{content:"";position:absolute;width:88px;height:88px;border-radius:50%;right:-36px;top:-36px;background:radial-gradient(circle,rgba(239,190,211,.2),transparent 68%);pointer-events:none}
+.project-card{transition:transform .22s ease,box-shadow .22s ease}.project-card:hover{transform:translateY(-4px) rotate(-.15deg)}.project-card:nth-child(even):hover{transform:translateY(-4px) rotate(.15deg)}
+.section-heading p{max-width:680px}.spring-highlights .section-heading p:last-child{display:none}
+/* No unreadable pastel-on-pastel tags. */
+html[data-theme="dark"] .tag-list span,html[data-theme="dark"] .skill-row span,html[data-theme="dark"] .mini-tags span,html[data-theme="dark"] .pill{color:#fff7fb !important;text-shadow:none!important}
+html[data-theme="dark"] .tag-list span:nth-child(6n+1),html[data-theme="dark"] .skill-row span:nth-child(6n+1),html[data-theme="dark"] .mini-tags span:nth-child(6n+1){background:#68455a!important}
+html[data-theme="dark"] .tag-list span:nth-child(6n+4),html[data-theme="dark"] .skill-row span:nth-child(6n+4),html[data-theme="dark"] .mini-tags span:nth-child(6n+4){background:#3f5a55!important}
+html[data-theme="dark"] .experience-card p,html[data-theme="dark"] .clean-bullets,html[data-theme="dark"] .current-item p,html[data-theme="dark"] .lab-highlight-card p{color:#ddd5e1!important}
+html[data-theme="dark"] .experience-top span,html[data-theme="dark"] .highlight-kicker,html[data-theme="dark"] .current-item>span{color:#efbfd3!important}
+html[data-theme="dark"] .brand-mark{background:linear-gradient(145deg,#eab6cc,#b9cdea 52%,#b9d2c3);border-color:rgba(255,255,255,.18)}
+/* Light mode: softer paper, less washed-out pastel. */
+html[data-theme="light"] body{background:#f8f5f6}html[data-theme="light"] .current-shell{background:linear-gradient(135deg,#fff9fb,#f6f8fc 56%,#f8f4fb)!important}html[data-theme="light"] .tag-list span,html[data-theme="light"] .skill-row span,html[data-theme="light"] .mini-tags span{color:#332b37!important}
+/* Images always occupy their intended area and don't vanish against dark mode. */
+.project-card>img,.senior-image img,.case-image img,.study-hero-image img{display:block;width:100%;object-fit:cover;background:#eee9ec!important;color:#403843!important}.project-card>img{aspect-ratio:16/10}.case-image img{min-height:280px}
+
+/* v55 — Presence Plant inspired: soft retro-computer + lab notebook */
+:root{
+  --retro-ink:#302936;
+  --retro-cream:#fbf8f4;
+  --retro-pink:#ead6df;
+  --retro-lilac:#ddd8eb;
+  --retro-blue:#d9e3eb;
+  --retro-sage:#dce5d8;
+  --retro-brown:#8c746b;
+}
+body{background-image:radial-gradient(circle at 12% 10%,rgba(234,214,223,.35),transparent 24%),radial-gradient(circle at 90% 20%,rgba(221,216,235,.45),transparent 27%),linear-gradient(180deg,#fbfaf8,#f5f1f5 55%,#f7f5f2)}
+.hero-grid,.current-shell,.panel,.senior-card,.course-card,.experience-card,.project-card{box-shadow:0 16px 38px rgba(62,48,68,.08)}
+.hero-grid{position:relative;overflow:hidden;background:rgba(255,253,251,.86);border:1px solid rgba(98,80,105,.12)}
+.hero-grid:before{content:"portfolio.exe   —   biomedical engineering";position:absolute;left:0;right:0;top:0;padding:8px 16px;font:700 10px/1.2 "Space Mono",monospace;letter-spacing:.08em;color:#756a78;background:linear-gradient(90deg,var(--retro-pink),var(--retro-lilac),var(--retro-blue));border-bottom:1px solid rgba(75,61,80,.12)}
+.hero-copy{padding-top:18px}
+.lab-ribbon{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;font:700 11px/1 "Space Mono",monospace;letter-spacing:.05em}
+.lab-ribbon span{padding:8px 10px;border:1px solid rgba(67,56,73,.16);border-radius:6px;background:#fff;color:#544958;box-shadow:2px 2px 0 rgba(116,94,120,.10)}
+.lab-ribbon span:nth-child(1){background:#f3e4e9}.lab-ribbon span:nth-child(2){background:#e5edf2}.lab-ribbon span:nth-child(3){background:#e9e4f1}.lab-ribbon span:nth-child(4){background:#e6ede1}
+.blink-dot{font-size:10px}
+.eyebrow{font-family:"Space Mono",monospace;letter-spacing:.11em}
+h1,h2,h3,.brand{letter-spacing:-.025em}
+.project-card,.course-card,.experience-card,.current-item{position:relative}
+.project-card:before,.course-card:before,.experience-card:before{content:"";position:absolute;top:10px;right:12px;width:30px;height:7px;background:repeating-linear-gradient(90deg,rgba(104,84,110,.24) 0 4px,transparent 4px 7px);border-radius:10px;pointer-events:none}
+.project-card:nth-child(4n+1){--card-accent:#d9e3eb}.project-card:nth-child(4n+2){--card-accent:#ead6df}.project-card:nth-child(4n+3){--card-accent:#ddd8eb}.project-card:nth-child(4n){--card-accent:#dce5d8}
+.project-card{border-top:5px solid var(--card-accent,#ddd8eb)}
+.tag-list span,.project-tags span{border-radius:999px}
+.section-heading .eyebrow:before{content:"[ ";opacity:.55}.section-heading .eyebrow:after{content:" ]";opacity:.55}
+.gallery-cta{border:1px dashed rgba(91,72,98,.20);background:rgba(255,255,255,.48)}
+
+@media (prefers-color-scheme: dark){
+  :root{--retro-ink:#f6eff5;--retro-cream:#1c1923;--retro-pink:#6f4f61;--retro-lilac:#57516d;--retro-blue:#465c6b;--retro-sage:#4f6254;--retro-brown:#66534d}
+  body{background-image:radial-gradient(circle at 10% 8%,rgba(121,77,103,.20),transparent 25%),radial-gradient(circle at 88% 16%,rgba(86,79,117,.25),transparent 28%),linear-gradient(180deg,#17141e,#211b29 55%,#171720)}
+  .hero-grid,.current-shell,.panel,.senior-card,.course-card,.experience-card,.project-card{box-shadow:0 18px 45px rgba(0,0,0,.22)}
+  .hero-grid{background:rgba(35,30,43,.90);border-color:rgba(234,214,223,.14)}
+  .hero-grid:before{color:#f7eef5;background:linear-gradient(90deg,#563d4c,#49445d,#3e5360);border-bottom-color:rgba(255,255,255,.08)}
+  .lab-ribbon span{color:#fff;border-color:rgba(255,255,255,.12);box-shadow:2px 2px 0 rgba(0,0,0,.18)}
+  .lab-ribbon span:nth-child(1){background:#59404f}.lab-ribbon span:nth-child(2){background:#3d5260}.lab-ribbon span:nth-child(3){background:#4d4762}.lab-ribbon span:nth-child(4){background:#46594a}
+  .project-card:nth-child(4n+1){--card-accent:#587285}.project-card:nth-child(4n+2){--card-accent:#805a6d}.project-card:nth-child(4n+3){--card-accent:#675f80}.project-card:nth-child(4n){--card-accent:#5c735f}
+  .gallery-cta{background:rgba(44,37,52,.50);border-color:rgba(238,220,235,.16)}
+}
+
+[data-theme="dark"] body{background-image:radial-gradient(circle at 10% 8%,rgba(121,77,103,.20),transparent 25%),radial-gradient(circle at 88% 16%,rgba(86,79,117,.25),transparent 28%),linear-gradient(180deg,#17141e,#211b29 55%,#171720)}
+[data-theme="dark"] .hero-grid{background:rgba(35,30,43,.90);border-color:rgba(234,214,223,.14)}
+[data-theme="dark"] .hero-grid:before{color:#f7eef5;background:linear-gradient(90deg,#563d4c,#49445d,#3e5360)}
+[data-theme="dark"] .lab-ribbon span{color:#fff;border-color:rgba(255,255,255,.12)}
+[data-theme="dark"] .lab-ribbon span:nth-child(1){background:#59404f}[data-theme="dark"] .lab-ribbon span:nth-child(2){background:#3d5260}[data-theme="dark"] .lab-ribbon span:nth-child(3){background:#4d4762}[data-theme="dark"] .lab-ribbon span:nth-child(4){background:#46594a}
