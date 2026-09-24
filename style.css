@@ -102,3 +102,36 @@ footer{border-top-color:var(--pink);background-image:linear-gradient(90deg,rgba(
 @media(max-width:1050px){.hero{gap:4vw;padding:6vw 5vw}.hero h1{font-size:clamp(72px,11vw,130px)}.tiles{grid-template-columns:repeat(2,1fr)}.expGrid{grid-template-columns:1fr 1fr}.visualBreak{grid-template-columns:1fr 1fr}.visualBreak>div{grid-column:1/-1}.q{grid-template-columns:1fr}.qDetail{grid-template-columns:1fr 1fr}.skillScreen{grid-template-columns:1fr 1fr}.archiveGrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){header{height:auto;min-height:58px;padding:8px 14px;flex-wrap:wrap}.logo{font-size:22px}nav{display:flex!important;order:3;width:100%;overflow-x:auto;gap:10px;padding:8px 0 2px}nav a{white-space:nowrap;font-size:14px}#theme{margin-left:auto}.hero{min-height:auto;padding:13vw 7vw;grid-template-columns:1fr}.hero h1{font-size:clamp(70px,24vw,120px)}.intro{font-size:15px}.heroBtns{gap:10px}.heroBtns a{font-size:17px}.window img{max-height:none}.manifest,.feature,.desktop,.q,footer,.moreWork,.caseHero,.caseBody,.caseVisual{grid-template-columns:1fr}.tiles,.expGrid,.skillScreen,.archiveGrid{grid-template-columns:1fr}.head{padding-left:6vw;padding-right:6vw}.skillScreen{margin:0 5vw;padding:18px}.visualBreak{grid-template-columns:1fr;padding-left:12px;background:linear-gradient(90deg,#14213d 0 12px,var(--pastel-blue) 12px 100%)}.visualBreak>div{grid-column:auto;padding:8vw}.visualBreak>img{width:100%}.q{padding:12vw 6vw}.qDetail{grid-template-columns:1fr}.qualityArcade{min-height:260px;padding:16px}.qaRow{font-size:20px}.archiveGrid{padding-left:6vw;padding-right:6vw}.archiveCard img{aspect-ratio:4/3}.photoPage{columns:2}.caseVisual{margin:0 6vw 10vw;padding:5vw}.arcadeShelf{flex-wrap:wrap;padding:18px 8px}.arcadeMsg{order:-1;width:100%!important;text-align:center}.current{padding-bottom:12vw}footer{padding:12vw 7vw}footer img{max-width:180px}.contactLinks{line-height:2}}
 @media(max-width:420px){.photoPage{columns:1}.hero h1{font-size:68px}.ticker{font-size:18px}.manifest h2,.head h2,.q h2,footer h2{font-size:54px}.feature h3{font-size:55px}.archiveCard h2{font-size:44px}.visualBreak h2{font-size:46px}.pixelArt{grid-template-columns:repeat(3,40px)}.pixelArt span{width:40px;height:40px}.invader{font-size:27px!important}}
+
+
+/* A13 cute-color polish */
+:root{--ink:#24324f;--lavender:#cfc9f4;--lavender-light:#eeeaff;--baby-blue:#dcecff;--mint:#dff5e8;--blush:#ffd6e5;--cream:#fff8df}
+/* replace near-black UI chrome with softer portfolio colors */
+.window>div{background:var(--lavender);color:var(--ink);border-bottom:2px solid var(--ink);font-weight:700}
+.window:after{inset:40px 10px 10px;background:repeating-linear-gradient(to bottom,transparent 0 3px,rgba(36,50,79,.045) 4px)}
+.skillScreen{background:linear-gradient(135deg,var(--lavender-light),#f8fbff 52%,var(--mint));color:var(--ink);border-color:var(--ink);box-shadow:10px 10px 0 var(--blush)}
+.skillScreen>div{border-top-color:#9ba8c3}.skillScreen p{color:var(--ink)}
+.skillScreen b{color:#d84f87}.skillScreen>div:nth-child(2) b{color:#397ca5}.skillScreen>div:nth-child(3) b{color:#8b6812}
+.peopleProcess{grid-column:1/2}
+.processBuddy{border:2px dashed #8394b5;background:var(--cream);padding:18px 20px;min-height:130px;display:flex;flex-direction:column;justify-content:center;position:relative;transform:rotate(1deg);box-shadow:6px 6px 0 var(--baby-blue)}
+.processBuddy strong{font:25px VT323;color:#b84978}.processBuddy p{margin:6px 0!important;font:18px VT323!important}.buddySpark{position:absolute;right:14px;top:9px;color:#7c8fe8;font-size:24px}.buddyDoodle{color:#5d87a5;font:22px VT323}
+.skillDecor{background:linear-gradient(135deg,var(--baby-blue),var(--lavender-light))!important;border-color:#8394b5!important}
+.skillDecorText span{background:#fffaf4!important;color:var(--ink)!important;border-color:#8394b5!important;box-shadow:3px 3px 0 var(--blush)}
+.skillDecorText span:nth-child(2){color:#c64f83!important}.skillDecorText span:nth-child(3){color:#8a6913!important}.skillDecorText small{color:#397ca5!important}
+.skillDecor>figure{margin:0;background:#fffaf4;border:1px dashed #8394b5;padding:10px;display:flex;flex-direction:column;justify-content:center}
+.skillDecor>figure img{width:100%;height:auto;max-height:340px;object-fit:contain;background:#fffaf4!important;border:0!important}
+.skillDecor figcaption{font:16px VT323;color:#5c6884;text-align:center;padding-top:7px;letter-spacing:.5px}
+/* consistent OFF_SCREEN panel */
+.visualBreak{background:var(--baby-blue)!important;border-left:14px solid var(--ink);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding-left:0!important}
+.visualBreak>img,.visualBreak>div{background:var(--baby-blue)!important}.visualBreak>div{color:var(--ink)}
+/* cute arcade strip instead of black */
+.arcadeShelf{background:linear-gradient(90deg,var(--lavender-light),var(--baby-blue),var(--mint))!important;border-color:#8b78b8!important;color:var(--ink)!important}
+.arcadeMsg{color:var(--ink)!important;border-color:#8b78b8!important;background:rgba(255,255,255,.55)}
+/* tiny decorative details in open space */
+.skills,.experience,.current{position:relative}
+.skills:before{content:'✦  +  ♡';position:absolute;right:5vw;top:4vw;font:28px VT323;color:#c45a8a;letter-spacing:12px;opacity:.7}
+.experience:after{content:'⌁ 0101 // MAKE • TEST • LEARN ✿';position:absolute;right:6vw;bottom:3vw;font:19px VT323;color:#7182a8;transform:rotate(-2deg);opacity:.7}
+.current:before{content:'♡ tiny systems, thoughtful details ✦';position:absolute;right:5vw;top:3vw;font:20px VT323;color:#c45a8a;opacity:.65}
+.syncareLive{margin:0 7vw 6vw;padding:32px;background:linear-gradient(135deg,var(--blush),var(--lavender-light),var(--baby-blue));border:2px solid var(--ink);box-shadow:8px 8px 0 var(--mint)}
+.syncareLive b{font:18px VT323;color:#b84978}.syncareLive h2{font:50px VT323;margin:5px 0}.syncareLive p{margin-bottom:22px}.syncareSiteLink{display:inline-block;padding:9px 13px;border:2px solid var(--ink);background:#fffaf4;color:var(--ink);text-decoration:none;font:20px VT323;box-shadow:4px 4px 0 #d9c9ff}.syncareLive small{display:block;margin-top:15px;color:#66708a}
+@media(max-width:700px){.peopleProcess{grid-column:auto}.processBuddy{transform:none}.skills:before,.experience:after,.current:before{display:none}.visualBreak{border-left-width:8px}.syncareLive{margin:0 6vw 10vw}.skillDecor>figure img{max-height:none}}
