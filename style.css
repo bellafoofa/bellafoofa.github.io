@@ -977,3 +977,32 @@ html.dark .activePose .joint.hip{fill:#533448;stroke:#f0a9c7} html.dark .activeP
 
 /* v3 coord visibility + matched meter colors */
 .activePose .jointReadout{paint-order:stroke;stroke:rgba(245,244,238,.9);stroke-width:3px;stroke-linejoin:round}\n.activePose .jointReadout.hipLabel{fill:#b86f8f}\n.activePose .jointReadout.kneeLabel{fill:#4e977c}\n.activePose .jointReadout.ankleLabel{fill:#6077cc}\n.angleReadout .meter.m1{fill:#e29ab6}\n.angleReadout .meter.m2{fill:#75cdb0}\n.angleReadout .meter.m3{fill:#8aa6f4}\nhtml.dark .activePose .jointReadout{stroke:rgba(17,24,37,.92)}\nhtml.dark .activePose .jointReadout.hipLabel{fill:#f0a9c7}\nhtml.dark .activePose .jointReadout.kneeLabel{fill:#9ae0c2}\nhtml.dark .activePose .jointReadout.ankleLabel{fill:#b9cbff}\n
+
+/* v4 fix: keep evidence monitor markers stationary while the heartbeat animates */
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{animation:none!important;transform:none!important}
+
+
+/* v5: clearer evidence callout links */
+.evidenceScreen{isolation:isolate}
+.evidenceCallout{z-index:2}
+.eConnector{position:absolute;display:block;width:0;border-left:3px solid rgba(189,123,151,.58);z-index:1;pointer-events:none}
+.eConnector::after{content:"";position:absolute;left:-6px;bottom:-7px;width:12px;height:12px;border-radius:50%;background:#6174c8;box-shadow:0 0 0 2px #f6f4ee}
+.eConnector.l1{left:31.8%;top:19%;height:11.5%}
+.eConnector.l2{left:62.1%;top:47%;height:17%}
+.eConnector.l3{left:85.7%;top:22.5%;height:12.5%}
+.evidenceCallout.c1 b{color:#5870c6}.evidenceCallout.c2 b{color:#7d6ec3}.evidenceCallout.c3 b{color:#b86287}
+html.dark .eConnector{border-left-color:rgba(232,168,194,.62)}
+html.dark .eConnector::after{background:#c9d4ff;box-shadow:0 0 0 2px #171f31}
+
+/* v5: cleaner joint labels with tag callouts */
+.activePose .jointPointer{fill:none;stroke:#93a3c9;stroke-width:2.5;stroke-linecap:round;opacity:.95}
+.activePose .jointTag rect{fill:rgba(246,244,238,.96);stroke:#8fa1ca;stroke-width:1.5}
+.activePose .jointTag text{font:13px VT323;letter-spacing:.04em;paint-order:stroke;stroke:rgba(245,244,238,.95);stroke-width:3px;stroke-linejoin:round}
+.activePose .jointTag.hipTag text{fill:#b86f8f}.activePose .jointTag.kneeTag text{fill:#4e977c}.activePose .jointTag.ankleTag text{fill:#6077cc}
+html.dark .activePose .jointPointer{stroke:#b9c7eb}
+html.dark .activePose .jointTag rect{fill:rgba(16,23,39,.96);stroke:#8ea3d8}
+html.dark .activePose .jointTag text{stroke:rgba(16,23,39,.98)}
+html.dark .activePose .jointTag.hipTag text{fill:#f0a9c7}
+html.dark .activePose .jointTag.kneeTag text{fill:#9ae0c2}
+html.dark .activePose .jointTag.ankleTag text{fill:#b9cbff}
+@media(max-width:720px){.activePose .jointTag,.activePose .jointPointer{display:none}}
