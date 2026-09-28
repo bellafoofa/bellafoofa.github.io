@@ -1134,3 +1134,31 @@ html.dark .calibrationRuler .rulerTicks{stroke:#e2ce8f}html.dark .calibrationRul
 @media(max-width:980px){.qcLiveRow{grid-template-columns:1fr}.qcInteractive .qcStep{min-height:160px}}
 @media(max-width:760px){.qualityCompact{grid-template-columns:1fr!important}.qcInteractive .qcCards{grid-template-columns:1fr}.qcInteractive .qcStep{min-height:0}}
 @media(prefers-reduced-motion:reduce){.qcInteractive .qcStep::before,.qcTrackFill::after{animation:none!important}}
+
+
+/* v10 evidence monitor cleanup */
+.eConnector,.eConnector::after{display:none !important; content:none !important;}
+.evidenceScreen .eConnector{display:none !important;}
+
+
+/* v11 evidence + QC cleanup */
+.evidenceWave{animation:evidenceDrawSync 4.8s ease-in-out infinite !important;}
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{animation:evidenceDotSync 4.8s step-end infinite !important;transform:none !important;opacity:1;}
+.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{animation-delay:0s !important;}
+@keyframes evidenceDrawSync{0%,14%{stroke-dashoffset:900}46%,84%{stroke-dashoffset:0}100%{stroke-dashoffset:-900}}
+@keyframes evidenceDotSync{0%,84%,100%{opacity:1}85%,92%{opacity:0}93%,99%{opacity:1}}
+.qcInteractive .qcCards{gap:14px !important;}
+.qcInteractive .qcStep{min-height:156px !important;justify-content:flex-start;padding:16px 14px !important;}
+.qcInteractive .qcStep b{font-size:26px !important;letter-spacing:.03em;}
+.qcInteractive .qcStep small{font-size:11px !important;line-height:1.3 !important;margin-bottom:10px;letter-spacing:.05em;color:#60739f;}
+.qcTags{display:flex;flex-wrap:wrap;gap:7px;margin:2px 0 12px;}
+.qcTags span{padding:4px 7px;border:1px solid #8fa1ca;background:rgba(141,174,216,.10);font:11px VT323;color:#60739f;letter-spacing:.04em;}
+.qcInteractive .qcAccent{margin-top:auto;}
+.qcLiveRow{align-items:stretch;}
+.qcTerminal,.qcProgressWrap{border:1px solid #8fa1ca;background:rgba(141,174,216,.08);padding:14px 14px 12px;}
+.qcTaskLine{min-height:0 !important;font-size:12px !important;line-height:1.45 !important;}
+.qcBar b{letter-spacing:.04em;}
+html.dark .qcInteractive .qcStep small{color:#dce6f7;}
+html.dark .qcTags span{background:rgba(255,255,255,.05);border-color:#7386bb;color:#d7e2ff;}
+html.dark .qcTerminal,html.dark .qcProgressWrap{background:rgba(121,144,220,.08);border-color:#7386bb;}
+@media(max-width:760px){.qcTags{margin-bottom:10px}.qcInteractive .qcStep{min-height:0 !important}}

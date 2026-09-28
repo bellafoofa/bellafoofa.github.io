@@ -34,9 +34,9 @@ const b=document.getElementById('theme');if(localStorage.theme==='dark')document
   const fill=qcConsole.querySelector('.qcTrackFill');
   const dots=[...qcConsole.querySelectorAll('.qcStageDots span')];
   const states=[
-    {mode:'inspect', head:'live troubleshooting loop', bar:'CHECK IN PROGRESS', fill:'33%', dot:'#9ebee6', task:'inspecting redistributed Lenovo + Fujitsu devices', tags:['support','hardware','QSE']},
-    {mode:'compare', head:'compare expected vs actual', bar:'ANALYSIS RUNNING', fill:'66%', dot:'#75bd9d', task:'comparing Kinovea joint angles to measured movement data', tags:['Kinovea','signals','biomechanics']},
-    {mode:'close', head:'clean closeout', bar:'READY FOR HANDOFF', fill:'100%', dot:'#f3b0c8', task:'documenting the fix, re-checking, and clearing the item for handoff', tags:['verify','document','handoff']}
+    {mode:'inspect', head:'find the issue', bar:'SCAN RUNNING', fill:'33%', dot:'#9ebee6', task:'capturing the first issue clearly', tags:['hardware','image','QSE']},
+    {mode:'compare', head:'expected vs actual', bar:'MATCH RUNNING', fill:'66%', dot:'#75bd9d', task:'matching Kinovea joint angles to movement data', tags:['Kinovea','signals','motion']},
+    {mode:'close', head:'verify + handoff', bar:'READY TO CLEAR', fill:'100%', dot:'#f3b0c8', task:'logging the fix and clearing it for handoff', tags:['verify','document','ready']}
   ];
   let index=0;
   function renderState(i){
