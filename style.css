@@ -1070,3 +1070,67 @@ html.dark .evidenceWave{stroke:#d5dcff}
 @media(max-width:980px){.c1{left:6%;top:11%}.c2{left:40%;bottom:9%}}
 @media(max-width:700px){.evidenceCallout{min-width:120px}.c1{left:4%;top:8%}.c2{left:32%;bottom:7%}}
 @media(prefers-reduced-motion:reduce){.evidenceWave,.evidenceDot{animation:none!important}}
+
+
+/* v8: remove stray red connector lines beside evidence dots */
+.eConnector{display:none !important;}
+
+
+/* v9: darker dark-mode polaroid frame, animated QC console, and calibrated motion readout */
+html.dark .window.polaroidWindow{background:#1a2334!important;border-color:#dfe8f7!important;box-shadow:14px 14px 0 rgba(120,143,209,.26)!important}
+html.dark .window.polaroidWindow>div{background:#111b2b!important;color:#edf3ff!important;border-bottom-color:#dfe8f7!important}
+html.dark .polaroidCaption{background:#111b2b!important;border-color:#dfe8f7!important;color:#edf3ff!important}
+html.dark .polaroidCaption small{color:#b9c7df!important}
+
+.qcInteractive .qcHeadStatus{font-size:13px;letter-spacing:.05em;text-transform:lowercase}
+.qcInteractive .qcCards{align-items:stretch}
+.qcInteractive .qcStep{overflow:hidden;transition:transform .28s ease,box-shadow .28s ease,background .28s ease,border-color .28s ease;min-height:172px;justify-content:flex-start}
+.qcInteractive .qcStep::before{content:'';position:absolute;left:-30%;top:0;width:26%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.58),transparent);opacity:0;transform:skewX(-20deg);pointer-events:none}
+.qcInteractive .qcStep::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--rose-deep),#9fb9ee);transform:scaleX(0);transform-origin:left;transition:transform .28s ease}
+.qcInteractive .qcStep.active{transform:translateY(-5px);box-shadow:8px 8px 0 var(--shadow-blue);background:linear-gradient(145deg,#ffffff,#eef4ff);border-color:#7f96c5}
+.qcInteractive .qcStep.active::before{opacity:1;animation:qcSweep 2.6s linear infinite}
+.qcInteractive .qcStep.active::after{transform:scaleX(1)}
+.qcMini{list-style:none;margin:8px 0 10px;padding:0;display:grid;gap:4px}
+.qcMini li{font:10px/1.35 'Roboto Mono',monospace;color:#52647f;position:relative;padding-left:11px}
+.qcMini li::before{content:'▸';position:absolute;left:0;top:0;color:#7d92c6}
+.qcAccent{margin-top:auto;display:inline-flex;align-self:flex-start;padding:5px 7px;border:1px solid #8fa1ca;background:rgba(141,174,216,.12);font:12px VT323;color:#60739f;letter-spacing:.05em}
+.qcLiveRow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(200px,.75fr);gap:12px;margin-bottom:12px}
+.qcTerminal,.qcProgressWrap{border:1px solid #8296bf;background:rgba(141,174,216,.08);padding:10px 11px;min-width:0}
+.qcLabel{display:block;font:12px VT323;color:#60739f;letter-spacing:.08em;margin-bottom:7px}
+.qcTaskLine{margin:0;font:13px/1.5 'Roboto Mono',monospace;color:var(--ink);min-height:40px}
+.qcTaskTags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.qcTaskTags span{padding:4px 6px;border:1px solid #8fa1ca;background:rgba(255,255,255,.48);font:10px VT323;color:#60739f;letter-spacing:.04em}
+.qcTrack{height:12px;border:1px solid #8fa1ca;background:rgba(255,255,255,.58);position:relative;overflow:hidden}
+.qcTrackFill{display:block;height:100%;width:33%;background:linear-gradient(90deg,#f3b0c8,#9fc7ef,#aee2c8);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);transition:width .35s ease}
+.qcTrackFill::after{content:'';position:absolute;inset:0 auto 0 0;width:34%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);animation:qcTrackScan 1.6s linear infinite}
+.qcStageDots{display:flex;gap:8px;margin-top:10px}.qcStageDots span{width:9px;height:9px;border-radius:50%;background:#cad5ea;border:1px solid #8ea0c8;transition:transform .25s ease,background .25s ease}.qcStageDots span.on{background:#75bd9d;transform:scale(1.18)}
+.qcInteractive .qcBar b{transition:color .25s ease,letter-spacing .25s ease}
+.qcInteractive[data-mode="inspect"] .qcBar>span{background:#9ebee6}.qcInteractive[data-mode="compare"] .qcBar>span{background:#75bd9d}.qcInteractive[data-mode="close"] .qcBar>span{background:#f3b0c8}.qcInteractive[data-mode="close"] .qcBar b{letter-spacing:.04em}
+
+html.dark .qcInteractive .qcStep{background:#131a2a;border-color:#f6f2e9}
+html.dark .qcInteractive .qcStep.active{background:linear-gradient(145deg,#172033,#1f2940);border-color:#dfe8f7;box-shadow:8px 8px 0 rgba(121,144,220,.24)}
+html.dark .qcInteractive .qcMini li{color:#dce6f7}
+html.dark .qcInteractive .qcMini li::before{color:#a7b8ea}
+html.dark .qcInteractive .qcAccent{border-color:#8ea3d8;background:rgba(168,199,239,.12);color:#d7e2ff}
+html.dark .qcTerminal,html.dark .qcProgressWrap{background:rgba(168,199,239,.08);border-color:#7386bb}
+html.dark .qcLabel{color:#aebddd}
+html.dark .qcTaskLine{color:#f6f2e9}
+html.dark .qcTaskTags span{background:rgba(255,255,255,.04);border-color:#7386bb;color:#d7e2ff}
+html.dark .qcTrack{border-color:#7386bb;background:rgba(255,255,255,.06)}
+html.dark .qcTrackFill{background:linear-gradient(90deg,#e8acc8,#a7c9f0,#9fe0c2)}
+html.dark .qcStageDots span{background:#34415f;border-color:#8ea3d8}
+html.dark .qcStageDots span.on{background:#9fe0c2}
+
+.calibrationRuler rect{fill:rgba(250,236,181,.52);stroke:#b89f57;stroke-width:1.2}
+.calibrationRuler .rulerTicks{stroke:#8b7540;stroke-linecap:square}.calibrationRuler .rulerTicks.minor{stroke-width:1.1;opacity:.8}.calibrationRuler .rulerTicks.major{stroke-width:1.8}
+.calibrationRuler text{font:10px VT323;fill:#75663a}.calibrationRuler .rulerUnit{font-size:11px}
+html.dark .calibrationRuler rect{fill:rgba(226,199,120,.18);stroke:#e6cf88}
+html.dark .calibrationRuler .rulerTicks{stroke:#e2ce8f}html.dark .calibrationRuler text{fill:#e9db9f}
+.activePose .jointReadout,.angleReadout .coord{letter-spacing:.03em}
+.angleReadout .coord{font-size:9.8px}
+
+@keyframes qcSweep{0%{transform:translateX(-140%) skewX(-20deg)}100%{transform:translateX(440%) skewX(-20deg)}}
+@keyframes qcTrackScan{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+@media(max-width:980px){.qcLiveRow{grid-template-columns:1fr}.qcInteractive .qcStep{min-height:160px}}
+@media(max-width:760px){.qualityCompact{grid-template-columns:1fr!important}.qcInteractive .qcCards{grid-template-columns:1fr}.qcInteractive .qcStep{min-height:0}}
+@media(prefers-reduced-motion:reduce){.qcInteractive .qcStep::before,.qcTrackFill::after{animation:none!important}}

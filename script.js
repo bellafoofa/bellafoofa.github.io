@@ -20,3 +20,51 @@ const b=document.getElementById('theme');if(localStorage.theme==='dark')document
     });
   } catch (e) {}
 })();
+
+
+;(function(){
+  const qcConsole=document.querySelector('.qcInteractive');
+  if(!qcConsole) return;
+  const steps=[...qcConsole.querySelectorAll('.qcStep')];
+  const taskLine=qcConsole.querySelector('.qcTaskLine');
+  const taskTags=qcConsole.querySelector('.qcTaskTags');
+  const headStatus=qcConsole.querySelector('.qcHeadStatus');
+  const barLabel=qcConsole.querySelector('.qcBar b');
+  const barDot=qcConsole.querySelector('.qcBar > span');
+  const fill=qcConsole.querySelector('.qcTrackFill');
+  const dots=[...qcConsole.querySelectorAll('.qcStageDots span')];
+  const states=[
+    {mode:'inspect', head:'live troubleshooting loop', bar:'CHECK IN PROGRESS', fill:'33%', dot:'#9ebee6', task:'inspecting redistributed Lenovo + Fujitsu devices', tags:['support','hardware','QSE']},
+    {mode:'compare', head:'compare expected vs actual', bar:'ANALYSIS RUNNING', fill:'66%', dot:'#75bd9d', task:'comparing Kinovea joint angles to measured movement data', tags:['Kinovea','signals','biomechanics']},
+    {mode:'close', head:'clean closeout', bar:'READY FOR HANDOFF', fill:'100%', dot:'#f3b0c8', task:'documenting the fix, re-checking, and clearing the item for handoff', tags:['verify','document','handoff']}
+  ];
+  let index=0;
+  function renderState(i){
+    index=(i+states.length)%states.length;
+    const state=states[index];
+    qcConsole.dataset.mode=state.mode;
+    steps.forEach((step,stepIndex)=>step.classList.toggle('active',stepIndex===index));
+    dots.forEach((dot,dotIndex)=>dot.classList.toggle('on',dotIndex<=index));
+    if(taskLine) taskLine.textContent=state.task;
+    if(headStatus) headStatus.textContent=state.head;
+    if(barLabel) barLabel.textContent=state.bar;
+    if(barDot) barDot.style.background=state.dot;
+    if(fill) fill.style.width=state.fill;
+    if(taskTags){
+      taskTags.innerHTML='';
+      state.tags.forEach(tag=>{
+        const span=document.createElement('span');
+        span.textContent=tag;
+        taskTags.appendChild(span);
+      });
+    }
+  }
+  renderState(0);
+  let timer=setInterval(()=>renderState(index+1),2600);
+  steps.forEach((step,stepIndex)=>{
+    step.setAttribute('tabindex','0');
+    const activate=()=>{ renderState(stepIndex); clearInterval(timer); timer=setInterval(()=>renderState(index+1),3200); };
+    step.addEventListener('click',activate);
+    step.addEventListener('keydown',e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); activate(); } });
+  });
+})();
