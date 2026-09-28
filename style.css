@@ -1197,3 +1197,21 @@ html.dark .evidenceDot{fill:#171f31;stroke:#d5dcff}
 
 /* v14: cleaner meter-stick labeling */
 .calibrationRuler text{text-anchor:start;letter-spacing:0}.calibrationRuler .rulerNum{dominant-baseline:middle}.calibrationRuler .rulerUnit{dominant-baseline:hanging}
+
+/* v15: ruler label clarity + more anatomical knee scan */
+.calibrationRuler text{paint-order:stroke;stroke-width:1.5px;stroke:rgba(245,241,228,.3)}
+html.dark .calibrationRuler text{stroke:rgba(10,14,24,.78)}
+.calibrationRuler .rulerTop{font-size:11px;dominant-baseline:hanging}
+.calibrationRuler .rulerUnit{font-size:9px;dominant-baseline:hanging}
+.mriSoftShadow{fill:rgba(255,255,255,.06)}
+.mriBone.femur,.mriBone.tibia{fill:#cfd4de;stroke:#616979;stroke-width:4;opacity:.88}
+.mriCondyle{fill:#c8ced8;stroke:#606777;stroke-width:3.5;opacity:.92}
+.mriPlateau{fill:none;stroke:#8b92a1;stroke-width:3;opacity:.8;stroke-linecap:round}
+.mriJointSpace{fill:rgba(243,245,251,.78);opacity:.9}
+.mriPatella{fill:#bcc1cc;stroke:#666e7d;stroke-width:3;opacity:.88}
+.mriCartilage.top,.mriCartilage.bottom{fill:none;stroke:#9aa2b1;stroke-width:7;stroke-linecap:round;opacity:.78}
+html.dark .mriBone.femur,html.dark .mriBone.tibia{fill:#c6ccd7;stroke:#535b6d} 
+html.dark .mriCondyle{fill:#c0c7d2;stroke:#515a6c}
+html.dark .mriPatella{fill:#b3b9c5;stroke:#5f6879}
+html.dark .mriJointSpace{fill:rgba(245,247,252,.72)}
+html.dark .mriSoftShadow{fill:rgba(255,255,255,.04)}

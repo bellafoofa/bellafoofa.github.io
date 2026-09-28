@@ -33,7 +33,17 @@
           <circle cx="62" cy="116" r="8"></circle><circle cx="49" cy="172" r="7"></circle><circle cx="106" cy="145" r="7"></circle>
         </g>
 
-        <g class="calibrationRuler" transform="translate(498 76)" aria-hidden="true"><rect x="0" y="0" width="20" height="248" rx="2"></rect><path class="rulerTicks minor" d="M0 12H9M0 25H9M0 37H9M0 50H9M0 74H9M0 87H9M0 99H9M0 112H9M0 136H9M0 149H9M0 161H9M0 174H9M0 198H9M0 211H9M0 223H9M0 236H9"></path><path class="rulerTicks major" d="M0 0H20M0 62H15M0 124H15M0 186H15M0 248H20"></path><text class="rulerUnit" x="40" y="10">cm</text><text class="rulerNum" x="26" y="0">40</text><text class="rulerNum" x="26" y="62">30</text><text class="rulerNum" x="26" y="124">20</text><text class="rulerNum" x="26" y="186">10</text><text class="rulerNum" x="26" y="248">0</text></g><g class="activePose" transform="translate(115 0)">
+        <g class="calibrationRuler" transform="translate(498 76)" aria-hidden="true">
+          <rect x="0" y="0" width="20" height="248" rx="2"></rect>
+          <path class="rulerTicks minor" d="M0 12H9M0 25H9M0 37H9M0 50H9M0 74H9M0 87H9M0 99H9M0 112H9M0 136H9M0 149H9M0 161H9M0 174H9M0 198H9M0 211H9M0 223H9M0 236H9"></path>
+          <path class="rulerTicks major" d="M0 0H20M0 62H15M0 124H15M0 186H15M0 248H20"></path>
+          <text class="rulerNum rulerTop" x="26" y="4">40</text>
+          <text class="rulerUnit" x="48" y="4">cm</text>
+          <text class="rulerNum" x="26" y="62">30</text>
+          <text class="rulerNum" x="26" y="124">20</text>
+          <text class="rulerNum" x="26" y="186">10</text>
+          <text class="rulerNum" x="26" y="248">0</text>
+        </g><g class="activePose" transform="translate(115 0)">
           <circle class="joint head" cx="356" cy="76" r="19"></circle>
           <path class="bone" d="M356 95L350 164M350 115L314 148M350 118L389 142M350 164L316 225M350 164L395 212M316 225L302 292M395 212L431 270"></path>
           <circle class="joint hip" cx="350" cy="164" r="10"></circle>
@@ -72,17 +82,24 @@
         <svg class="mriSvg" viewBox="0 0 320 360" aria-hidden="true">
           <defs>
             <radialGradient id="mriGlowWide" cx="50%" cy="50%" r="65%">
-              <stop offset="0" stop-color="#e0e2ea" stop-opacity=".86"></stop>
-              <stop offset=".5" stop-color="#7d8492" stop-opacity=".48"></stop>
-              <stop offset="1" stop-color="#151b26" stop-opacity=".1"></stop>
+              <stop offset="0" stop-color="#eef1f7" stop-opacity=".9"></stop>
+              <stop offset=".52" stop-color="#8e94a4" stop-opacity=".42"></stop>
+              <stop offset="1" stop-color="#151b26" stop-opacity=".08"></stop>
             </radialGradient>
           </defs>
-          <ellipse cx="160" cy="176" rx="104" ry="124" fill="url(#mriGlowWide)" opacity=".88"></ellipse>
-          <path class="mriBone" d="M94 72C132 44 187 52 214 90C233 120 227 154 197 175C170 195 132 193 104 171C78 151 68 99 94 72Z"></path>
-          <path class="mriBone inner" d="M110 205C135 184 176 184 205 204C230 222 232 256 209 281C184 308 137 306 108 280C83 258 83 227 110 205Z"></path>
-          <path class="mriCartilage" d="M108 172C138 154 178 153 205 169C185 187 138 191 108 172Z"></path>
-          <circle class="mriFocus" cx="171" cy="184" r="40"></circle>
-          <rect class="mriRoi" x="125" y="144" width="100" height="92" rx="8"></rect>
+          <ellipse cx="160" cy="180" rx="112" ry="128" fill="url(#mriGlowWide)" opacity=".9"></ellipse>
+          <ellipse class="mriSoftShadow" cx="160" cy="180" rx="96" ry="112"></ellipse>
+          <path class="mriBone femur" d="M120 70C139 57 181 58 198 72C213 84 221 103 221 123C221 141 214 157 202 168C194 176 183 181 171 184L149 184C137 181 126 176 118 168C106 157 99 141 99 123C99 103 106 84 120 70Z"></path>
+          <path class="mriCondyle left" d="M112 144C121 135 139 131 151 135C163 140 167 153 164 164C160 176 148 184 135 184C121 184 109 176 105 163C102 156 105 149 112 144Z"></path>
+          <path class="mriCondyle right" d="M169 135C181 131 199 135 208 144C215 149 218 156 215 163C211 176 199 184 185 184C172 184 160 176 156 164C153 153 157 140 169 135Z"></path>
+          <path class="mriBone tibia" d="M118 205C131 196 149 192 160 192C171 192 189 196 202 205C215 214 220 227 219 240C218 254 211 267 200 279C190 291 176 300 160 301C144 300 130 291 120 279C109 267 102 254 101 240C100 227 105 214 118 205Z"></path>
+          <path class="mriPlateau" d="M118 205C134 198 146 196 160 196C174 196 186 198 202 205"></path>
+          <ellipse class="mriJointSpace" cx="160" cy="189" rx="56" ry="16"></ellipse>
+          <ellipse class="mriPatella" cx="189" cy="179" rx="28" ry="34"></ellipse>
+          <path class="mriCartilage top" d="M121 178C136 171 147 169 160 169C173 169 184 171 199 178"></path>
+          <path class="mriCartilage bottom" d="M121 201C136 208 147 211 160 211C173 211 184 208 199 201"></path>
+          <circle class="mriFocus" cx="178" cy="186" r="40"></circle>
+          <rect class="mriRoi" x="126" y="144" width="102" height="92" rx="10"></rect>
         </svg>
         <div class="mriScanLine"></div>
         <div class="mriLabel">ROI_01<br><small>knee // image check</small></div>
