@@ -1045,3 +1045,28 @@ html.dark .activePose .jointAngle{stroke:rgba(17,24,37,.95)}
 @media(max-width:980px){.evidenceScreen{height:265px}.evidenceCallout{min-width:150px}.c2{left:38%;bottom:9%}}
 @media(max-width:700px){.evidenceTop{font-size:13px}.evidenceScreen{height:255px}.evidenceCallout{min-width:126px;padding:8px 9px}.evidenceCallout b{font-size:18px}.evidenceCallout small{font-size:8.8px}.c1{left:5%;top:9%}.c2{left:34%;bottom:7%}.c3{right:2%;top:16%}.eConnector{display:none}}
 @media(prefers-reduced-motion:reduce){.evidenceWave,.evidenceDot{animation:none!important}}
+
+
+/* v7 fixes: moving heartbeat restored, fixed marker placement, knee tag moved left */
+.evidenceWave{stroke-dasharray:940;stroke-dashoffset:940;animation:evidenceDrawLoop 4.8s ease-in-out infinite !important}
+@keyframes evidenceDrawLoop{0%,14%{stroke-dashoffset:940;opacity:1}42%,78%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-80;opacity:1}}
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{animation:evidenceDotBlinkFixed 4.8s step-end infinite !important;transform:none!important}
+.evidenceDot.d1{animation-delay:0s!important}.evidenceDot.d2{animation-delay:1.55s!important}.evidenceDot.d3{animation-delay:3.0s!important}
+@keyframes evidenceDotBlinkFixed{0%,86%,100%{opacity:1}87%,93%{opacity:0}94%,99%{opacity:1}}
+.evidenceCallout{min-width:154px}
+.evidenceCallout small{font-size:9.2px;line-height:1.35}
+.c1{left:7%;top:12%}
+.c2{left:42%;bottom:11%}
+.c3{right:3%;top:18%}
+.eConnector::after{display:none}
+.eConnector.l1{left:34.9%;top:21%;height:10.2%}
+.eConnector.l2{left:60.2%;top:49%;height:10.6%}
+.eConnector.l3{left:87.6%;top:23.3%;height:10.9%}
+html.dark .evidenceWave{stroke:#d5dcff}
+
+.activePose .jointTag.kneeTag rect{filter:drop-shadow(2px 2px 0 rgba(125,140,183,.16))}
+.activePose .jointTag.kneeTag text{font-size:12px}
+
+@media(max-width:980px){.c1{left:6%;top:11%}.c2{left:40%;bottom:9%}}
+@media(max-width:700px){.evidenceCallout{min-width:120px}.c1{left:4%;top:8%}.c2{left:32%;bottom:7%}}
+@media(prefers-reduced-motion:reduce){.evidenceWave,.evidenceDot{animation:none!important}}
