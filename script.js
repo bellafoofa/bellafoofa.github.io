@@ -68,3 +68,37 @@ const b=document.getElementById('theme');if(localStorage.theme==='dark')document
     step.addEventListener('keydown',e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); activate(); } });
   });
 })();
+
+
+// v21: real-time scanner sweep for the knee image panel.
+(() => {
+  const startScanner = () => {
+    const viewport = document.querySelector('.mriViewport.artMode.liveScan.themedKneeScan');
+    if (!viewport || viewport.dataset.liveScannerStarted === '1') return;
+    viewport.dataset.liveScannerStarted = '1';
+
+    let start = performance.now();
+    const period = 5200; // full left -> right -> left cycle
+    const edgePad = 10;
+
+    const tick = (now) => {
+      if (!viewport.isConnected) return;
+      const width = Math.max(1, viewport.clientWidth);
+      const usable = Math.max(0, width - edgePad * 2);
+      const phase = ((now - start) % period) / period;
+      // smooth ping-pong motion, like a scanner carriage
+      const ping = phase < 0.5 ? phase * 2 : 2 - phase * 2;
+      const eased = 0.5 - 0.5 * Math.cos(Math.PI * ping);
+      const x = edgePad + eased * usable;
+      viewport.style.setProperty('--scan-x', `${x}px`);
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startScanner, {once:true});
+  } else {
+    startScanner();
+  }
+})();
