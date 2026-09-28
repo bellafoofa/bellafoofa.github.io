@@ -1611,3 +1611,69 @@ html.dark .evidenceWaveBase{stroke:#d5dcff!important}
   .evidenceWaveBase{animation:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important;opacity:1!important}
   .evidenceDot{animation:none!important;opacity:1!important}
 }
+
+
+/* v23: visible moving ECG + compact scan info badge */
+.evidenceWaveBase{
+  display:block!important;
+  fill:none!important;
+  stroke:#6174c8!important;
+  stroke-width:3.25!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  stroke-dasharray:none!important;
+  stroke-dashoffset:0!important;
+  opacity:.34!important;
+  animation:none!important;
+}
+.evidenceWavePulse{
+  display:block!important;
+  fill:none!important;
+  stroke:#cad5ff!important;
+  stroke-width:4.25!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  path-length:100;
+  stroke-dasharray:18 82!important;
+  stroke-dashoffset:100!important;
+  filter:drop-shadow(0 0 4px rgba(202,213,255,.55));
+  animation:ecgTravelV23 4.2s linear infinite!important;
+}
+html:not(.dark) .evidenceWavePulse{stroke:#6174c8!important;filter:drop-shadow(0 0 3px rgba(97,116,200,.3))}
+html.dark .evidenceWaveBase{stroke:#7888c1!important;opacity:.42!important}
+html.dark .evidenceWavePulse{stroke:#eef2ff!important}
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{
+  transform:none!important;
+  opacity:.78!important;
+  animation:ecgMarkerPulseV23 2.1s ease-in-out infinite!important;
+  fill:var(--paper)!important;
+  stroke:#6174c8!important;
+  stroke-width:3!important;
+}
+html.dark .evidenceDot{fill:#171f31!important;stroke:#d5dcff!important}
+.evidenceDot.d2{animation-delay:.55s!important}.evidenceDot.d3{animation-delay:1.1s!important}
+@keyframes ecgTravelV23{from{stroke-dashoffset:100}to{stroke-dashoffset:-100}}
+@keyframes ecgMarkerPulseV23{0%,100%{opacity:.62}50%{opacity:1}}
+
+.scanInfoBadge{
+  position:absolute;
+  right:14px;
+  bottom:14px;
+  z-index:9;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:172px;
+  padding:10px 12px;
+  border:1px solid rgba(176,190,232,.82);
+  background:rgba(14,20,34,.88);
+  box-shadow:4px 4px 0 rgba(104,120,164,.18);
+  pointer-events:none;
+}
+.scanInfoWave{width:44px;height:30px;flex:0 0 auto;overflow:visible}
+.scanInfoWave path{fill:none;stroke:#ea8cb1;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:scanInfoTraceV23 2.4s ease-in-out infinite}
+.scanInfoBadge b{display:block;font:15px VT323;color:#f5c0d3;letter-spacing:.07em;line-height:1}
+.scanInfoBadge small{display:block;margin-top:4px;font:10px/1.45 'Roboto Mono',monospace;color:#9faecc;letter-spacing:.035em}
+@keyframes scanInfoTraceV23{0%{stroke-dashoffset:60;opacity:.35}55%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-20;opacity:.35}}
+@media(max-width:850px){.scanInfoBadge{right:9px;bottom:9px;min-width:150px;padding:8px 9px}.scanInfoWave{width:38px}.scanInfoBadge b{font-size:14px}.scanInfoBadge small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.evidenceWavePulse,.scanInfoWave path{animation:none!important}.evidenceWavePulse{stroke-dasharray:none!important;stroke-dashoffset:0!important}.scanInfoWave path{stroke-dasharray:none!important;stroke-dashoffset:0!important}}
