@@ -1524,3 +1524,90 @@ html.dark .mriPanel.liveKneePanel,html.dark .mriViewport.artMode.liveScan.themed
   .mriViewport.artMode.liveScan.themedKneeScan .liveScanBand,
   .mriViewport.artMode.liveScan.themedKneeScan .liveScanLine{animation:none!important}
 }
+
+
+/* v22: clean live knee scan + realistic ECG trace */
+.mriViewport.artMode.liveScan.themedKneeScan .scanStatus{display:none!important}
+.mriViewport.artMode.liveScan.themedKneeScan .mriArt{
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:saturate(.82) brightness(.96) contrast(1.04)!important;
+}
+.scanOverlayLabel{
+  position:absolute;
+  left:14px;
+  top:14px;
+  z-index:8;
+  min-width:168px;
+  padding:10px 12px 9px;
+  border:1px solid rgba(176,190,232,.85);
+  background:rgba(14,20,34,.86);
+  box-shadow:4px 4px 0 rgba(104,120,164,.18);
+  pointer-events:none;
+}
+.scanOverlayLabel b{display:block;font:18px VT323;color:#f6f2e9;letter-spacing:.08em;line-height:1}
+.scanOverlayLabel small{display:block;margin-top:5px;font:12px 'Roboto Mono',monospace;color:#9faecc;letter-spacing:.04em}
+.mriViewport.artMode.liveScan.themedKneeScan .liveScanBand{
+  width:10%!important;
+  opacity:.72!important;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,164,201,.04) 18%,rgba(255,164,201,.14) 40%,rgba(255,214,231,.25) 50%,rgba(255,164,201,.14) 60%,rgba(255,164,201,.04) 82%,transparent 100%)!important;
+  filter:blur(1.2px)!important;
+}
+.mriViewport.artMode.liveScan.themedKneeScan .liveScanLine{
+  width:3px!important;
+  opacity:.96!important;
+  background:linear-gradient(180deg,transparent 0%,rgba(255,221,235,.9) 8%,#ff9fc6 24%,#ffe0ec 50%,#ff9fc6 76%,rgba(255,221,235,.9) 92%,transparent 100%)!important;
+  box-shadow:0 0 6px #ffb2cf,0 0 14px rgba(255,154,196,.55)!important;
+}
+
+.evidenceWavePulse{display:none!important}
+.evidenceWaveBase{
+  display:block!important;
+  fill:none!important;
+  stroke:#6174c8!important;
+  stroke-width:4!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  stroke-dasharray:1200!important;
+  stroke-dashoffset:1200!important;
+  opacity:0;
+  animation:ecgTraceV22 4.6s linear infinite!important;
+}
+html.dark .evidenceWaveBase{stroke:#d5dcff!important}
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{
+  transform:none!important;
+  opacity:0;
+  animation-duration:4.6s!important;
+  animation-timing-function:linear!important;
+  animation-iteration-count:infinite!important;
+  animation-delay:0s!important;
+}
+.evidenceDot.d1{animation-name:ecgDotOneV22!important}
+.evidenceDot.d2{animation-name:ecgDotTwoV22!important}
+.evidenceDot.d3{animation-name:ecgDotThreeV22!important}
+@keyframes ecgTraceV22{
+  0%{stroke-dashoffset:1200;opacity:0}
+  3%{opacity:1}
+  84%{stroke-dashoffset:0;opacity:1}
+  92%{stroke-dashoffset:0;opacity:1}
+  97%,100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes ecgDotOneV22{
+  0%,29%{opacity:0}
+  31%,92%{opacity:1}
+  97%,100%{opacity:0}
+}
+@keyframes ecgDotTwoV22{
+  0%,45%{opacity:0}
+  47%,92%{opacity:1}
+  97%,100%{opacity:0}
+}
+@keyframes ecgDotThreeV22{
+  0%,80%{opacity:0}
+  82%,92%{opacity:1}
+  97%,100%{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .evidenceWaveBase{animation:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important;opacity:1!important}
+  .evidenceDot{animation:none!important;opacity:1!important}
+}
