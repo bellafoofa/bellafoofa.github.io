@@ -960,3 +960,16 @@ html.dark .mocapPanel,html.dark .mriPanel{background:#131a2a;border-color:#7386b
 @media(max-width:850px){.motionDashWide{grid-template-columns:1fr;min-height:0}.mocapPanel,.mriPanel{min-height:330px}}
 @media(max-width:560px){.mocapPanel{min-height:280px}.mriPanel{min-height:285px}.angleReadout{display:none}.skillDecorWide{padding:10px!important}}
 @media(prefers-reduced-motion:reduce){.evidenceWave,.evidenceSweep,.gp1,.gp2,.gp3,.activePose,.m1,.m2,.m3,.mriFocus,.mriRoi,.mriScanLine{animation:none!important}}
+
+
+/* v2 heartbeat / biomed scan refinements */
+.evidenceDot{fill:#6174c8;stroke:#f6f4ee;stroke-width:2}.d1{animation:eDot1 4s ease-in-out infinite}.d2{animation:eDot2 4s ease-in-out infinite}.d3{animation:eDot3 4s ease-in-out infinite}.evidenceCallout{min-width:150px}.c1{left:8%;top:11%}.c2{left:43%;bottom:11%}.c3{right:3%;top:18%}
+html.dark .evidenceDot{fill:#c9d4ff;stroke:#171f31}
+@keyframes eDot1{0%,100%{transform:scale(1)}20%,38%{transform:scale(1.18)}45%{transform:scale(1)}}
+@keyframes eDot2{0%,100%{transform:scale(1)}44%,62%{transform:scale(1.18)}68%{transform:scale(1)}}
+@keyframes eDot3{0%,100%{transform:scale(1)}68%,86%{transform:scale(1.18)}92%{transform:scale(1)}}
+
+.activePose .joint.hip{fill:#f3d9e5;stroke:#b86f8f}.activePose .joint.knee{fill:#cdebdc;stroke:#3f8f75}.activePose .joint.ankle{fill:#dfe7ff;stroke:#6077cc}.activePose .joint.ankle.secondary{fill:#e8eefc;stroke:#8c98be}.angleArc.hipArc{stroke:#e29ab6}.angleArc.kneeArc{stroke:#75cdb0}.angleArc.ankleArc{stroke:#8aa6f4}.activePose .jointReadout{font:12px VT323;fill:#5d6b8e}.activePose .jointAngle{font:18px VT323}.activePose .jointAngle.hipTxt{fill:#b86f8f}.activePose .jointAngle.kneeTxt{fill:#4e977c}.activePose .jointAngle.ankleTxt{fill:#6077cc}.angleReadout .coord{font:10px VT323;fill:#7a88ab}
+html.dark .activePose .joint.hip{fill:#533448;stroke:#f0a9c7} html.dark .activePose .joint.knee{fill:#223d35;stroke:#9ae0c2} html.dark .activePose .joint.ankle{fill:#29344f;stroke:#b9cbff} html.dark .activePose .jointReadout{fill:#d7e2ff} html.dark .angleReadout .coord{fill:#afbddf}
+@media(max-width:560px){.activePose .jointReadout,.angleReadout .coord,.activePose .jointAngle{display:none}}
+@media(prefers-reduced-motion:reduce){.evidenceDot{animation:none!important}}
