@@ -1176,3 +1176,20 @@ html.dark .evidenceWavePulse{stroke:#d5dcff;filter:drop-shadow(0 0 4px rgba(201,
 html.dark .evidenceDot{fill:#171f31;stroke:#d5dcff}
 @keyframes evidencePulseTravel{from{stroke-dashoffset:0}to{stroke-dashoffset:-100}}
 @media(prefers-reduced-motion:reduce){.evidenceWavePulse{animation:none!important;stroke-dasharray:none!important}}
+
+
+/* v13: restore moving heartbeat, sync dots with waveform visibility, and ground the ruler */
+.evidenceWave{display:none!important}
+.evidenceSweep{display:none!important}
+.evidenceWavePulse{display:none!important}
+.evidenceWaveBase{fill:none;stroke:#6174c8;stroke-width:4;opacity:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:940;stroke-dashoffset:940;animation:evidenceWaveLoopV13 4.8s ease-in-out infinite!important}
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{fill:#f7f8ff;stroke:#6174c8;stroke-width:3;transform:none!important;animation:evidenceDotsLoopV13 4.8s step-end infinite!important;opacity:0}
+.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{animation-delay:0s!important}
+html.dark .evidenceWaveBase{stroke:#d5dcff;opacity:1}
+html.dark .evidenceDot{fill:#171f31;stroke:#d5dcff}
+@keyframes evidenceWaveLoopV13{0%,12%{stroke-dashoffset:940;opacity:1}18%,80%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-940;opacity:1}}
+@keyframes evidenceDotsLoopV13{0%,16%,100%{opacity:0}18%,80%{opacity:1}82%,98%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.evidenceWaveBase,.evidenceDot{animation:none!important;opacity:1!important;stroke-dasharray:none!important;stroke-dashoffset:0!important}}
+
+/* subtle ruler grounding tweak */
+.calibrationRuler .rulerNum{dominant-baseline:middle}
