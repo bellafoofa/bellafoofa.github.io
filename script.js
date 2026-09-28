@@ -155,3 +155,32 @@ const b=document.getElementById('theme');if(localStorage.theme==='dark')document
     startLiveECG();
   }
 })();
+
+
+// v25: continuously scroll the ECG waveform itself, like a live monitor.
+(() => {
+  const startScrollingECG = () => {
+    const group = document.querySelector('.ecgScrollGroup');
+    if (!group || group.dataset.scrollStarted === '1') return;
+    group.dataset.scrollStarted = '1';
+
+    const periodUnits = 194;      // spacing between repeating ECG beats in SVG units
+    const beatDuration = 900;     // ~67 bpm; one beat scrolls past every 0.9s
+    let start = performance.now();
+
+    const tick = (now) => {
+      if (!group.isConnected) return;
+      const phase = ((now - start) % beatDuration) / beatDuration;
+      const offset = phase * periodUnits;
+      group.setAttribute('transform', `translate(${-offset.toFixed(2)} 0)`);
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startScrollingECG, {once:true});
+  } else {
+    startScrollingECG();
+  }
+})();

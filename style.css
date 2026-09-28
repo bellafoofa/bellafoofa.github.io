@@ -1731,3 +1731,30 @@ html:not(.dark) .ecgLiveCursor{fill:#fff;stroke:#5268c0;filter:drop-shadow(0 0 4
   .evidenceWavePulse{animation:none!important;stroke-dasharray:12 88!important}
   .evidenceDot{animation:ecgAnchorBreathV24 2.8s ease-in-out infinite!important}
 }
+
+
+/* v25: true scrolling ECG monitor — the waveform itself moves continuously */
+.evidenceScreen .ecgScrollGroup{will-change:transform}
+.evidenceScreen .evidenceWaveBase{
+  display:block!important;
+  fill:none!important;
+  stroke:#6174c8!important;
+  stroke-width:4.2!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  stroke-dasharray:none!important;
+  stroke-dashoffset:0!important;
+  opacity:.88!important;
+  animation:none!important;
+  filter:drop-shadow(0 0 2px rgba(97,116,200,.18));
+}
+.evidenceScreen .evidenceWavePulse{display:none!important}
+.evidenceScreen .ecgLiveCursor{display:none!important}
+html.dark .evidenceScreen .evidenceWaveBase{
+  stroke:#d5dcff!important;
+  opacity:.82!important;
+  filter:drop-shadow(0 0 3px rgba(213,220,255,.16));
+}
+@media(prefers-reduced-motion:reduce){
+  .evidenceScreen .ecgScrollGroup{transform:translate(0 0)!important}
+}
