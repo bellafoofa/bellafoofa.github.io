@@ -1193,3 +1193,7 @@ html.dark .evidenceDot{fill:#171f31;stroke:#d5dcff}
 
 /* subtle ruler grounding tweak */
 .calibrationRuler .rulerNum{dominant-baseline:middle}
+
+
+/* v14: cleaner meter-stick labeling */
+.calibrationRuler text{text-anchor:start;letter-spacing:0}.calibrationRuler .rulerNum{dominant-baseline:middle}.calibrationRuler .rulerUnit{dominant-baseline:hanging}
