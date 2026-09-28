@@ -889,3 +889,62 @@ html.dark .arcadeMsg.curiosityLink{background:linear-gradient(145deg,#171f31,#25
 @media(max-width:560px){.manifestTop h2,.qualityIntro h2{font-size:clamp(58px,15vw,86px)!important}.whyNote{width:100%}.evidenceScreen{height:190px}.c2{left:36%}.evidenceCallout{padding:7px 8px}.evidenceCallout b{font-size:18px}.evidenceCallout small{font-size:9px}.qualityFacts{display:grid}.skillDecorText{grid-template-columns:1fr 1fr!important;padding:12px!important}.skillModule{min-height:104px}.scanStage{gap:10px}.scanScope,.scanImage{min-height:180px}.arcadeShelf .invader{display:none!important}.arcadeMsg.curiosityLink{width:100%}}
 @media(hover:none){.curiosityLink:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.evidenceWave,.evidenceSweep,.scanSignal,.scanSweepBar,.scanSpecimen i,.scanLive i{animation:none!important}.curiosityLink{transition:none!important}}
+
+
+/* A23 — animated biomechanics + imaging dashboard */
+.scanBoardMotion{min-height:0!important;padding:16px!important;gap:12px!important;overflow:hidden}
+.motionDash{display:grid;grid-template-columns:1.35fr .85fr;gap:12px;min-height:360px}
+.mocapPanel,.mriPanel{position:relative;border:1px solid #8296bf;background:linear-gradient(180deg,#eef4ff,#f8fbff);overflow:hidden;min-width:0}
+.mocapPanel>span{position:absolute;left:10px;bottom:8px;font:12px VT323;color:#5c6884;letter-spacing:.06em;z-index:4}
+.mocapSvg{width:100%;height:100%;display:block}
+.mocapGrid path{fill:none;stroke:#a9b6d0;stroke-width:1;opacity:.24}
+.ghostPose{fill:none;stroke:#6a78a4;stroke-width:4;opacity:.18}
+.ghostPose circle{fill:#2d3854;stroke:#6a78a4;stroke-width:2}
+.gp1{animation:ghostDrift1 4.8s ease-in-out infinite}
+.gp2{animation:ghostDrift2 4.8s ease-in-out infinite}
+.gp3{animation:ghostDrift3 4.8s ease-in-out infinite}
+.activePose{animation:poseLift 4.8s ease-in-out infinite;transform-origin:350px 170px}
+.activePose .bone{fill:none;stroke:#6174c8;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.activePose .joint{fill:#f4f6ff;stroke:#6174c8;stroke-width:3}
+.activePose .head{fill:#eef2ff}
+.activePose .knee{fill:#cdebdc;stroke:#3f8f75}
+.angleArc{fill:none;stroke:#75cdb0;stroke-width:4;stroke-dasharray:8 6}
+.activePose text{font:24px VT323;fill:#4e977c}
+.groundLine{stroke:#7386bb;stroke-width:2;stroke-dasharray:8 6}
+.angleReadout text{font:12px VT323;fill:#5d6b8e}
+.angleReadout rect{fill:#d8e1f1}.angleReadout .meter{fill:#75cdb0}
+.m1{animation:meter1 4.8s ease-in-out infinite}.m2{animation:meter2 4.8s ease-in-out infinite}.m3{animation:meter3 4.8s ease-in-out infinite}
+.mriPanel{background:linear-gradient(145deg,#fff6ef,#f0effb)}
+.mriViewport{position:absolute;inset:0;overflow:hidden}
+.mriSvg{width:100%;height:100%;display:block;filter:contrast(1.08) saturate(.9)}
+.mriBone{fill:#d8dce4;stroke:#5f6672;stroke-width:4;opacity:.78}
+.mriBone.inner{fill:#cfd3dc;opacity:.72}
+.mriCartilage{fill:#9ca4b4;opacity:.62}
+.mriFocus{fill:#d08ca5;opacity:.38;animation:mriPulse 2.9s ease-in-out infinite}
+.mriRoi{fill:none;stroke:#e27ba8;stroke-width:4;stroke-dasharray:10 8;animation:roiDash 3.5s linear infinite}
+.mriScanLine{position:absolute;top:0;bottom:0;width:3px;left:4%;background:linear-gradient(180deg,transparent,#e48aa5 18%,#e48aa5 82%,transparent);box-shadow:0 0 14px rgba(228,138,165,.55);animation:mriSweep 4.6s ease-in-out infinite}
+.mriLabel{position:absolute;left:12px;top:12px;padding:8px 9px;border:1px solid #8296bf;background:rgba(255,250,243,.86);font:15px VT323;color:#5c6884;letter-spacing:.05em}
+.mriLabel small{font:10px 'Roboto Mono',monospace;color:#5c6884}
+.motionMeta{display:flex;gap:8px;flex-wrap:wrap}.motionMeta span{font:13px VT323;padding:5px 8px;border:1px solid #8296bf;color:#60739f;background:rgba(141,174,216,.08)}
+.scanBoardMotion figcaption{border-top:1px dashed color-mix(in srgb,var(--ink) 30%,transparent);padding-top:9px!important;margin-top:0!important}
+html.dark .mocapPanel,html.dark .mriPanel{background:#131a2a;border-color:#7386bb}
+html.dark .mocapGrid path{stroke:#7183ad;opacity:.22}
+html.dark .ghostPose{stroke:#8394c8}.html.dark .ghostPose circle{fill:#24304d}
+html.dark .activePose .bone{stroke:#c9d4ff}.html.dark .activePose .joint{fill:#141b2b;stroke:#c9d4ff}
+html.dark .angleReadout text,html.dark .mocapPanel>span{fill:#cbd7ff;color:#cbd7ff}
+html.dark .angleReadout rect{fill:#243251}.html.dark .angleReadout .meter{fill:#8ce0c2}
+html.dark .mriPanel{background:linear-gradient(145deg,#101727,#241e2e)}
+html.dark .mriLabel{background:rgba(15,21,27,.88);border-color:#7386bb;color:#d7e2ff}
+html.dark .mriLabel small{color:#cbd7ff}
+html.dark .motionMeta span{border-color:#7386bb;color:#cbd7ff;background:rgba(121,144,220,.08)}
+@keyframes poseLift{0%,100%{transform:translateY(18px) rotate(-2deg)}25%{transform:translateY(2px) rotate(0)}50%{transform:translateY(-22px) rotate(2deg)}75%{transform:translateY(4px) rotate(0)}}
+@keyframes ghostDrift1{0%,100%{opacity:.12;transform:translate(54px,122px) scale(.78)}50%{opacity:.22;transform:translate(58px,116px) scale(.78)}}
+@keyframes ghostDrift2{0%,100%{opacity:.16;transform:translate(128px,92px) scale(.82)}50%{opacity:.26;transform:translate(132px,84px) scale(.82)}}
+@keyframes ghostDrift3{0%,100%{opacity:.18;transform:translate(206px,58px) scale(.87)}50%{opacity:.3;transform:translate(211px,50px) scale(.87)}}
+@keyframes meter1{0%,100%{width:18px}50%{width:34px}}@keyframes meter2{0%,100%{width:27px}50%{width:42px}}@keyframes meter3{0%,100%{width:14px}50%{width:29px}}
+@keyframes mriPulse{0%,100%{opacity:.28;transform:scale(.96);transform-origin:145px 184px}50%{opacity:.5;transform:scale(1.08);transform-origin:145px 184px}}
+@keyframes roiDash{to{stroke-dashoffset:-36}}
+@keyframes mriSweep{0%,100%{left:4%}50%{left:96%}}
+@media(max-width:820px){.motionDash{grid-template-columns:1fr;min-height:0}.mocapPanel{min-height:330px}.mriPanel{min-height:330px}}
+@media(max-width:560px){.mocapPanel{min-height:280px}.mriPanel{min-height:285px}.angleReadout{display:none}}
+@media(prefers-reduced-motion:reduce){.gp1,.gp2,.gp3,.activePose,.m1,.m2,.m3,.mriFocus,.mriRoi,.mriScanLine{animation:none!important}}
