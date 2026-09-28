@@ -1229,3 +1229,118 @@ html.dark .mriJointSpace{fill:rgba(245,247,252,.52)}
 .mriViewport.artMode{position:absolute;inset:0;background:#0f1524}
 .mriArt{width:100%;height:100%;display:block;object-fit:cover;object-position:center center}
 html.dark .mriViewport.artMode{background:#0f1524}
+
+
+/* v18: restore live knee scanning and remove light gutters/borders */
+.mriPanel.liveKneePanel{
+  padding:0!important;
+  background:#0f1524!important;
+  border-color:#7386bb!important;
+  overflow:hidden!important;
+}
+.mriViewport.artMode.liveScan{
+  position:absolute!important;
+  inset:-2px!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:#0f1524!important;
+  isolation:isolate;
+}
+.mriViewport.artMode.liveScan .mriArt{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  transform:scale(1.035);
+  transform-origin:center;
+  z-index:0;
+}
+.liveScanBand{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-26%;
+  width:24%;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,rgba(235,126,175,.04) 20%,rgba(235,126,175,.16) 50%,rgba(235,126,175,.04) 80%,transparent 100%);
+  filter:blur(1px);
+  animation:kneeScanBand 4.4s ease-in-out infinite;
+}
+.liveScanLine{
+  position:absolute;
+  top:3%;
+  bottom:3%;
+  left:-4px;
+  width:3px;
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,#ef8db7 8%,#ef8db7 92%,transparent 100%);
+  box-shadow:0 0 8px rgba(239,141,183,.95),0 0 18px rgba(239,141,183,.5);
+  animation:kneeScanLine 4.4s ease-in-out infinite;
+}
+.scanStatus{
+  position:absolute;
+  right:14px;
+  bottom:12px;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:5px 8px;
+  border:1px solid rgba(151,166,208,.7);
+  background:rgba(12,18,31,.78);
+  color:#dfe7ff;
+  font:12px VT323,monospace;
+  letter-spacing:.06em;
+  text-transform:lowercase;
+  backdrop-filter:blur(2px);
+}
+.scanStatus span{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#8fd0ad;
+  box-shadow:0 0 0 3px rgba(143,208,173,.12);
+  animation:scanStatusBlink 1.2s steps(2,end) infinite;
+}
+@keyframes kneeScanLine{
+  0%,8%{left:-4px;opacity:0}
+  12%{opacity:1}
+  50%{left:calc(100% - 2px);opacity:1}
+  54%{opacity:0}
+  58%{left:calc(100% - 2px);opacity:0}
+  92%{left:-4px;opacity:1}
+  100%{left:-4px;opacity:0}
+}
+@keyframes kneeScanBand{
+  0%,8%{left:-26%;opacity:0}
+  12%{opacity:1}
+  50%{left:102%;opacity:1}
+  54%{opacity:0}
+  58%{left:102%;opacity:0}
+  92%{left:-26%;opacity:1}
+  100%{left:-26%;opacity:0}
+}
+@keyframes scanStatusBlink{50%{opacity:.35}}
+html.dark .mriPanel.liveKneePanel,
+html.dark .mriViewport.artMode.liveScan{background:#0f1524!important}
+@media(max-width:850px){
+  .mriViewport.artMode.liveScan .mriArt{transform:scale(1.02)}
+  .scanStatus{right:9px;bottom:9px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .liveScanBand,.liveScanLine,.scanStatus span{animation:none!important}
+  .liveScanLine{left:50%;opacity:.7}
+  .liveScanBand{left:38%;opacity:.25}
+}
