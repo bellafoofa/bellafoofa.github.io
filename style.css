@@ -1162,3 +1162,17 @@ html.dark .qcInteractive .qcStep small{color:#dce6f7;}
 html.dark .qcTags span{background:rgba(255,255,255,.05);border-color:#7386bb;color:#d7e2ff;}
 html.dark .qcTerminal,html.dark .qcProgressWrap{background:rgba(121,144,220,.08);border-color:#7386bb;}
 @media(max-width:760px){.qcTags{margin-bottom:10px}.qcInteractive .qcStep{min-height:0 !important}}
+
+
+/* v12 evidence monitor: full waveform always visible + moving highlight segment */
+.evidenceSweep{display:none!important}
+.evidenceWave{display:none!important}
+.evidenceWaveBase,.evidenceWavePulse{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.evidenceWaveBase{stroke:#6174c8;stroke-width:4;opacity:.52}
+.evidenceWavePulse{stroke:#6174c8;stroke-width:5;stroke-dasharray:11 89;stroke-dashoffset:0;filter:drop-shadow(0 0 3px rgba(97,116,200,.24));animation:evidencePulseTravel 4.8s linear infinite}
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{animation:none!important;transform:none!important;opacity:1!important;fill:#f7f8ff;stroke:#6174c8;stroke-width:3}
+html.dark .evidenceWaveBase{stroke:#b8c6ff;opacity:.42}
+html.dark .evidenceWavePulse{stroke:#d5dcff;filter:drop-shadow(0 0 4px rgba(201,212,255,.28))}
+html.dark .evidenceDot{fill:#171f31;stroke:#d5dcff}
+@keyframes evidencePulseTravel{from{stroke-dashoffset:0}to{stroke-dashoffset:-100}}
+@media(prefers-reduced-motion:reduce){.evidenceWavePulse{animation:none!important;stroke-dasharray:none!important}}
