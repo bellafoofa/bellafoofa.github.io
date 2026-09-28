@@ -102,3 +102,56 @@ const b=document.getElementById('theme');if(localStorage.theme==='dark')document
     startScanner();
   }
 })();
+
+// v24: real-time ECG trace. Uses requestAnimationFrame so the heartbeat stays live
+// even when CSS animation / reduced-motion rules would otherwise freeze it.
+(() => {
+  const startLiveECG = () => {
+    const pulse = document.querySelector('.evidenceWavePulse');
+    const svg = pulse && pulse.ownerSVGElement;
+    if (!pulse || !svg || pulse.dataset.liveEcgStarted === '1') return;
+    pulse.dataset.liveEcgStarted = '1';
+
+    // The SVG path uses pathLength="100", so dash values map cleanly to 0..100.
+    pulse.style.strokeDasharray = '12 88';
+    pulse.style.strokeDashoffset = '0';
+
+    let cursor = svg.querySelector('.ecgLiveCursor');
+    if (!cursor) {
+      cursor = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      cursor.setAttribute('class', 'ecgLiveCursor');
+      cursor.setAttribute('r', '4.4');
+      svg.appendChild(cursor);
+    }
+
+    const duration = 4200; // one full sweep
+    let start = performance.now();
+
+    const frame = (now) => {
+      if (!pulse.isConnected) return;
+      const phase = ((now - start) % duration) / duration;
+      const progress = phase * 100;
+
+      // Move the bright segment continuously across the ECG path.
+      pulse.style.strokeDashoffset = String(-progress);
+
+      // A small luminous cursor follows the actual geometry of the ECG line.
+      try {
+        const total = pulse.getTotalLength();
+        const pt = pulse.getPointAtLength(total * phase);
+        cursor.setAttribute('cx', pt.x.toFixed(2));
+        cursor.setAttribute('cy', pt.y.toFixed(2));
+        cursor.style.opacity = String(0.72 + 0.28 * Math.sin(Math.PI * phase));
+      } catch (_) {}
+
+      requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startLiveECG, {once:true});
+  } else {
+    startLiveECG();
+  }
+})();

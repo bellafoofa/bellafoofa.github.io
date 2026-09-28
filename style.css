@@ -1677,3 +1677,57 @@ html.dark .evidenceDot{fill:#171f31!important;stroke:#d5dcff!important}
 @keyframes scanInfoTraceV23{0%{stroke-dashoffset:60;opacity:.35}55%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-20;opacity:.35}}
 @media(max-width:850px){.scanInfoBadge{right:9px;bottom:9px;min-width:150px;padding:8px 9px}.scanInfoWave{width:38px}.scanInfoBadge b{font-size:14px}.scanInfoBadge small{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.evidenceWavePulse,.scanInfoWave path{animation:none!important}.evidenceWavePulse{stroke-dasharray:none!important;stroke-dashoffset:0!important}.scanInfoWave path{stroke-dasharray:none!important;stroke-dashoffset:0!important}}
+
+/* v24: force an unmistakably live ECG sweep, independent of reduced-motion settings */
+.evidenceWaveBase{
+  display:block!important;
+  fill:none!important;
+  stroke:#6174c8!important;
+  stroke-width:3.1!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  opacity:.30!important;
+  stroke-dasharray:none!important;
+  stroke-dashoffset:0!important;
+  animation:none!important;
+}
+.evidenceWavePulse{
+  display:block!important;
+  fill:none!important;
+  stroke:#eef2ff!important;
+  stroke-width:5!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  stroke-dasharray:12 88!important;
+  stroke-dashoffset:0!important;
+  opacity:1!important;
+  filter:drop-shadow(0 0 3px rgba(238,242,255,.9)) drop-shadow(0 0 8px rgba(174,190,255,.45))!important;
+  animation:none!important;
+  will-change:stroke-dashoffset;
+}
+html:not(.dark) .evidenceWavePulse{
+  stroke:#5268c0!important;
+  filter:drop-shadow(0 0 3px rgba(82,104,192,.5))!important;
+}
+html.dark .evidenceWaveBase{stroke:#6f7eb2!important;opacity:.38!important}
+.ecgLiveCursor{
+  fill:#f7f8ff;
+  stroke:#93a7ff;
+  stroke-width:2.3;
+  filter:drop-shadow(0 0 4px rgba(218,226,255,.95)) drop-shadow(0 0 9px rgba(147,167,255,.6));
+  pointer-events:none;
+}
+html:not(.dark) .ecgLiveCursor{fill:#fff;stroke:#5268c0;filter:drop-shadow(0 0 4px rgba(82,104,192,.45))}
+/* marker rings remain stationary; only their glow breathes subtly */
+.evidenceDot,.evidenceDot.d1,.evidenceDot.d2,.evidenceDot.d3{
+  transform:none!important;
+  opacity:.9!important;
+  animation:ecgAnchorBreathV24 2.8s ease-in-out infinite!important;
+}
+.evidenceDot.d2{animation-delay:.45s!important}.evidenceDot.d3{animation-delay:.9s!important}
+@keyframes ecgAnchorBreathV24{0%,100%{opacity:.72}50%{opacity:1}}
+/* The user explicitly wants this demo to stay live, even when system reduce-motion is enabled. */
+@media(prefers-reduced-motion:reduce){
+  .evidenceWavePulse{animation:none!important;stroke-dasharray:12 88!important}
+  .evidenceDot{animation:ecgAnchorBreathV24 2.8s ease-in-out infinite!important}
+}
