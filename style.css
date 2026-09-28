@@ -1215,3 +1215,11 @@ html.dark .mriCondyle{fill:#c0c7d2;stroke:#515a6c}
 html.dark .mriPatella{fill:#b3b9c5;stroke:#5f6879}
 html.dark .mriJointSpace{fill:rgba(245,247,252,.72)}
 html.dark .mriSoftShadow{fill:rgba(255,255,255,.04)}
+
+/* v16: ruler unit on top + cleaner knee anatomy */
+.calibrationRuler .topUnit{font-size:10px;dominant-baseline:auto}
+.mriMeniscus{fill:rgba(241,243,249,.58);stroke:none}
+.mriJointSpace{fill:rgba(241,244,250,.58);opacity:.92}
+.mriPatella{fill:#bcc1cc;stroke:#666e7d;stroke-width:3;opacity:.9}
+html.dark .mriMeniscus{fill:rgba(240,243,250,.5)}
+html.dark .mriJointSpace{fill:rgba(245,247,252,.52)}
