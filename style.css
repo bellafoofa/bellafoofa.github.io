@@ -973,3 +973,7 @@ html.dark .evidenceDot{fill:#c9d4ff;stroke:#171f31}
 html.dark .activePose .joint.hip{fill:#533448;stroke:#f0a9c7} html.dark .activePose .joint.knee{fill:#223d35;stroke:#9ae0c2} html.dark .activePose .joint.ankle{fill:#29344f;stroke:#b9cbff} html.dark .activePose .jointReadout{fill:#d7e2ff} html.dark .angleReadout .coord{fill:#afbddf}
 @media(max-width:560px){.activePose .jointReadout,.angleReadout .coord,.activePose .jointAngle{display:none}}
 @media(prefers-reduced-motion:reduce){.evidenceDot{animation:none!important}}
+
+
+/* v3 coord visibility + matched meter colors */
+.activePose .jointReadout{paint-order:stroke;stroke:rgba(245,244,238,.9);stroke-width:3px;stroke-linejoin:round}\n.activePose .jointReadout.hipLabel{fill:#b86f8f}\n.activePose .jointReadout.kneeLabel{fill:#4e977c}\n.activePose .jointReadout.ankleLabel{fill:#6077cc}\n.angleReadout .meter.m1{fill:#e29ab6}\n.angleReadout .meter.m2{fill:#75cdb0}\n.angleReadout .meter.m3{fill:#8aa6f4}\nhtml.dark .activePose .jointReadout{stroke:rgba(17,24,37,.92)}\nhtml.dark .activePose .jointReadout.hipLabel{fill:#f0a9c7}\nhtml.dark .activePose .jointReadout.kneeLabel{fill:#9ae0c2}\nhtml.dark .activePose .jointReadout.ankleLabel{fill:#b9cbff}\n
