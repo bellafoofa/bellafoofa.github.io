@@ -1344,3 +1344,14 @@ html.dark .mriViewport.artMode.liveScan{background:#0f1524!important}
   .liveScanLine{left:50%;opacity:.7}
   .liveScanBand{left:38%;opacity:.25}
 }
+
+
+/* v19: themed illustrated knee scan panel */
+.mriPanel.liveKneePanel{background:#111827!important;border:1px solid #7e8fc2!important;box-shadow:4px 4px 0 rgba(123,143,204,.18)!important}
+.mriViewport.artMode.liveScan.themedKneeScan{position:absolute!important;inset:0!important;background:#111827!important;overflow:hidden!important}
+.mriViewport.artMode.liveScan.themedKneeScan .mriArt{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;transform:none!important;filter:none!important;border:0!important;margin:0!important;padding:0!important;display:block!important}
+.mriViewport.artMode.liveScan.themedKneeScan .liveScanBand{top:0!important;bottom:0!important;left:-22%!important;width:18%!important;background:linear-gradient(90deg,transparent,rgba(255,167,204,.04),rgba(255,167,204,.24),rgba(255,167,204,.04),transparent)!important;filter:blur(.5px)!important;mix-blend-mode:screen;animation:kneeScanBandV19 4.8s ease-in-out infinite!important;z-index:3!important}
+@keyframes kneeScanBandV19{0%,10%{left:-22%;opacity:0}15%{opacity:1}48%{left:104%;opacity:1}54%{opacity:0}60%{left:104%;opacity:0}92%{left:-22%;opacity:.9}100%{left:-22%;opacity:0}}
+html.dark .mriPanel.liveKneePanel,html.dark .mriViewport.artMode.liveScan.themedKneeScan{background:#111827!important}
+@media(max-width:850px){.mriViewport.artMode.liveScan.themedKneeScan .mriArt{object-fit:cover!important;object-position:center center!important}}
+@media(prefers-reduced-motion:reduce){.mriViewport.artMode.liveScan.themedKneeScan .liveScanBand{animation:none!important;left:42%!important;opacity:.18!important}}
